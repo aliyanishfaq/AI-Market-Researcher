@@ -1,0 +1,4052 @@
+[
+  {
+    "review": {
+      "title": "I got an Intel i9 13900k",
+      "name": "Anonymous",
+      "publication_date": "Dec 24, 2024",
+      "summary": "The reviewer describes a highly negative experience with the Intel i9 13900k, citing product instability, poor customer support, and significant stress caused by repeated failures.",
+      "pros": [
+        "Competitive performance (if the product functions correctly)",
+        "Advanced features for power users"
+      ],
+      "cons": [
+        "Frequent instability issues causing shutdowns",
+        "Ineffective and time-consuming RMA process",
+        "Poor customer support response",
+        "High cost without reliability",
+        "Health impacts caused by prolonged stress"
+      ],
+      "rating": {
+        "score": 1.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Product reliability",
+        "Customer service",
+        "Health impacts",
+        "Cost-effectiveness"
+      ],
+      "suggestions": [
+        "Streamline RMA process to reduce customer effort",
+        "Enhance quality control to avoid frequent failures",
+        "Improve customer support response time"
+      ]
+    },
+    "product": {
+      "name": "Intel i9 13900k",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "€800",
+      "release_date": "2024",
+      "location": "Spain"
+    },
+    "user_context": {
+      "use_case": "Personal and professional use",
+      "technical_level": "Advanced",
+      "experience": "Multiple attempts to resolve issues through RMA"
+    }
+  },
+  {
+    "review": {
+      "title": "Having purchased a custom build back in 2018...",
+      "name": "Anonymous",
+      "publication_date": "Nov 15, 2024",
+      "summary": "The reviewer shares frustration about outdated graphics driver updates and poor customer support.",
+      "pros": [
+        "Solid performance initially",
+        "Easy to set up and install"
+      ],
+      "cons": [
+        "No updates for integrated graphics since 2019",
+        "Customer support failed to resolve repeated issues",
+        "Promises of help not followed through"
+      ],
+      "rating": {
+        "score": 1.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Outdated software updates",
+        "Customer service reliability"
+      ],
+      "suggestions": [
+        "Provide timely updates for integrated graphics",
+        "Ensure customer support follows up on issues"
+      ]
+    },
+    "product": {
+      "name": "Intel Custom Build (2018)",
+      "category": "Custom Build",
+      "manufacturer": "Intel",
+      "price": "Varies",
+      "release_date": "2018",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "Custom-built PC for general use",
+      "technical_level": "Intermediate",
+      "experience": "Frustrated by software issues and poor support"
+    }
+  },
+  {
+    "review": {
+      "title": "Intel Core Ultra 5 245K Review",
+      "name": "Michael Justin Allen Sexton",
+      "publication_date": "October 24, 2024",
+      "summary": "The Intel Core Ultra 5 245K introduces notable architectural improvements with its 'Lion Cove' and 'Skymont' cores, offering enhanced performance and efficiency. However, its gaming performance presents mixed results compared to competitors.",
+      "pros": [
+        "Significant performance boost with new 'Lion Cove' P-cores and 'Skymont' E-cores.",
+        "Enhanced integrated graphics based on Xe-LPG architecture, featuring increased execution units and ray-tracing hardware.",
+        "E-cores achieve higher clock speeds up to 4.6GHz, improving multi-threaded tasks."
+      ],
+      "cons": [
+        "P-cores have a slightly lower boost clock (5.2GHz) compared to predecessors.",
+        "Gaming benchmarks show mixed results, with performance varying across different titles.",
+        "Lack of Hyper-Threading support may impact certain multi-threaded applications."
+      ],
+      "rating": {
+        "score": 4.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Performance Enhancement",
+        "Integrated Graphics Improvement",
+        "Gaming Performance Variability",
+        "Clock Speed Adjustments",
+        "Hyper-Threading Absence"
+      ],
+      "suggestions": [
+        "Optimize gaming performance through driver updates and software enhancements.",
+        "Consider reintroducing Hyper-Threading in future iterations to boost multi-threaded application performance.",
+        "Provide detailed guidance on optimal use cases to help consumers match the processor to their specific needs."
+      ]
+    },
+    "product": {
+      "name": "Intel Core Ultra 5 245K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "$309",
+      "release_date": "October 24, 2024",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "Mid-range computing, including gaming and productivity tasks.",
+      "technical_level": "Enthusiast",
+      "experience": "Seeking a balance between performance and efficiency in a mid-tier processor."
+    }
+  },
+  {
+    "review": {
+      "title": "Intel Core Ultra 9 285K Review",
+      "name": "Michael Justin Allen Sexton",
+      "publication_date": "Oct 17, 2024",
+      "summary": "The Intel Core Ultra 9 285K introduces architectural improvements with 24 cores, offering competitive performance but facing challenges in gaming and efficiency.",
+      "pros": [
+        "Significant architectural advancements",
+        "Competitive performance in multi-threaded tasks",
+        "Maintains 24-core configuration with improved efficiency"
+      ],
+      "cons": [
+        "Inconsistent gaming performance",
+        "Lack of Hyper-Threading support",
+        "Early-stage bugs affecting performance"
+      ],
+      "rating": {
+        "score": 3.5,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Architectural innovation",
+        "Performance consistency",
+        "Gaming efficiency"
+      ],
+      "suggestions": [
+        "Address gaming performance inconsistencies",
+        "Enhance software optimization for new architecture",
+        "Resolve early-stage bugs to improve user experience"
+      ]
+    },
+    "product": {
+      "name": "Intel Core Ultra 9 285K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "$589",
+      "release_date": "2024",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "High-performance computing and gaming",
+      "technical_level": "Advanced",
+      "experience": "Seeking cutting-edge processor technology with balanced performance"
+    }
+  },
+  {
+    "review": {
+      "title": "Intel Core i9-14900KS Review",
+      "name": "Michael Justin Allen Sexton",
+      "publication_date": "Apr 10, 2024",
+      "summary": "The Intel Core i9-14900KS offers a marginal performance boost over its predecessor, with a 6.2GHz max turbo frequency, but struggles to justify its higher price and increased power consumption.",
+      "pros": [
+        "Achieves 6.2GHz max turbo frequency",
+        "Top-tier performance in multi-threaded applications"
+      ],
+      "cons": [
+        "Minimal performance gain over previous models",
+        "High power consumption",
+        "Significant heat generation requiring advanced cooling solutions",
+        "Premium price with limited value addition"
+      ],
+      "rating": {
+        "score": 2.5,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Performance vs. value",
+        "Power efficiency",
+        "Thermal management"
+      ],
+      "suggestions": [
+        "Improve performance gains to justify price increase",
+        "Enhance power efficiency to reduce heat output",
+        "Consider value proposition compared to previous models"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i9-14900KS",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "$699",
+      "release_date": "2024",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "Enthusiast-level computing requiring peak performance",
+      "technical_level": "Expert",
+      "experience": "Demanding maximum processing power with willingness to invest in premium hardware"
+    }
+  },
+  {
+    "review": {
+      "title": "Intel Core i5-13400F Review",
+      "name": "Michael Justin Allen Sexton",
+      "publication_date": "Mar 24, 2024",
+      "summary": "The Intel Core i5-13400F offers competitive multi-threaded performance at an affordable price, making it a solid choice for budget-conscious users, though it lacks integrated graphics and has modest single-threaded capabilities.",
+      "pros": [
+        "High core count for the price",
+        "Competitive multi-threaded performance"
+      ],
+      "cons": [
+        "No integrated graphics in 'F' variant",
+        "Modest single-threaded performance",
+        "Somewhat loud stock fan"
+      ],
+      "rating": {
+        "score": 3.5,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Value for money",
+        "Performance",
+        "Integrated graphics"
+      ],
+      "suggestions": [
+        "Consider including integrated graphics in future models",
+        "Enhance single-threaded performance",
+        "Improve stock cooling solutions to reduce noise"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i5-13400F",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "$196",
+      "release_date": "2024",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "Budget gaming and general computing",
+      "technical_level": "Intermediate",
+      "experience": "Seeking cost-effective performance without need for integrated graphics"
+    }
+  },
+  {
+    "review": {
+      "title": "Intel Core i7-14700K Review",
+      "name": "Michael Justin Allen Sexton",
+      "publication_date": "Oct 17, 2024",
+      "summary": "The Intel Core i7-14700K delivers strong performance with an increased core count and higher clock speeds, making it a compelling choice for high-end users, though it comes with higher power consumption and heat output.",
+      "pros": [
+        "Increased core count enhances multi-threaded performance",
+        "Higher clock speeds improve overall performance"
+      ],
+      "cons": [
+        "Higher power consumption",
+        "Increased heat output requiring robust cooling solutions"
+      ],
+      "rating": {
+        "score": 4.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Performance",
+        "Power efficiency",
+        "Thermal management"
+      ],
+      "suggestions": [
+        "Improve power efficiency to reduce heat output",
+        "Consider bundling with advanced cooling solutions"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i7-14700K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "$409",
+      "release_date": "2024",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "High-end gaming and content creation",
+      "technical_level": "Advanced",
+      "experience": "Seeking top-tier performance with willingness to manage higher power and cooling requirements"
+    }
+  },
+  {
+    "review": {
+      "title": "Intel Core i5-14600K Review",
+      "name": "Michael Justin Allen Sexton",
+      "publication_date": "Oct 17, 2024",
+      "summary": "The Intel Core i5-14600K offers a modest performance boost over its predecessor, maintaining the same core count with slightly higher clock speeds, suitable for mid-range builds but with limited improvements.",
+      "pros": [
+        "Slightly higher clock speeds than predecessor",
+        "Maintains competitive performance in its class"
+      ],
+      "cons": [
+        "Minimal performance gains over previous generation",
+        "Same core count as predecessor",
+        "High power consumption relative to performance gain"
+      ],
+      "rating": {
+        "score": 3.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Performance improvement",
+        "Value for money",
+        "Power efficiency"
+      ],
+      "suggestions": [
+        "Consider more significant performance enhancements in future iterations",
+        "Improve power efficiency to justify upgrades"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i5-14600K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "$319",
+      "release_date": "2024",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "Mid-range gaming and productivity tasks",
+      "technical_level": "Intermediate",
+      "experience": "Looking for a balance between performance and cost in a mid-tier processor"
+    }
+  },
+  {
+    "review": {
+      "title": "Intel Core i5-14600K Review",
+      "name": "Michael Justin Allen Sexton",
+      "publication_date": "Oct 17, 2024",
+      "summary": "The Intel Core i5-14600K offers a modest performance boost over its predecessor, maintaining the same core count with slightly higher clock speeds, suitable for mid-range builds but with limited improvements.",
+      "pros": [
+        "Slightly higher clock speeds than predecessor",
+        "Maintains competitive performance in its class"
+      ],
+      "cons": [
+        "Minimal performance gains over previous generation",
+        "Same core count as predecessor",
+        "High power consumption relative to performance gain"
+      ],
+      "rating": {
+        "score": 3.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Performance improvement",
+        "Value for money",
+        "Power efficiency"
+      ],
+      "suggestions": [
+        "Consider more significant performance enhancements in future iterations",
+        "Improve power efficiency to justify upgrades"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i5-14600K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "$319",
+      "release_date": "2024",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "Mid-range gaming and productivity tasks",
+      "technical_level": "Intermediate",
+      "experience": "Looking for a balance between performance and cost in a mid-tier processor"
+    }
+  },
+  {
+    "review": {
+      "title": "Intel Core i9-14900K Review",
+      "name": "Michael Justin Allen Sexton",
+      "publication_date": "Oct 17, 2024",
+      "summary": "The Intel Core i9-14900K delivers top-tier performance with a slight clock speed increase over its predecessor, excelling in multi-threaded tasks but with higher power consumption and heat output.",
+      "pros": [
+        "Exceptional multi-threaded performance",
+        "Slight clock speed increase over previous generation"
+      ],
+      "cons": [
+        "High power consumption",
+        "Increased heat output requiring robust cooling solutions",
+        "Marginal performance improvement over predecessor"
+      ],
+      "rating": {
+        "score": 4.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Performance",
+        "Power efficiency",
+        "Thermal management"
+      ],
+      "suggestions": [
+        "Enhance power efficiency to reduce heat output",
+        "Consider more substantial performance improvements in future releases"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i9-14900K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "$589",
+      "release_date": "2024",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "High-end computing and intensive multi-threaded applications",
+      "technical_level": "Advanced",
+      "experience": "Seeking top-tier performance with the capability to manage higher power and cooling requirements"
+    }
+  },
+  {
+    "review": {
+      "title": "Intel Core i7-13700K Review",
+      "name": "Michael Justin Allen Sexton",
+      "publication_date": "Oct 20, 2022",
+      "summary": "The Intel Core i7-13700K offers a compelling balance of performance and value, with a 16-core design that delivers strong multi-threaded performance and competitive gaming capabilities.",
+      "pros": [
+        "16-core design enhances multi-threaded performance",
+        "Competitive gaming performance",
+        "Good value for the price"
+      ],
+      "cons": [
+        "Higher power consumption under load",
+        "Requires robust cooling solutions"
+      ],
+      "rating": {
+        "score": 4.5,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Performance",
+        "Value for money",
+        "Power efficiency"
+      ],
+      "suggestions": [
+        "Improve power efficiency to reduce heat output",
+        "Consider bundling with advanced cooling solutions"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i7-13700K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "$419",
+      "release_date": "2022",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "High-performance gaming and content creation",
+      "technical_level": "Advanced",
+      "experience": "Seeking a balance between top-tier performance and value, with the ability to manage higher power and cooling requirements"
+    }
+  },
+  {
+    "review": {
+      "title": "Intel Core i9-13900KS Review",
+      "name": "Michael Justin Allen Sexton",
+      "publication_date": "Mar 8, 2023",
+      "summary": "The Intel Core i9-13900KS offers a peak clock speed of 6GHz, providing exceptional performance for enthusiasts, though it comes with increased power consumption and a higher price point compared to the i9-13900K.",
+      "pros": [
+        "Achieves 6GHz peak clock speed",
+        "Exceptional performance for high-end applications"
+      ],
+      "cons": [
+        "Increased power consumption",
+        "Higher price compared to i9-13900K",
+        "Marginal performance gains over i9-13900K"
+      ],
+      "rating": {
+        "score": 3.5,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Performance",
+        "Power efficiency",
+        "Value for money"
+      ],
+      "suggestions": [
+        "Improve power efficiency to reduce heat output",
+        "Consider more substantial performance improvements over existing models"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i9-13900KS",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "$699",
+      "release_date": "2023",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "High-end computing and gaming",
+      "technical_level": "Expert",
+      "experience": "Seeking the highest possible performance with willingness to manage increased power and cooling requirements"
+    }
+  },
+  {
+    "review": {
+      "title": "NUC 7 i5 BNK developed an unusual boot fault",
+      "name": "Robin Davies",
+      "publication_date": "Apr 9, 2019",
+      "summary": "The NUC 7 i5 BNK developed a boot fault after 18 months of service. The replacement process was handled efficiently, with a quick turnaround time and exceptional customer service.",
+      "pros": [
+        "Efficient replacement process",
+        "Exceptional customer service"
+      ],
+      "cons": [],
+      "rating": {
+        "score": 5.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Customer service",
+        "Replacement efficiency"
+      ],
+      "suggestions": []
+    },
+    "product": {
+      "name": "NUC 7 i5 BNK",
+      "category": "Mini PC",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "GB"
+    },
+    "user_context": {
+      "use_case": "",
+      "technical_level": "",
+      "experience": "Encountered boot fault resolved via replacement process"
+    }
+  },
+  {
+    "review": {
+      "title": "So Intel is great if you want a company, if you don't want any help",
+      "name": "Patrick Davidson",
+      "publication_date": "Jun 7, 2024",
+      "summary": "The user had a poor experience with Intel's customer service while attempting to troubleshoot a faulty Intel i9 processor. The customer service was described as unhelpful, with ineffective solutions provided.",
+      "pros": [],
+      "cons": [
+        "Unhelpful customer service",
+        "Ineffective troubleshooting solutions",
+        "Poor communication"
+      ],
+      "rating": {
+        "score": 1.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Customer service",
+        "Troubleshooting inefficiencies"
+      ],
+      "suggestions": [
+        "Improve customer service training",
+        "Provide actionable troubleshooting steps"
+      ]
+    },
+    "product": {
+      "name": "Intel i9 Processor",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "US"
+    },
+    "user_context": {
+      "use_case": "",
+      "technical_level": "",
+      "experience": "Spent a month unsuccessfully resolving issues with Intel support"
+    }
+  },
+  {
+    "review": {
+      "title": "Fantastic Aftersales Service",
+      "name": "Steven Rudd",
+      "publication_date": "Sep 20, 2017",
+      "summary": "The user praised Intel's aftersales service for resolving issues with a Compute Stick efficiently and professionally. Further issues were also resolved with the same level of excellence.",
+      "pros": [
+        "Efficient issue resolution",
+        "Professional customer support"
+      ],
+      "cons": [],
+      "rating": {
+        "score": 5.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Customer service",
+        "Aftersales support"
+      ],
+      "suggestions": []
+    },
+    "product": {
+      "name": "Intel Compute Stick",
+      "category": "Mini PC",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "GB"
+    },
+    "user_context": {
+      "use_case": "",
+      "technical_level": "",
+      "experience": "Required aftersales support for initial and subsequent issues"
+    }
+  },
+  {
+    "review": {
+      "title": "To all those who read negative about this company",
+      "name": "Shubh Varma",
+      "publication_date": "May 24, 2020",
+      "summary": "The user commended Intel's customer service for its cooperative approach and consistent follow-ups to resolve issues. Compared to other companies, Intel's support was described as superior.",
+      "pros": [
+        "Cooperative customer service",
+        "Proactive follow-ups"
+      ],
+      "cons": [],
+      "rating": {
+        "score": 5.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Customer service",
+        "Follow-up process"
+      ],
+      "suggestions": []
+    },
+    "product": {
+      "name": "",
+      "category": "",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "IN"
+    },
+    "user_context": {
+      "use_case": "",
+      "technical_level": "",
+      "experience": "Received cooperative support for resolving Intel driver issues"
+    }
+  },
+  {
+    "review": {
+      "title": "Great products paired with exemplary customer service!",
+      "name": "Stefan K.",
+      "publication_date": "Dec 15, 2017",
+      "summary": "The user praised Intel for great product performance and exceptional customer service when dealing with a defective NUC7i3BNH. The replacement process was quick and efficient.",
+      "pros": [
+        "Great performance-to-price ratio",
+        "Efficient warranty replacement process",
+        "Exceptional customer service"
+      ],
+      "cons": [],
+      "rating": {
+        "score": 5.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Product performance",
+        "Warranty support",
+        "Customer service"
+      ],
+      "suggestions": []
+    },
+    "product": {
+      "name": "NUC7i3BNH",
+      "category": "Mini PC",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "DE"
+    },
+    "user_context": {
+      "use_case": "",
+      "technical_level": "",
+      "experience": "Encountered BIOS-related issues resolved through warranty exchange"
+    }
+  },
+  {
+    "review": {
+      "title": "The most useless company in the world",
+      "name": "March AI",
+      "publication_date": "Nov 10, 2023",
+      "summary": "The user expressed frustration with Intel for preinstalled hardware limitations and poor customer support. They compared Intel unfavorably to Microsoft regarding drivers.",
+      "pros": [],
+      "cons": [
+        "Preinstalled hardware limitations",
+        "Poor driver support",
+        "Ineffective customer support"
+      ],
+      "rating": {
+        "score": 1.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Hardware customization",
+        "Customer support",
+        "Driver issues"
+      ],
+      "suggestions": [
+        "Allow for more customizable hardware options",
+        "Improve driver development and support",
+        "Enhance customer service training"
+      ]
+    },
+    "product": {
+      "name": "",
+      "category": "",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "GB"
+    },
+    "user_context": {
+      "use_case": "",
+      "technical_level": "",
+      "experience": "Dissatisfied with Intel's hardware and support limitations"
+    }
+  },
+  {
+    "review": {
+      "title": "intel needs to change things",
+      "name": "A-Network Ca",
+      "publication_date": "Feb 10, 2021",
+      "summary": "The user criticized Intel for overheating laptop CPUs and overclocking practices, which they claim lead to reduced hardware longevity.",
+      "pros": [],
+      "cons": [
+        "Overheating of laptop CPUs",
+        "Reduced hardware longevity",
+        "Aggressive overclocking practices"
+      ],
+      "rating": {
+        "score": 1.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Thermal management",
+        "Hardware durability",
+        "Overclocking practices"
+      ],
+      "suggestions": [
+        "Reduce CPU overheating through better thermal design",
+        "Avoid aggressive overclocking practices",
+        "Focus on improving hardware durability"
+      ]
+    },
+    "product": {
+      "name": "",
+      "category": "Laptop CPUs",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "CA"
+    },
+    "user_context": {
+      "use_case": "Laptop computing",
+      "technical_level": "",
+      "experience": "Frustrated with overheating and reduced hardware lifespan"
+    }
+  },
+  {
+    "review": {
+      "title": "DevCloud and oneAPI do not work!",
+      "name": "Andrew",
+      "publication_date": "Jul 11, 2024",
+      "summary": "The user encountered persistent issues accessing Intel DevCloud and oneAPI, with no support or resolution provided by Intel. The development program and toolkits were described as unreliable and buggy.",
+      "pros": [],
+      "cons": [
+        "Unresponsive support team",
+        "Access issues with DevCloud and oneAPI",
+        "Buggy toolkits and system failures"
+      ],
+      "rating": {
+        "score": 1.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Customer service",
+        "Access issues",
+        "System reliability"
+      ],
+      "suggestions": [
+        "Improve access processes for DevCloud and oneAPI",
+        "Fix bugs in the toolkit and systems",
+        "Provide responsive customer support"
+      ]
+    },
+    "product": {
+      "name": "Intel DevCloud and oneAPI",
+      "category": "Cloud and Development Tools",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "IT"
+    },
+    "user_context": {
+      "use_case": "AI development and modeling",
+      "technical_level": "Advanced",
+      "experience": "Struggled with access and system reliability"
+    }
+  },
+  {
+    "review": {
+      "title": "Kachara service",
+      "name": "Mr. S Kumar",
+      "publication_date": "Jul 9, 2024", 
+      "summary": "I was frustrated by Intel's poor customer service and slow replacement process.",
+      "pros": [],
+      "cons": [
+        "Poor customer service",
+        "Delayed replacement process"
+      ],
+      "rating": {
+        "score": 1.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Customer service",
+        "Replacement delays"
+      ],
+      "suggestions": [
+        "Speed up the replacement process",
+        "Improve customer service efficiency"
+      ]
+    },
+    "product": {
+      "name": "",
+      "category": "",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "IN"
+    },
+    "user_context": {
+      "use_case": "",
+      "technical_level": "",
+      "experience": "Experienced delays and poor service during product replacement"
+    }
+  },
+  {
+    "review": {
+      "title": "Planned obsolescence and eWaste lovers",
+      "name": "Marcus Gordon",
+      "publication_date": "Nov 19, 2023",
+      "summary": "I'm frustrated with Intel's planned obsolescence and lack of support for discontinued models. Other companies provide much better support for their older products.",
+      "pros": [],
+      "cons": [
+        "Lack of support for discontinued products",
+        "Planned obsolescence",
+        "Driver and hardware compatibility issues"
+      ],
+      "rating": {
+        "score": 1.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Product longevity",
+        "Customer support",
+        "eWaste concerns"
+      ],
+      "suggestions": [
+        "Provide continued support for older products",
+        "Improve hardware and driver compatibility",
+        "Avoid planned obsolescence practices"
+      ]
+    },
+    "product": {
+      "name": "",
+      "category": "",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "GB"
+    },
+    "user_context": {
+      "use_case": "",
+      "technical_level": "",
+      "experience": "Experienced issues with discontinued Intel products"
+    }
+  },
+  {
+    "review": {
+      "title": "Reasons I hate Intel",
+      "name": "Michael",
+      "publication_date": "Oct 21, 2019",
+      "summary": "I've encountered numerous issues with Intel products including chipset performance problems, CPU vulnerabilities, weak modems, and hardware failures.",
+      "pros": [],
+      "cons": [
+        "Chipset performance issues",
+        "CPU vulnerabilities",
+        "Weak modem signals",
+        "Hardware failures"
+      ],
+      "rating": {
+        "score": 1.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Product performance",
+        "Security vulnerabilities",
+        "Hardware reliability"
+      ],
+      "suggestions": [
+        "Address chipset performance issues",
+        "Fix CPU vulnerabilities",
+        "Improve modem signal strength",
+        "Enhance hardware durability"
+      ]
+    },
+    "product": {
+      "name": "",
+      "category": "",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "GB"
+    },
+    "user_context": {
+      "use_case": "",
+      "technical_level": "",
+      "experience": "Faced multiple issues across Intel products"
+    }
+  },
+  {
+    "review": {
+      "title": "You can't walk five steps on the...",
+      "name": "Archie Murphy",
+      "publication_date": "Jan 26, 2024",
+      "summary": "I'm impressed by Intel's widespread influence in the semiconductor industry and the robustness of their Core i7 and i9 processors. Their contributions to technological advancements are remarkable.",
+      "pros": [
+        "Wide influence in the semiconductor industry",
+        "Robust performance of Core i7 and i9 processors"
+      ],
+      "cons": [],
+      "rating": {
+        "score": 5.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Technological innovation",
+        "Processor robustness",
+        "Industry leadership"
+      ],
+      "suggestions": []
+    },
+    "product": {
+      "name": "Intel Core i7 and i9 processors",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "IE"
+    },
+    "user_context": {
+      "use_case": "High-performance computing",
+      "technical_level": "Advanced",
+      "experience": "Satisfied with Intel's contributions and processor capabilities"
+    }
+  },
+  {
+    "review": {
+      "title": "Extremely unprofessional experience…",
+      "name": "Akash Arora",
+      "publication_date": "Dec 27, 2023",
+      "summary": "I found Intel's warranty process to be outdated and they required excessive personal information. I'm frustrated with the delays in resolving my issue.",
+      "pros": [],
+      "cons": [
+        "Outdated warranty process",
+        "Excessive personal information requirements",
+        "Significant delays in resolution"
+      ],
+      "rating": {
+        "score": 1.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Customer support inefficiency",
+        "Privacy concerns",
+        "Process delays"
+      ],
+      "suggestions": [
+        "Digitize the warranty process",
+        "Simplify personal information requirements",
+        "Resolve issues promptly"
+      ]
+    },
+    "product": {
+      "name": "",
+      "category": "",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "US"
+    },
+    "user_context": {
+      "use_case": "",
+      "technical_level": "",
+      "experience": "Experienced delays and privacy concerns during warranty resolution"
+    }
+  },
+  {
+    "review": {
+      "title": "2 years later the Intel ARC desktop market…",
+      "name": "CSonTP",
+      "publication_date": "Jun 29, 2024",
+      "summary": "I'm frustrated with Intel's lack of proper Linux support for ARC GPUs. I've encountered issues with drivers, software compatibility, and unresolved hardware settings problems.",
+      "pros": [],
+      "cons": [
+        "No official ARC control panel for Linux",
+        "Poor driver support for Linux distributions",
+        "Unresolved voltage and temperature monitoring issues"
+      ],
+      "rating": {
+        "score": 2.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Driver support",
+        "Linux compatibility",
+        "Hardware monitoring issues"
+      ],
+      "suggestions": [
+        "Develop an official control panel for Linux",
+        "Improve driver support for diverse Linux distributions",
+        "Address hardware monitoring issues"
+      ]
+    },
+    "product": {
+      "name": "Intel ARC GPUs",
+      "category": "Graphics Processing Units",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "IT"
+    },
+    "user_context": {
+      "use_case": "Linux-based system with ARC GPUs",
+      "technical_level": "Advanced",
+      "experience": "Faced issues with driver support and monitoring tools"
+    }
+  },
+  {
+    "review": {
+      "title": "I love the way they release really new…",
+      "name": "Albert Mukherjee",
+      "publication_date": "Jan 4, 2024",
+      "summary": "I'm impressed by how Intel releases innovative processors frequently, catering to everything from gaming to complex workloads. I particularly appreciate their versatility as a company.",
+      "pros": [
+        "Frequent release of innovative processors",
+        "Options for both budget and high-performance needs",
+        "Versatility in addressing different use cases"
+      ],
+      "cons": [],
+      "rating": {
+        "score": 5.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Innovation",
+        "Product variety",
+        "Versatility"
+      ],
+      "suggestions": []
+    },
+    "product": {
+      "name": "Intel Processors",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "IN"
+    },
+    "user_context": {
+      "use_case": "Gaming and professional tasks",
+      "technical_level": "Intermediate",
+      "experience": "Positive experience with Intel's frequent innovation"
+    }
+  },
+  {
+    "review": {
+      "title": "Worst customer service experience in my…",
+      "name": "Kacey",
+      "publication_date": "Aug 12, 2024",
+      "summary": "I had the worst experience with Intel's customer service. They were inefficient and kept delaying my warranty replacement. I kept getting recurring requests for additional information without any resolution.",
+      "pros": [],
+      "cons": [
+        "Inefficient customer service",
+        "Recurring delays in warranty processing",
+        "Poor communication"
+      ],
+      "rating": {
+        "score": 1.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Customer service inefficiency",
+        "Warranty delays",
+        "Poor communication"
+      ],
+      "suggestions": [
+        "Streamline warranty processing",
+        "Enhance customer service training",
+        "Improve communication with customers"
+      ]
+    },
+    "product": {
+      "name": "",
+      "category": "",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "US"
+    },
+    "user_context": {
+      "use_case": "Warranty replacement for a processor",
+      "technical_level": "",
+      "experience": "Frustrated with delays and inefficiency in customer service"
+    }
+  },
+  {
+    "review": {
+      "title": "Intel is still my number one choice",
+      "name": "Emeka Monday",
+      "publication_date": "Sep 30, 2024",
+      "summary": "I'm very satisfied with Intel's technology. I find their products reliable and easy to use. I particularly appreciate their website and the performance of Intel-based processors in my devices.",
+      "pros": [
+        "Reliable technology",
+        "Ease of use",
+        "Effective website interface"
+      ],
+      "cons": [],
+      "rating": {
+        "score": 5.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Reliability",
+        "Ease of use",
+        "Customer satisfaction"
+      ],
+      "suggestions": []
+    },
+    "product": {
+      "name": "Intel Processors",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "NG"
+    },
+    "user_context": {
+      "use_case": "Daily use in phones and computers",
+      "technical_level": "",
+      "experience": "Satisfied with Intel's reliability and ease of use"
+    }
+  },
+  {
+    "review": {
+      "title": "New CPU thanks to customer support",
+      "name": "Jamal Mahmoud",
+      "publication_date": "Sep 19, 2024",
+      "summary": "I appreciate how Intel's customer support helped resolve my CPU's voltage issue. Though there were delays, I received a replacement CPU which was worth the wait.",
+      "pros": [
+        "Effective resolution by customer support",
+        "Replacement CPU provided"
+      ],
+      "cons": [
+        "Delays in the process",
+        "Shipping complications"
+      ],
+      "rating": {
+        "score": 4.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Customer support",
+        "Warranty resolution",
+        "Shipping issues"
+      ],
+      "suggestions": [
+        "Improve shipping logistics",
+        "Reduce processing time for replacements"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i7-13700KF",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "SE"
+    },
+    "user_context": {
+      "use_case": "High-performance computing",
+      "technical_level": "Advanced",
+      "experience": "Resolved voltage issues through warranty replacement"
+    }
+  },
+  {
+    "review": {
+      "title": "Still the best processors",
+      "name": "Chandrahas Kumar",
+      "publication_date": "Jun 29, 2023",
+      "summary": "I believe Intel processors are still the best in the world, as my work in repairing computer equipment has shown me their reliability. However, I gave four stars because I don’t agree with the company’s policies on everything.",
+      "pros": [
+        "Best processors in the world",
+        "Ideal for computer equipment repair work"
+      ],
+      "cons": [
+        "Disagreement with company policies"
+      ],
+      "rating": {
+        "score": 4.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Product excellence",
+        "Company policy concerns"
+      ],
+      "suggestions": [
+        "Address concerns regarding company policies"
+      ]
+    }
+  },
+  {
+    "review": {
+      "title": "Poor support",
+      "name": "Jim",
+      "publication_date": "Nov 30, 2021",
+      "summary": "I had a very poor experience with Intel’s support. It took them weeks to respond, and they only seem to care about customers using their parts. If you need help with third-party components, you’re out of luck. I suspect most of the five-star reviews are from people working at Intel. If you’re considering buying from them, just know they don’t care about you beyond taking your money.",
+      "pros": [],
+      "cons": [
+        "Poor response time",
+        "Lack of support for third-party components",
+        "Focus on company-owned parts"
+      ],
+      "rating": {
+        "score": 1.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Customer support issues",
+        "Third-party component limitations"
+      ],
+      "suggestions": [
+        "Improve support response times",
+        "Provide assistance with third-party components"
+      ]
+    }
+  },
+  {
+    "review": {
+      "title": "I have a fair but manageable experience …",
+      "name": "Mandy Grey",
+      "publication_date": "Jul 16, 2017",
+      "summary": "I’ve had a fair but manageable experience with Intel. Their processors work well, but they don’t update older chipsets or drivers regularly. If it weren’t for the efficiency and effectiveness of their processors, especially with heat management, I would have switched to AMD.",
+      "pros": [
+        "Efficient and effective processors",
+        "Good heat management"
+      ],
+      "cons": [
+        "Irregular updates for older chipsets",
+        "Limited driver support"
+      ],
+      "rating": {
+        "score": 3.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Processor efficiency",
+        "Driver update issues"
+      ],
+      "suggestions": [
+        "Regularly update older chipsets and drivers"
+      ]
+    }
+  },
+  {
+    "review": {
+      "title": "4.22.2020",
+      "name": "Johanna",
+      "publication_date": "Apr 22, 2020",
+      "summary": "I had a monitor issue, and Sebastian M. was amazing. He pinpointed the exact problem and resolved it in record time. His professionalism, patience, and excellent communication skills made a huge difference. I’m beyond satisfied with the level of assistance and would highly recommend him!",
+      "pros": [
+        "Efficient issue resolution",
+        "Professional and patient support representative",
+        "Excellent communication skills"
+      ],
+      "cons": [],
+      "rating": {
+        "score": 5.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Outstanding customer support",
+        "Technical expertise"
+      ],
+      "suggestions": []
+    }
+  },
+  {
+    "review": {
+      "title": "got help way past warranty",
+      "name": "GenuinReviewsMadeInGermany",
+      "publication_date": "Apr 12, 2022",
+      "summary": "Even though my warranty had expired, Intel’s tech support went above and beyond to help me. They analyzed every detail and provided incredibly scientific support. It was the best technical assistance I’ve ever received.",
+      "pros": [
+        "Comprehensive technical support",
+        "Assistance beyond warranty period",
+        "Scientific and analytical approach"
+      ],
+      "cons": [],
+      "rating": {
+        "score": 5.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Extended support",
+        "Technical expertise"
+      ],
+      "suggestions": []
+    }
+  },
+  {
+    "review": {
+      "title": "I Am Unhappy That The Boss Had Fired A…",
+      "name": "Alec Heesacker",
+      "publication_date": "Sep 15, 2020",
+      "summary": "I’m really upset that Intel fired a job coach I worked with. She did nothing wrong and was still legally fired. Because of this, I won’t work with Intel anymore. Goodbye to their business—I’m moving on to better opportunities.",
+      "pros": [],
+      "cons": [
+        "Management decisions",
+        "Employee treatment concerns"
+      ],
+      "rating": {
+        "score": 1.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Employee dissatisfaction",
+        "Management criticism"
+      ],
+      "suggestions": [
+        "Improve management policies",
+        "Foster better employee relations"
+      ]
+    }
+  },
+  {
+    "review": {
+      "title": "Best Customer Service Ever!",
+      "name": "Lloyd Perry",
+      "publication_date": "Oct 11, 2016",
+      "summary": "When my NUC6i7KYK had a power issue, Intel’s customer service was phenomenal. They provided clear instructions for a warranty return, sent an Airway bill, and covered all shipping costs. I live in Indonesia and bought the NUC in the US, so I expected a nightmare. Instead, Intel handled everything smoothly and got me a replacement in just 11 days. I couldn’t be happier!",
+      "pros": [
+        "Seamless warranty process",
+        "Efficient international shipping",
+        "Outstanding customer service"
+      ],
+      "cons": [],
+      "rating": {
+        "score": 5.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Customer satisfaction",
+        "Efficient warranty handling"
+      ],
+      "suggestions": []
+    }
+  },
+  {
+    "review": {
+        "title": "Intel is amazing for gaming",
+        "name": "Anonymous",
+        "publication_date": "2025-01-08",
+        "summary": "I have always used Intel processors for my gaming PCs. Their performance is unmatched when it comes to high-end gaming. I’ve had no issues with heat management or overclocking, and the experience has been smooth overall.",
+        "pros": [
+            "Excellent gaming performance",
+            "Reliable heat management",
+            "Easy overclocking capabilities"
+        ],
+        "cons": [],
+        "rating": {
+            "score": 5.0,
+            "scale": 5
+        },
+        "recommend": true,
+        "themes": [
+            "Gaming performance",
+            "Reliability",
+            "Overclocking capabilities"
+        ],
+        "suggestions": []
+    },
+    "product": {
+        "name": "Intel Processor",
+        "category": "Processor",
+        "manufacturer": "Intel",
+        "price": "",
+        "release_date": "",
+        "location": ""
+    },
+    "user_context": {
+        "use_case": "Gaming",
+        "technical_level": "Advanced",
+        "experience": "Long-term Intel user for gaming"
+    }
+  },
+  {
+    "review": {
+        "title": "Disappointed with Intel customer service",
+        "name": "Anonymous",
+        "publication_date": "2025-01-08",
+        "summary": "I had a terrible experience with Intel’s customer service. It took over a month to get a response about my warranty claim, and they kept asking repetitive questions. This delay caused significant inconvenience for me.",
+        "pros": [],
+        "cons": [
+            "Slow response time",
+            "Repetitive queries",
+            "Warranty claim delays"
+        ],
+        "rating": {
+            "score": 1.0,
+            "scale": 5
+        },
+        "recommend": false,
+        "themes": [
+            "Customer service",
+            "Warranty issues"
+        ],
+        "suggestions": [
+            "Improve response time",
+            "Streamline warranty claim process"
+        ]
+    },
+    "product": {
+        "name": "Intel Processor",
+        "category": "Processor",
+        "manufacturer": "Intel",
+        "price": "",
+        "release_date": "",
+        "location": ""
+    },
+    "user_context": {
+        "use_case": "Warranty claim",
+        "technical_level": "Intermediate",
+        "experience": "Frustrating experience with customer service"
+    }
+  },
+  {
+    "review": {
+        "title": "Intel products have amazing longevity",
+        "name": "Anonymous",
+        "publication_date": "2025-01-08",
+        "summary": "I’ve been using Intel products for years, and they have proven to be very durable. My last Intel processor lasted over 10 years without any issues, and it still performs well for basic tasks.",
+        "pros": [
+            "Long-lasting durability",
+            "Good performance even after years of use"
+        ],
+        "cons": [],
+        "rating": {
+            "score": 5.0,
+            "scale": 5
+        },
+        "recommend": true,
+        "themes": [
+            "Durability",
+            "Longevity",
+            "Reliability"
+        ],
+        "suggestions": []
+    },
+    "product": {
+        "name": "Intel Processor",
+        "category": "Processor",
+        "manufacturer": "Intel",
+        "price": "",
+        "release_date": "",
+        "location": ""
+    },
+    "user_context": {
+        "use_case": "Long-term usage",
+        "technical_level": "Intermediate",
+        "experience": "Satisfied with Intel’s product longevity"
+    }
+  },
+  {
+    "review": {
+        "title": "Intel has great AI toolkits",
+        "name": "Anonymous",
+        "publication_date": "2025-01-08",
+        "summary": "I’ve been using Intel’s AI toolkits for my research, and they are incredibly helpful. The integration with existing frameworks is seamless, and the support for advanced AI algorithms is excellent.",
+        "pros": [
+            "Seamless integration with frameworks",
+            "Excellent support for advanced AI algorithms"
+        ],
+        "cons": [],
+        "rating": {
+            "score": 5.0,
+            "scale": 5
+        },
+        "recommend": true,
+        "themes": [
+            "AI development",
+            "Integration with frameworks",
+            "Advanced algorithms"
+        ],
+        "suggestions": []
+    },
+    "product": {
+        "name": "Intel AI Toolkit",
+        "category": "Software",
+        "manufacturer": "Intel",
+        "price": "",
+        "release_date": "",
+        "location": ""
+    },
+    "user_context": {
+        "use_case": "AI research and development",
+        "technical_level": "Expert",
+        "experience": "Very positive experience with Intel’s AI tools"
+    }
+  },
+  {
+    "review": {
+        "title": "Intel warranty service is slow",
+        "name": "Anonymous",
+        "publication_date": "2025-01-08",
+        "summary": "The warranty service process with Intel was frustrating. It took weeks to get my replacement unit, and the entire process was filled with delays and lack of communication. I expected better from such a big company.",
+        "pros": [],
+        "cons": [
+            "Long delays in warranty service",
+            "Poor communication"
+        ],
+        "rating": {
+            "score": 2.0,
+            "scale": 5
+        },
+        "recommend": false,
+        "themes": [
+            "Customer service",
+            "Warranty issues",
+            "Delays"
+        ],
+        "suggestions": [
+            "Streamline the warranty replacement process",
+            "Improve communication during service requests"
+        ]
+    },
+    "product": {
+        "name": "Intel Processor",
+        "category": "Processor",
+        "manufacturer": "Intel",
+        "price": "",
+        "release_date": "",
+        "location": ""
+    },
+    "user_context": {
+        "use_case": "Warranty replacement",
+        "technical_level": "Intermediate",
+        "experience": "Disappointed with slow service"
+    }
+  },
+  {
+    "review": {
+        "title": "Intel processors are the best for professionals",
+        "name": "Anonymous",
+        "publication_date": "2025-01-08",
+        "summary": "As a professional content creator, Intel processors have been my go-to choice. Their processing power allows me to handle 4K video editing and rendering with ease, making my workflow faster and smoother.",
+        "pros": [
+            "Excellent processing power",
+            "Great for 4K video editing and rendering",
+            "Reliable for professional use"
+        ],
+        "cons": [],
+        "rating": {
+            "score": 5.0,
+            "scale": 5
+        },
+        "recommend": true,
+        "themes": [
+            "Performance",
+            "Professional use",
+            "Reliability"
+        ],
+        "suggestions": []
+    },
+    "product": {
+        "name": "Intel Processor",
+        "category": "Processor",
+        "manufacturer": "Intel",
+        "price": "",
+        "release_date": "",
+        "location": ""
+    },
+    "user_context": {
+        "use_case": "Professional content creation",
+        "technical_level": "Advanced",
+        "experience": "Highly satisfied with Intel for professional tasks"
+    }
+  },
+  {
+    "review": {
+        "title": "Disappointed with software compatibility",
+        "name": "Anonymous",
+        "publication_date": "2025-01-08",
+        "summary": "I encountered issues with software compatibility when using Intel’s new GPUs. Certain games and programs don’t run as smoothly as expected, and driver updates have been inconsistent. This has been a letdown for me.",
+        "pros": [
+            "Decent performance in supported programs"
+        ],
+        "cons": [
+            "Software compatibility issues",
+            "Inconsistent driver updates"
+        ],
+        "rating": {
+            "score": 3.0,
+            "scale": 5
+        },
+        "recommend": false,
+        "themes": [
+            "Software compatibility",
+            "Driver support"
+        ],
+        "suggestions": [
+            "Improve driver support for newer GPUs",
+            "Ensure better compatibility with popular software"
+        ]
+    },
+    "product": {
+        "name": "Intel GPU",
+        "category": "Graphics Card",
+        "manufacturer": "Intel",
+        "price": "",
+        "release_date": "",
+        "location": ""
+    },
+    "user_context": {
+        "use_case": "Gaming and professional applications",
+        "technical_level": "Advanced",
+        "experience": "Mixed experience due to software issues"
+    }
+  },
+  {
+    "review": {
+      "title": "Eventually I got my warranty taken care...",
+      "name": "Danny Ribeiro",
+      "publication_date": "Dec 20, 2023",
+      "summary": "The reviewer describes the challenging process of getting a warranty honored, citing extensive documentation requirements, delays, and poor system design.",
+      "pros": [],
+      "cons": [
+        "Challenging warranty process",
+        "Extensive documentation requirements",
+        "Processor failed within a year"
+      ],
+      "rating": {
+        "score": 2.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Warranty issues",
+        "Customer service"
+      ],
+      "suggestions": [
+        "Simplify warranty process by using serial numbers for verification",
+        "Improve product durability"
+      ]
+    },
+    "product": {
+      "name": "",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "CA"
+    },
+    "user_context": {
+      "use_case": "",
+      "technical_level": "Intermediate",
+      "experience": "Warranty claim"
+    }
+  },
+  {
+    "review": {
+      "title": "I bought the Intel Arc A770 16GB GPU",
+      "name": "Hugo Hugoson",
+      "publication_date": "Oct 6, 2023",
+      "summary": "The reviewer reports a poor experience with the Intel Arc A770 due to hardware defects, a product recall, and lack of proper replacement options.",
+      "pros": [],
+      "cons": [
+        "Hardware defects",
+        "Product recall not communicated well",
+        "No suitable replacement offered"
+      ],
+      "rating": {
+        "score": 1.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Product reliability",
+        "Customer service"
+      ],
+      "suggestions": [
+        "Improve product quality control",
+        "Enhance recall communication"
+      ]
+    },
+    "product": {
+      "name": "Intel Arc A770 16GB GPU",
+      "category": "Graphics Card",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "GB"
+    },
+    "user_context": {
+      "use_case": "Gaming",
+      "technical_level": "Advanced",
+      "experience": "Product replacement issue"
+    }
+  },
+  {
+    "review": {
+      "title": "Intel have best CPUs",
+      "name": "Abdullah Haroon",
+      "publication_date": "Apr 26, 2021",
+      "summary": "The reviewer praises the affordability and performance of the Intel i3 laptop, emphasizing its ability to handle schoolwork and gaming.",
+      "pros": [
+        "Affordable",
+        "Good performance for price",
+        "Adequate for gaming and schoolwork"
+      ],
+      "cons": [
+        "Lower graphics settings for gaming"
+      ],
+      "rating": {
+        "score": 5.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Affordability",
+        "Performance"
+      ],
+      "suggestions": []
+    },
+    "product": {
+      "name": "Intel 4831500 i3",
+      "category": "Laptop",
+      "manufacturer": "ASUS",
+      "price": "$300",
+      "release_date": "",
+      "location": "AE"
+    },
+    "user_context": {
+      "use_case": "Schoolwork and light gaming",
+      "technical_level": "Beginner",
+      "experience": "Budget-friendly upgrade"
+    }
+  },
+  {
+    "review": {
+      "title": "I would never use an Intel CPU",
+      "name": "Moo",
+      "publication_date": "Feb 11, 2021",
+      "summary": "The reviewer criticizes Intel for its outdated 14nm manufacturing process and lack of innovation.",
+      "pros": [],
+      "cons": [
+        "Outdated 14nm process",
+        "Lack of innovation",
+        "Poor value compared to competitors"
+      ],
+      "rating": {
+        "score": 1.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Outdated technology",
+        "Value for money"
+      ],
+      "suggestions": [
+        "Upgrade to modern manufacturing processes",
+        "Offer competitive pricing"
+      ]
+    },
+    "product": {
+      "name": "",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "US"
+    },
+    "user_context": {
+      "use_case": "",
+      "technical_level": "Intermediate",
+      "experience": ""
+    }
+  },
+  {
+    "review": {
+      "title": "Help Northridge not just Johnstown schools",
+      "name": "Veronica Waller",
+      "publication_date": "Oct 21, 2023",
+      "summary": "The reviewer expresses frustration with Intel's community donation strategy, feeling it neglects certain areas.",
+      "pros": [],
+      "cons": [
+        "Unequal donation allocation",
+        "Neglect of certain schools"
+      ],
+      "rating": {
+        "score": 2.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Corporate responsibility",
+        "Community impact"
+      ],
+      "suggestions": [
+        "Distribute donations more equitably"
+      ]
+    },
+    "product": {
+      "name": "",
+      "category": "",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "US"
+    },
+    "user_context": {
+      "use_case": "Community fundraising",
+      "technical_level": "",
+      "experience": "Disappointment with corporate donation policy"
+    }
+  },
+  {
+    "review": {
+      "title": "I bought an Intel Core i5-14600KF",
+      "name": "Owen McKenzie",
+      "publication_date": "Feb 8, 2024",
+      "summary": "The reviewer is highly satisfied with the Intel Core i5-14600KF for its performance and reliability.",
+      "pros": [
+        "High performance",
+        "Reliability"
+      ],
+      "cons": [],
+      "rating": {
+        "score": 5.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Performance",
+        "Reliability"
+      ],
+      "suggestions": []
+    },
+    "product": {
+      "name": "Intel Core i5-14600KF",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "CA"
+    },
+    "user_context": {
+      "use_case": "Personal computer upgrade",
+      "technical_level": "Intermediate",
+      "experience": ""
+    }
+  },
+  {
+    "review": {
+      "title": "Killing performance of CPU",
+      "name": "Christian M.",
+      "publication_date": "Sep 23, 2019",
+      "summary": "The reviewer reports a 10% performance drop after installing security updates for their Intel i7 4790.",
+      "pros": [],
+      "cons": [
+        "Significant performance drop",
+        "Impact of security updates"
+      ],
+      "rating": {
+        "score": 1.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Performance impact",
+        "Security updates"
+      ],
+      "suggestions": [
+        "Minimize performance impact of security patches"
+      ]
+    },
+    "product": {
+      "name": "Intel i7 4790",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "PL"
+    },
+    "user_context": {
+      "use_case": "",
+      "technical_level": "Advanced",
+      "experience": "Performance tuning"
+    }
+  },
+  {
+    "review": {
+      "title": "Eventually I got my warranty taken care...",
+      "name": "Danny Ribeiro",
+      "publication_date": "Dec 20, 2023",
+      "summary": "The reviewer describes the challenging process of getting a warranty honored, citing extensive documentation requirements, delays, and poor system design.",
+      "pros": [],
+      "cons": [
+        "Challenging warranty process",
+        "Extensive documentation requirements",
+        "Processor failed within a year"
+      ],
+      "rating": {
+        "score": 2.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Warranty issues",
+        "Customer service"
+      ],
+      "suggestions": [
+        "Simplify warranty process by using serial numbers for verification",
+        "Improve product durability"
+      ]
+    },
+    "product": {
+      "name": "",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "CA"
+    },
+    "user_context": {
+      "use_case": "",
+      "technical_level": "Intermediate",
+      "experience": "Warranty claim"
+    }
+  },
+  {
+    "review": {
+      "title": "I bought the Intel Arc A770 16GB GPU",
+      "name": "Hugo Hugoson",
+      "publication_date": "Oct 6, 2023",
+      "summary": "The reviewer reports a poor experience with the Intel Arc A770 due to hardware defects, a product recall, and lack of proper replacement options.",
+      "pros": [],
+      "cons": [
+        "Hardware defects",
+        "Product recall not communicated well",
+        "No suitable replacement offered"
+      ],
+      "rating": {
+        "score": 1.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Product reliability",
+        "Customer service"
+      ],
+      "suggestions": [
+        "Improve product quality control",
+        "Enhance recall communication"
+      ]
+    },
+    "product": {
+      "name": "Intel Arc A770 16GB GPU",
+      "category": "Graphics Card",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "GB"
+    },
+    "user_context": {
+      "use_case": "Gaming",
+      "technical_level": "Advanced",
+      "experience": "Product replacement issue"
+    }
+  },
+  {
+    "review": {
+      "title": "Intel is a really good CPU company!",
+      "name": "Joshua Naismith",
+      "publication_date": "Aug 16, 2014",
+      "summary": "The reviewer praises Intel CPUs as essential for office desktops and superior to competitors like AMD in terms of performance for the price.",
+      "pros": [
+        "Great performance for the price"
+      ],
+      "cons": [],
+      "rating": {
+        "score": 5.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Performance",
+        "Value for money"
+      ],
+      "suggestions": []
+    },
+    "product": {
+      "name": "",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "GB"
+    },
+    "user_context": {
+      "use_case": "Office desktops",
+      "technical_level": "Intermediate",
+      "experience": "Long-term Intel user"
+    }
+  },
+  {
+    "review": {
+      "title": "Good product, but overpriced.",
+      "name": "Virginia Greene",
+      "publication_date": "Jan 4, 2020",
+      "summary": "The reviewer acknowledges Intel's quality products but criticizes their pricing, ultimately switching to AMD after years of loyalty.",
+      "pros": [
+        "High-quality chipsets"
+      ],
+      "cons": [
+        "Overpriced"
+      ],
+      "rating": {
+        "score": 2.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Product quality",
+        "Pricing"
+      ],
+      "suggestions": [
+        "Lower prices to remain competitive"
+      ]
+    },
+    "product": {
+      "name": "",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "US"
+    },
+    "user_context": {
+      "use_case": "",
+      "technical_level": "Intermediate",
+      "experience": "Long-time Intel user switching to AMD"
+    }
+  },
+  {
+    "review": {
+      "title": "You literally have the best CPUs ever",
+      "name": "LinceLas",
+      "publication_date": "Jan 8, 2019",
+      "summary": "The reviewer strongly favors Intel CPUs after a negative experience with AMD, praising Intel's reliability and performance.",
+      "pros": [
+        "Excellent CPU performance",
+        "Reliable products"
+      ],
+      "cons": [],
+      "rating": {
+        "score": 5.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Reliability",
+        "Performance"
+      ],
+      "suggestions": []
+    },
+    "product": {
+      "name": "",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "NL"
+    },
+    "user_context": {
+      "use_case": "",
+      "technical_level": "Beginner",
+      "experience": "Switching from AMD to Intel"
+    }
+  },
+  {
+    "review": {
+      "title": "Better than the other processor who...",
+      "name": "Ronald Peele",
+      "publication_date": "Nov 26, 2020",
+      "summary": "The reviewer remains loyal to Intel for decades, emphasizing its consistency and superiority over competitors.",
+      "pros": [
+        "Consistently reliable performance"
+      ],
+      "cons": [],
+      "rating": {
+        "score": 5.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Performance",
+        "Brand loyalty"
+      ],
+      "suggestions": []
+    },
+    "product": {
+      "name": "",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "US"
+    },
+    "user_context": {
+      "use_case": "",
+      "technical_level": "Intermediate",
+      "experience": "Decades of experience with Intel products"
+    }
+  },
+  {
+    "review": {
+      "title": "Best customer service I have ever seen.",
+      "name": "Can Lo",
+      "publication_date": "Aug 2, 2019",
+      "summary": "The reviewer commends Intel for its exceptional customer service, highlighting quick responses and a free upgrade.",
+      "pros": [
+        "Fast customer service responses",
+        "Free product upgrades"
+      ],
+      "cons": [],
+      "rating": {
+        "score": 5.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Customer service"
+      ],
+      "suggestions": []
+    },
+    "product": {
+      "name": "",
+      "category": "",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "CA"
+    },
+    "user_context": {
+      "use_case": "",
+      "technical_level": "",
+      "experience": "Positive interaction with customer service"
+    }
+  },
+  {
+    "review": {
+      "title": "Good service after being patient for a while",
+      "name": "R.H.",
+      "publication_date": "Apr 11, 2018",
+      "summary": "The reviewer had a good experience with Intel's refund process after a short wait.",
+      "pros": [
+        "Prompt refund process"
+      ],
+      "cons": [],
+      "rating": {
+        "score": 4.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Customer service"
+      ],
+      "suggestions": []
+    },
+    "product": {
+      "name": "",
+      "category": "",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "SE"
+    },
+    "user_context": {
+      "use_case": "",
+      "technical_level": "",
+      "experience": "Refund process"
+    }
+  },
+  {
+    "review": {
+      "title": "Intel provides good products",
+      "name": "Martin Ligabue",
+      "publication_date": "Nov 26, 2023",
+      "summary": "The reviewer acknowledges Intel's high-quality products but notes their higher price compared to competitors.",
+      "pros": [
+        "High-quality products"
+      ],
+      "cons": [
+        "Expensive compared to competitors"
+      ],
+      "rating": {
+        "score": 3.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Product quality",
+        "Pricing"
+      ],
+      "suggestions": [
+        "Consider reducing prices to improve competitiveness"
+      ]
+    },
+    "product": {
+      "name": "",
+      "category": "",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "IT"
+    },
+    "user_context": {
+      "use_case": "",
+      "technical_level": "",
+      "experience": "Comparison with competitors"
+    }
+  },
+  {
+    "review": {
+      "title": "Broken brand new computer and warranty is worthless",
+      "name": "Mark Baranov",
+      "publication_date": "Sep 16, 2022",
+      "summary": "I bought a brand new Intel NUK 11th gen computer, but it came with a broken NVMe socket. Intel refused to honor the warranty because I couldn't prove the device was from an official distributor. The process has been frustrating, with no resolution in sight.",
+      "pros": [],
+      "cons": [
+        "Warranty not honored",
+        "Broken product out of the box",
+        "No suitable replacement offered",
+        "Frustrating customer service"
+      ],
+      "rating": {
+        "score": 1.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Product reliability",
+        "Customer service",
+        "Warranty issues"
+      ],
+      "suggestions": [
+        "Honor warranties regardless of purchase source",
+        "Improve customer service response times"
+      ]
+    },
+    "product": {
+      "name": "Intel NUK 11th gen",
+      "category": "Mini PC",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "IL"
+    },
+    "user_context": {
+      "use_case": "Personal and professional use",
+      "technical_level": "Intermediate",
+      "experience": "Dealing with warranty issues"
+    }
+  },
+  {
+    "review": {
+      "title": "Intel 👎 … unreliable technology and...",
+      "name": "Consumer",
+      "publication_date": "May 9, 2024",
+      "summary": "I’ve had terrible experiences with Intel’s unreliable technology and unprofessional customer support. I will never buy a product with an Intel processor or graphics card again.",
+      "pros": [],
+      "cons": [
+        "Unreliable technology",
+        "Poor customer support"
+      ],
+      "rating": {
+        "score": 1.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Product reliability",
+        "Customer service"
+      ],
+      "suggestions": [
+        "Focus on improving product reliability",
+        "Train customer service staff for professionalism"
+      ]
+    },
+    "product": {
+      "name": "",
+      "category": "",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "GB"
+    },
+    "user_context": {
+      "use_case": "",
+      "technical_level": "",
+      "experience": "Repeated product failures"
+    }
+  },
+  {
+    "review": {
+      "title": "Awful customer service and poor quality",
+      "name": "Terminatorrrr",
+      "publication_date": "Sep 19, 2021",
+      "summary": "I experienced poor quality technology and awful customer service from Intel, which led me to switch to AMD. I cannot support their business practices.",
+      "pros": [],
+      "cons": [
+        "Poor product quality",
+        "Terrible customer service",
+        "Questionable business practices"
+      ],
+      "rating": {
+        "score": 1.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Product quality",
+        "Customer service",
+        "Ethics"
+      ],
+      "suggestions": [
+        "Ensure better product quality",
+        "Address ethical concerns transparently"
+      ]
+    },
+    "product": {
+      "name": "",
+      "category": "",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "MX"
+    },
+    "user_context": {
+      "use_case": "",
+      "technical_level": "",
+      "experience": "Negative transition to a competitor"
+    }
+  },
+  {
+    "review": {
+      "title": "Was helped by Stephen",
+      "name": "Th",
+      "publication_date": "Feb 9, 2022",
+      "summary": "Stephen was incredibly diligent and resolved my issue related to dithering and integrated graphics. I truly appreciate the support.",
+      "pros": [
+        "Excellent customer service",
+        "Resolved technical issues efficiently"
+      ],
+      "cons": [],
+      "rating": {
+        "score": 5.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Customer service",
+        "Technical support"
+      ],
+      "suggestions": []
+    },
+    "product": {
+      "name": "",
+      "category": "",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "NL"
+    },
+    "user_context": {
+      "use_case": "Resolving technical issues",
+      "technical_level": "Intermediate",
+      "experience": "Positive interaction with support staff"
+    }
+  },
+  {
+    "review": {
+      "title": "They are scamming people",
+      "name": "Stephanie",
+      "publication_date": "Dec 8, 2020",
+      "summary": "Intel falsely promised a Marvel Avengers campaign but withheld the game, citing technical difficulties. Customer support was no help.",
+      "pros": [],
+      "cons": [
+        "Misleading promotions",
+        "Unhelpful customer support"
+      ],
+      "rating": {
+        "score": 1.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Marketing ethics",
+        "Customer service"
+      ],
+      "suggestions": [
+        "Avoid misleading promotions",
+        "Improve technical support for campaigns"
+      ]
+    },
+    "product": {
+      "name": "",
+      "category": "",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "DK"
+    },
+    "user_context": {
+      "use_case": "",
+      "technical_level": "",
+      "experience": "Misleading promotional offers"
+    }
+  },
+  {
+    "review": {
+      "title": "Ridiculously pleased with the service",
+      "name": "patr0290",
+      "publication_date": "Oct 10, 2018",
+      "summary": "Intel’s customer service exceeded my expectations when they replaced my CPU under warranty quickly and efficiently. Great experience!",
+      "pros": [
+        "Quick replacement process",
+        "Polite and helpful representatives"
+      ],
+      "cons": [],
+      "rating": {
+        "score": 5.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Customer service",
+        "Warranty support"
+      ],
+      "suggestions": []
+    },
+    "product": {
+      "name": "",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "CA"
+    },
+    "user_context": {
+      "use_case": "Warranty replacement",
+      "technical_level": "Intermediate",
+      "experience": "Seamless warranty process"
+    }
+  },
+  {
+    "review": {
+      "title": "Intel takes your data with fake giveaways. Avoid!",
+      "name": "Stefan van Horssen",
+      "publication_date": "May 5, 2023",
+      "summary": "Intel ran a fake giveaway for a $1500 laptop. They never sent the prize and claimed it was the responsibility of their partners. I’ve contacted customer support multiple times without resolution.",
+      "pros": [],
+      "cons": [
+        "Fake giveaways",
+        "No prize delivery",
+        "Unhelpful customer service"
+      ],
+      "rating": {
+        "score": 1.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Marketing ethics",
+        "Customer service"
+      ],
+      "suggestions": [
+        "Avoid fake giveaways",
+        "Hold partners accountable for promotions"
+      ]
+    },
+    "product": {
+      "name": "",
+      "category": "",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "NL"
+    },
+    "user_context": {
+      "use_case": "",
+      "technical_level": "",
+      "experience": "Unresolved promotional issue"
+    }
+  },
+  {
+    "review": {
+      "title": "Intel Core Ultra 9 285K Review",
+      "name": "TechPowerUp",
+      "publication_date": "October 24, 2024",
+      "summary": "The Intel Core Ultra 9 285K exhibits mixed performance, excelling in certain applications but showing significant regressions in others, particularly in browser benchmarks and gaming. Users express concerns over increased memory latency and inconsistent performance across different workloads.",
+      "pros": [
+        "Strong performance in specific applications",
+        "Advancements in power efficiency"
+      ],
+      "cons": [
+        "Performance regression in browser benchmarks",
+        "Increased memory latency",
+        "Inconsistent gaming performance",
+        "Requires new motherboard due to LGA 1851 socket"
+      ],
+      "rating": {
+        "score": 3.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Performance inconsistency",
+        "Hardware compatibility",
+        "Memory latency issues"
+      ],
+      "suggestions": [
+        "Address memory latency concerns",
+        "Improve performance consistency across applications",
+        "Enhance compatibility with existing hardware"
+      ]
+    },
+    "product": {
+      "name": "Intel Core Ultra 9 285K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "October 24, 2024",
+      "location": ""
+    },
+    "user_context": {
+      "use_case": "High-performance computing",
+      "technical_level": "Advanced",
+      "experience": "Mixed performance outcomes across various applications"
+    }
+  },
+  {
+    "review": {
+      "title": "Intel B580 Mini-Review",
+      "name": "madpistol",
+      "publication_date": "January 2025",
+      "summary": "I recently tested the Intel B580 (Sparkle Titan OC) and found it to be an excellent budget GPU for 1080p gaming. The GPU operates efficiently with a maximum power consumption of 150 watts and maintains a cool 62°C under full load. It lacks coil whine, offering a smoother and quieter gaming experience compared to my RTX 4090, which suffers from stutters and hitches. The B580 performs well for its price, although it struggles with 1440p and 4K gaming on modern titles.",
+      "pros": [
+        "Affordable price for performance",
+        "Low power consumption",
+        "Cool operating temperatures",
+        "No coil whine"
+      ],
+      "cons": [
+        "Limited to 1080p gaming for modern titles",
+        "Struggles with 1440p and 4K gaming"
+      ],
+      "rating": {
+        "score": 4.5,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Budget-friendly performance",
+        "Quiet and efficient operation",
+        "Gaming performance"
+      ],
+      "suggestions": [
+        "Improve performance for higher resolutions like 1440p and 4K"
+      ]
+    },
+    "product": {
+      "name": "Intel B580 (Sparkle Titan OC)",
+      "category": "Graphics Card",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": ""
+    },
+    "user_context": {
+      "use_case": "Budget-friendly gaming",
+      "technical_level": "Intermediate",
+      "experience": "Tested alongside RTX 4090 and found smoother gameplay with fewer issues"
+    }
+  },
+  {
+    "review": {
+      "title": "Get It Together, Intel: Core Ultra 9 285K CPU Review & Benchmarks",
+      "name": "Gamers Nexus",
+      "publication_date": "October 29, 2024",
+      "summary": "Gamers Nexus reviewed the Intel Core Ultra 9 285K CPU, emphasizing its strong performance in productivity tasks but criticizing its lackluster gaming results compared to AMD's Ryzen 7800X3D. Commenters noted concerns about Intel's power consumption, thermal performance, and compatibility with older motherboards. Some defended Intel, stating its advancements in productivity tasks make it ideal for specific use cases. Others highlighted AMD's superiority in gaming performance and questioned Intel's pricing strategy.",
+      "pros": [
+        "Strong performance in productivity tasks",
+        "Advancements in power efficiency compared to previous generations",
+        "Improvements in multitasking capabilities"
+      ],
+      "cons": [
+        "Underwhelming gaming performance relative to competitors",
+        "High power consumption under load",
+        "Requires new motherboard due to LGA 1851 socket",
+        "Concerns over thermal efficiency and cooling requirements"
+      ],
+      "rating": {
+        "score": 3.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Performance inconsistency",
+        "Gaming vs. productivity trade-offs",
+        "Hardware compatibility",
+        "Pricing strategy"
+      ],
+      "suggestions": [
+        "Improve gaming performance to compete with AMD's 7800X3D",
+        "Optimize thermal design for better cooling efficiency",
+        "Consider backward compatibility with older motherboards",
+        "Reevaluate pricing to reflect competitive market conditions"
+      ]
+    },
+    "product": {
+      "name": "Intel Core Ultra 9 285K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "$590-$630",
+      "release_date": "October 24, 2024",
+      "location": ""
+    },
+    "user_context": {
+      "use_case": "High-performance computing with a focus on productivity tasks and moderate gaming",
+      "technical_level": "Advanced",
+      "experience": "Mixed performance results in benchmarks, leaning towards productivity over gaming"
+    }
+  },
+  {
+    "review": {
+      "title": "Intel Core Ultra 200S Review Thread",
+      "name": "Draugoth",
+      "publication_date": "October 24, 2024",
+      "summary": "The Intel Core Ultra 200S series, codenamed Arrow Lake S, introduces significant advancements in multithreaded performance and energy efficiency. However, gaming performance has regressed compared to previous generations, and the requirement for a new motherboard with Socket LGA1851 may deter potential upgraders.",
+      "pros": [
+        "Excellent performance in heavy multithreaded applications",
+        "Improved energy efficiency",
+        "Enhanced integrated GPU performance",
+        "Support for PCIe Gen 5 SSDs without compromising GPU bandwidth",
+        "Unlocked overclocking capabilities",
+        "Advanced memory support, exceeding DDR5-8000",
+        "Inclusion of Neural Processing Unit (NPU) for AI tasks",
+        "Manufactured using a 3nm process"
+      ],
+      "cons": [
+        "Gaming performance lower than expected, slower than Raptor Lake",
+        "Some applications exhibit subpar performance",
+        "Requires new motherboard with Socket LGA1851",
+        "No support for DDR4 memory",
+        "Lacks AVX-512 support"
+      ],
+      "rating": {
+        "score": 3.5,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Performance in productivity vs. gaming",
+        "Hardware compatibility and upgrade requirements",
+        "Energy efficiency improvements",
+        "Integrated GPU advancements"
+      ],
+      "suggestions": [
+        "Enhance gaming performance to meet or exceed previous generations",
+        "Address application-specific performance issues",
+        "Consider broader memory support to accommodate various user needs",
+        "Reintroduce AVX-512 support for workloads that benefit from it"
+      ]
+    },
+    "product": {
+      "name": "Intel Core Ultra 200S Series (Arrow Lake S)",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "October 24, 2024",
+      "location": ""
+    },
+    "user_context": {
+      "use_case": "High-performance computing with a focus on multithreaded applications; moderate gaming",
+      "technical_level": "Advanced",
+      "experience": "Seeking efficient processors with strong productivity performance; concerns about gaming performance regression"
+    }
+  },
+  {
+    "review": {
+      "title": "Intel Core i9-13900K Review",
+      "name": "Anonymous",
+      "publication_date": "",
+      "summary": "The Intel Core i9-13900K is a high-performance processor from Intel's 13th generation Raptor Lake series. It offers significant improvements in clock speeds and core counts over its predecessors, delivering exceptional performance in both gaming and productivity tasks. However, it comes with increased power consumption and heat generation, necessitating robust cooling solutions.",
+      "pros": [
+        "Exceptional performance in gaming and productivity",
+        "Increased core counts and higher clock speeds",
+        "Supports latest technologies and standards"
+      ],
+      "cons": [
+        "High power consumption",
+        "Generates substantial heat",
+        "Premium pricing"
+      ],
+      "rating": {
+        "score": 4.5,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Performance",
+        "Power Efficiency",
+        "Thermal Management",
+        "Value for Money"
+      ],
+      "suggestions": [
+        "Consider investing in a high-quality cooling solution",
+        "Ensure your power supply can handle increased power demands",
+        "Evaluate if the performance gains justify the cost for your specific use case"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i9-13900K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": ""
+    },
+    "user_context": {
+      "use_case": "High-end gaming and professional workloads",
+      "technical_level": "Advanced",
+      "experience": "Seeking top-tier performance with awareness of power and cooling requirements"
+    }
+  },
+  {
+    "review": {
+      "title": "Intel Arc A770 - Intel is on the Right Track",
+      "name": "CornFlakes1991",
+      "publication_date": "October 2024",
+      "summary": "I reviewed the Intel Arc A770 Phantom Gaming 16GB OC from ASRock, nearly two years after its release. Initially plagued with driver issues, Intel has made significant improvements, resulting in a competitive mid-range GPU. The card performs well in modern games at 1080p and 1440p, with stable drivers and efficient power usage. However, it struggles with older DirectX versions and lacks support for certain features like AV1 encoding.",
+      "pros": [
+        "Competitive performance in modern games at 1080p and 1440p",
+        "Stable drivers after multiple updates",
+        "Efficient power usage",
+        "Attractive design with RGB lighting"
+      ],
+      "cons": [
+        "Performance issues with older DirectX versions",
+        "Lack of support for AV1 encoding",
+        "Limited availability in some regions"
+      ],
+      "rating": {
+        "score": 4.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Driver improvements over time",
+        "Mid-range GPU market competition",
+        "Performance in modern vs. older games"
+      ],
+      "suggestions": [
+        "Continue driver optimizations for older DirectX versions",
+        "Expand feature support to include AV1 encoding",
+        "Improve global availability"
+      ]
+    },
+    "product": {
+      "name": "Intel Arc A770 Phantom Gaming 16GB OC",
+      "category": "Graphics Card",
+      "manufacturer": "ASRock",
+      "price": "",
+      "release_date": "October 2022",
+      "location": ""
+    },
+    "user_context": {
+      "use_case": "Gaming at 1080p and 1440p resolutions",
+      "technical_level": "Intermediate",
+      "experience": "Seeking a mid-range GPU with stable drivers and efficient performance"
+    }
+  },
+  {
+    "review": {
+      "title": "Intel Arc B580 Battlemage Review: A Mighty Midrange Gaming GPU",
+      "name": "Marco Chiappetta, Zak Killian",
+      "publication_date": "December 12, 2024",
+      "summary": "The Intel Arc B580, part of Intel's second-generation Arc Graphics lineup, offers significant improvements over its predecessor. It delivers excellent gaming performance, strong feature support, and comes with a competitive price point of $249. However, while the drivers have improved, they are not yet perfect, and some software functions are still missing.",
+      "pros": [
+        "Excellent gaming performance",
+        "Strong feature support",
+        "Solid new software",
+        "Understated card aesthetics",
+        "Official overclocking support"
+      ],
+      "cons": [
+        "Drivers aren't perfect yet",
+        "Missing certain software functions"
+      ],
+      "rating": {
+        "score": 4.5,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Performance improvements over previous generation",
+        "Driver stability and software support",
+        "Value for money in the midrange GPU market"
+      ],
+      "suggestions": [
+        "Continue to improve driver stability and performance",
+        "Implement missing software functions in future updates"
+      ]
+    },
+    "product": {
+      "name": "Intel Arc B580 Battlemage",
+      "category": "Graphics Card",
+      "manufacturer": "Intel",
+      "price": "$249",
+      "release_date": "December 12, 2024",
+      "location": ""
+    },
+    "user_context": {
+      "use_case": "Midrange gaming and general-purpose computing",
+      "technical_level": "Intermediate",
+      "experience": "Seeking a cost-effective GPU with strong performance and feature set"
+    }
+  },
+  {
+    "review": {
+      "title": "Intel Core i9-14900KS Review Roundup",
+      "name": "Jon Martindale",
+      "publication_date": "March 14, 2024",
+      "summary": "The Intel Core i9-14900KS is a 'Special Edition' processor that pushes performance boundaries with a 6.2GHz clock speed out of the box. While it offers impressive speed, it comes with increased power consumption and heat generation, making it suitable for enthusiasts who prioritize performance over efficiency.",
+      "pros": [
+        "Unprecedented 6.2GHz clock speed",
+        "Exceptional performance in gaming and productivity tasks",
+        "Maintains Intel's competitive edge in high-end CPUs"
+      ],
+      "cons": [
+        "High power consumption",
+        "Significant heat generation requiring robust cooling solutions",
+        "Premium pricing compared to other high-end processors"
+      ],
+      "rating": {
+        "score": 4.5,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Performance",
+        "Power Efficiency",
+        "Thermal Management",
+        "Value for Money"
+      ],
+      "suggestions": [
+        "Ensure adequate cooling solutions to manage heat",
+        "Consider power supply capacity to accommodate increased consumption",
+        "Evaluate cost-to-performance benefits based on individual needs"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i9-14900KS",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "March 14, 2024",
+      "location": ""
+    },
+    "user_context": {
+      "use_case": "High-end gaming and professional workloads",
+      "technical_level": "Advanced",
+      "experience": "Enthusiasts seeking top-tier performance with awareness of power and cooling requirements"
+    }
+  },
+  {
+    "review": {
+      "title": "AMD Ryzen vs Intel for Gaming and Beyond",
+      "name": "Jae Alexis Lee",
+      "publication_date": "2017",
+      "summary": "I expressed my thoughts on Ryzen's strengths and weaknesses in gaming versus productivity tasks. While Ryzen offers fantastic performance in 3D rendering, video editing, and VFX workloads, it struggles to compete with Intel in gaming, especially in single-core performance. Ryzen's value proposition lies in its ability to handle multitasking and workloads beyond gaming.",
+      "pros": [
+        "Great performance in 3D rendering and VFX workloads",
+        "Excellent for streamers and video editors",
+        "Highly competitive price-to-performance ratio for productivity tasks"
+      ],
+      "cons": [
+        "Falls behind Intel in gaming performance, particularly single-core tasks",
+        "Issues with SMT (Simultaneous Multithreading) impacting gaming performance",
+        "Potential need for BIOS updates or software optimization to fully utilize Ryzen's capabilities"
+      ],
+      "rating": {
+        "score": 3.5,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Gaming vs productivity performance",
+        "Value for streamers and video editors",
+        "Software optimization challenges"
+      ],
+      "suggestions": [
+        "Consider Intel for gaming-focused builds",
+        "Choose Ryzen for multitasking and heavy productivity workloads",
+        "Wait for potential improvements in Ryzen's SMT and software optimizations"
+      ]
+    },
+    "product": {
+      "name": "AMD Ryzen (1st Generation)",
+      "category": "Processor",
+      "manufacturer": "AMD",
+      "price": "",
+      "release_date": "2017",
+      "location": ""
+    },
+    "user_context": {
+      "use_case": "Gaming and productivity tasks",
+      "technical_level": "Intermediate",
+      "experience": "Balancing gaming and professional workloads on the same rig"
+    }
+  },
+  {
+    "review": {
+      "title": "Good CPU, working well in gaming",
+      "name": "Andrey",
+      "publication_date": "January 8, 2024",
+      "summary": "The reviewer shares a positive experience with the Intel Core i7-13700K, highlighting its reliable performance in gaming and its ability to handle stress tests. The review is part of a comprehensive PC build focused on creating a compact gaming system.",
+      "pros": [
+        "Excellent gaming performance",
+        "Handles stress tests well in a compact build",
+        "Reliable performance for a high-end CPU"
+      ],
+      "cons": [
+        "No significant issues mentioned with the CPU itself"
+      ],
+      "rating": {
+        "score": 5.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Gaming performance",
+        "Compact PC build",
+        "High reliability"
+      ],
+      "suggestions": [
+        "Consider pairing the Intel i7-13700K with compatible components for optimal performance in compact builds"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i7-13700K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "Compact gaming system",
+      "technical_level": "Advanced",
+      "experience": "Building and testing custom PC setups with high-end components"
+    }
+  },
+  {
+    "review": {
+      "title": "Intel Core i7-12700K: A Powerful and Reliable CPU",
+      "name": "Various Users",
+      "publication_date": "2022-2025",
+      "summary": "The Intel Core i7-12700K has been consistently praised by users for its exceptional performance, reliability, and versatility across gaming and productivity tasks. Many reviewers highlighted its superior performance compared to AMD CPUs in the same price range. The CPU's energy efficiency, cooler operation, and P&E core structure make it a favorite among gamers and professionals alike. However, adequate cooling is recommended for optimal performance.",
+      "pros": [
+        "Exceptional gaming and productivity performance",
+        "Efficient energy use with P&E core architecture",
+        "Great price-to-performance ratio",
+        "Runs cooler compared to previous generations",
+        "Compatible with DDR4 and DDR5 (depending on motherboard)"
+      ],
+      "cons": [
+        "Requires a high-quality cooling solution for optimal performance",
+        "Latency on DDR4 memory is slightly higher compared to AMD setups",
+        "Amazon's shipping practices caused minor concerns for some users"
+      ],
+      "rating": {
+        "score": 5.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Gaming performance",
+        "Productivity and multitasking",
+        "Energy efficiency",
+        "Price-to-performance value"
+      ],
+      "suggestions": [
+        "Invest in a high-quality air or liquid cooler for the best thermal management",
+        "Consider DDR5 RAM for improved performance",
+        "Ensure your motherboard BIOS is updated for compatibility and stability"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i7-12700K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "Gaming and professional multitasking",
+      "technical_level": "Intermediate to Advanced",
+      "experience": "Upgrading from older AMD CPUs for improved performance and compatibility"
+    }
+  },
+  {
+    "review": {
+      "title": "Disappointing Experience with Intel Core i7-12700K",
+      "name": "Multiple Users",
+      "publication_date": "August 2024",
+      "summary": "Users report mixed experiences with the Intel Core i7-12700K. While some highlight performance issues and overheating concerns, others express frustration with Intel's poor customer service and unresolved RMA requests. The processor fails to meet expectations in multitasking and efficiency, leaving many users dissatisfied.",
+      "pros": [],
+      "cons": [
+        "Poor customer service with long wait times",
+        "Unresolved RMA requests",
+        "Underwhelming performance in multitasking",
+        "Overheating issues",
+        "High cost relative to performance"
+      ],
+      "rating": {
+        "score": 1.5,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Customer service issues",
+        "Performance dissatisfaction",
+        "Thermal management challenges",
+        "Cost-effectiveness concerns"
+      ],
+      "suggestions": [
+        "Improve customer service response times and RMA processes",
+        "Address overheating issues with better thermal design",
+        "Enhance multitasking capabilities to meet modern demands",
+        "Reevaluate pricing to align with performance delivered"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i7-12700K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "Personal computing and multitasking",
+      "technical_level": "Intermediate",
+      "experience": "Frustration with customer service and performance shortcomings"
+    }
+  },
+  {
+    "review": {
+      "title": "Good while it lasted",
+      "name": "Butterstuff",
+      "publication_date": "August 11, 2023",
+      "summary": "The reviewer faced issues with their system and eventually identified the Intel i7-12700K as the problem. After replacing all other components, the issue persisted until the CPU was swapped out. Unfortunately, the product was outside the return window, requiring the reviewer to go through Intel's warranty process.",
+      "pros": [],
+      "cons": [
+        "Product failed and caused system boot issues",
+        "Return window too short to identify the problem",
+        "Reliance on warranty process for resolution"
+      ],
+      "rating": {
+        "score": 3.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Product reliability",
+        "Warranty process challenges",
+        "System compatibility issues"
+      ],
+      "suggestions": [
+        "Extend the return window for electronics to account for troubleshooting delays",
+        "Improve quality control to avoid such failures"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i7-12700K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "System troubleshooting and gaming",
+      "technical_level": "Intermediate",
+      "experience": "Faced challenges diagnosing a boot issue caused by the CPU"
+    }
+  },
+  {
+    "review": {
+      "title": "Didn’t work for my computer",
+      "name": "Julie",
+      "publication_date": "December 27, 2022",
+      "summary": "The reviewer purchased the Intel i7-12700K as a Christmas gift for their son, but it did not work in their system. The company required the return to be processed before issuing a refund, which could take up to 30 days after receiving the item.",
+      "pros": [],
+      "cons": [
+        "CPU incompatibility with the user's system",
+        "Lengthy refund process",
+        "Poor experience with the seller's return policy"
+      ],
+      "rating": {
+        "score": 2.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "System compatibility issues",
+        "Customer service and refund policy",
+        "Gift disappointment"
+      ],
+      "suggestions": [
+        "Provide clearer compatibility guidelines for customers",
+        "Streamline the return and refund process"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i7-12700K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "Gaming and general computing",
+      "technical_level": "Beginner",
+      "experience": "Faced challenges with compatibility and refund process"
+    }
+  },
+  {
+    "review": {
+      "title": "Died after a couple of weeks of use",
+      "name": "Michael Crawford",
+      "publication_date": "October 22, 2022",
+      "summary": "The processor initially worked well for two weeks but then began crashing frequently, leading to the realization that the CPU was defective. Despite the initial disappointment, the replacement CPU has performed flawlessly since then.",
+      "pros": [
+        "Good performance initially",
+        "Replacement CPU works well"
+      ],
+      "cons": [
+        "CPU failed after two weeks",
+        "Time-consuming troubleshooting process",
+        "Outside the return window requiring RMA"
+      ],
+      "rating": {
+        "score": 1.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Product reliability",
+        "Troubleshooting challenges",
+        "Customer service and returns"
+      ],
+      "suggestions": [
+        "Test components immediately to ensure they work within the return window",
+        "Enhance quality control to prevent early failures"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i7-12700K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "Gaming and general computing",
+      "technical_level": "Intermediate",
+      "experience": "Extensive troubleshooting required to identify a defective CPU"
+    }
+  },
+  {
+    "review": {
+      "title": "Don't buy if you're a first timer",
+      "name": "Florenta Edwards",
+      "publication_date": "July 29, 2022",
+      "summary": "The CPU overheated multiple times during BIOS setup and while running certain workloads. As a first-time builder, the reviewer found the process challenging but acknowledged learning from the experience.",
+      "pros": [],
+      "cons": [
+        "Frequent overheating during initial setup",
+        "Challenging for first-time builders"
+      ],
+      "rating": {
+        "score": 3.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Thermal management issues",
+        "Challenges for beginners",
+        "Learning experience"
+      ],
+      "suggestions": [
+        "Provide better guidance for first-time builders",
+        "Ensure improved thermal performance out of the box"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i7-12700K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "Gaming and multitasking",
+      "technical_level": "Beginner",
+      "experience": "Faced challenges managing CPU overheating during setup"
+    }
+  },
+  {
+    "review": {
+      "title": "Many issues after 2 months",
+      "name": "Snir",
+      "publication_date": "May 21, 2022",
+      "summary": "The CPU performed well initially, providing great performance for gaming and productivity tasks. However, after two months, some cores failed, causing system instability. Despite good cooling and stock settings, the processor became unusable.",
+      "pros": [
+        "Great initial performance",
+        "Compatible with Linux and Windows",
+        "Suitable for various workloads like development and content creation"
+      ],
+      "cons": [
+        "Core failure after two months of use",
+        "System instability despite proper cooling",
+        "Significant inconvenience for troubleshooting"
+      ],
+      "rating": {
+        "score": 1.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Product reliability",
+        "System stability",
+        "Thermal management"
+      ],
+      "suggestions": [
+        "Enhance quality control to prevent core failures",
+        "Investigate and address causes of core degradation"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i7-12700K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "Gaming, development, and content creation",
+      "technical_level": "Intermediate",
+      "experience": "Dealt with system instability caused by core failures after two months"
+    }
+  },
+  {
+    "review": {
+      "title": "Don't trust 5 star reviews!!",
+      "name": "Jake Socks",
+      "publication_date": "January 8, 2022",
+      "summary": "The reviewer strongly advises against purchasing the Intel i7-12700K, citing poor gaming performance compared to older Intel CPUs and AMD Ryzen 5900X. Additional issues include high temperatures, difficulties finding compatible coolers due to Intel's new layout, and a lack of included cooler in the box.",
+      "pros": [],
+      "cons": [
+        "No significant gaming performance improvement over older CPUs",
+        "Higher temperatures compared to previous Intel and AMD CPUs",
+        "Compatibility issues with CPU coolers due to new layout",
+        "No included cooler for testing",
+        "Frequent socket and layout changes causing upgrade difficulties"
+      ],
+      "rating": {
+        "score": 1.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Gaming performance",
+        "Thermal management issues",
+        "Compatibility challenges",
+        "Upgrade path concerns"
+      ],
+      "suggestions": [
+        "Provide an included cooler for easier testing",
+        "Minimize unnecessary socket and layout changes",
+        "Improve thermal design for lower temperatures"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i7-12700K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "Gaming at 1440p and 4K",
+      "technical_level": "Intermediate",
+      "experience": "Frustrated by compatibility and thermal management issues with the CPU"
+    }
+  },
+  {
+    "review": {
+      "title": "No DDR5 available to buy and no upgrade path",
+      "name": "Kenshi",
+      "publication_date": "November 24, 2021",
+      "summary": "The reviewer highlights a lack of DDR5 availability, forcing them to rely on DDR4. Additionally, concerns about the CPU's high TDP and limited upgrade path make this processor a poor choice for future-proofing.",
+      "pros": [],
+      "cons": [
+        "No availability of DDR5 memory at the time of purchase",
+        "Limited upgrade path for future CPUs",
+        "High TDP may exceed capabilities of basic coolers"
+      ],
+      "rating": {
+        "score": 1.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Memory compatibility issues",
+        "Upgrade path limitations",
+        "Power and cooling requirements"
+      ],
+      "suggestions": [
+        "Ensure DDR5 memory is available at the time of product launch",
+        "Improve compatibility for future CPUs",
+        "Provide clear guidance on TDP and cooling requirements"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i7-12700K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "Gaming and general computing",
+      "technical_level": "Intermediate",
+      "experience": "Encountered challenges with memory availability and upgrade paths"
+    }
+  },
+  {
+    "review": {
+      "title": "Still A Top Option in December 2024",
+      "name": "mikecart1",
+      "publication_date": "December 28, 2024",
+      "summary": "The Intel Core i7-12700K continues to deliver reliable and consistent performance for multitasking and modern gaming in late 2024. With no crashes or overheating issues, the processor has proven to be a solid all-around performer.",
+      "pros": [
+        "Reliable 24/7 performance",
+        "No crashes or stability issues",
+        "Handles multitasking and gaming well"
+      ],
+      "cons": [
+        "Better options exist for cost-to-performance"
+      ],
+      "rating": {
+        "score": 5.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Reliability",
+        "Multitasking performance",
+        "Gaming compatibility"
+      ],
+      "suggestions": [
+        "Consider cost-to-performance comparisons if on a tight budget"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i7-12700K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "Multitasking and medium gaming workloads",
+      "technical_level": "Intermediate",
+      "experience": "Stable, crash-free operation in a newly built system"
+    }
+  },
+  {
+    "review": {
+      "title": "Intel Core i7-12700K No overclock issues here",
+      "name": "MarioG",
+      "publication_date": "December 5, 2024",
+      "summary": "After initial skepticism due to reported Intel CPU issues, the reviewer found the i7-12700K to be a reliable processor with low temperatures and high benchmark results. It was a better value than AMD options at Black Friday pricing.",
+      "pros": [
+        "Reliable performance with slight overclocking",
+        "Low operating temperatures",
+        "Good value for productivity and moderate gaming"
+      ],
+      "cons": [],
+      "rating": {
+        "score": 5.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Value for money",
+        "Productivity and multitasking",
+        "Thermal efficiency"
+      ],
+      "suggestions": [
+        "Ensure BIOS is updated for optimal performance"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i7-12700K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "Productivity-focused workloads with occasional gaming",
+      "technical_level": "Intermediate",
+      "experience": "Positive experience with slight overclocking and updated BIOS"
+    }
+  },
+  {
+    "review": {
+      "title": "An amazing CPU",
+      "name": "James Banner",
+      "publication_date": "November 30, 2024",
+      "summary": "The Intel Core i7-12700K is a powerful and energy-efficient CPU with great price-to-performance value. It is suitable for gaming, work, or general computing, making it a versatile choice even in 2024.",
+      "pros": [
+        "Amazing price-to-performance ratio",
+        "Energy efficient, no need for expensive cooling",
+        "Powerful for gaming and general workloads"
+      ],
+      "cons": [],
+      "rating": {
+        "score": 5.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Energy efficiency",
+        "Gaming and work performance",
+        "Value for money"
+      ],
+      "suggestions": [
+        "No significant improvements suggested"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i7-12700K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "Gaming, work, and general computing",
+      "technical_level": "Intermediate",
+      "experience": "Positive experience across various workloads"
+    }
+  },
+  {
+    "review": {
+      "title": "Best bang for the buck",
+      "name": "Jessie Hinton",
+      "publication_date": "October 14, 2024",
+      "summary": "The Intel Core i7-12700K is a fast and efficient processor that works well with most applications, including gaming and office tasks. It handles high-end games seamlessly, making it a great choice for its price.",
+      "pros": [
+        "Fast and efficient",
+        "Handles high-end gaming flawlessly",
+        "Compatible with most applications and GPUs"
+      ],
+      "cons": [],
+      "rating": {
+        "score": 5.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Gaming performance",
+        "Efficiency",
+        "Value for money"
+      ],
+      "suggestions": [
+        "Consider this as an alternative to i9 for non-AI workloads"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i7-12700K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "Gaming and office work",
+      "technical_level": "Intermediate",
+      "experience": "Seamless experience with gaming and productivity tasks"
+    }
+  },
+  {
+    "review": {
+      "title": "OK, BUT...",
+      "name": "Mr. Robert F. Nutter",
+      "publication_date": "June 24, 2024",
+      "summary": "The Intel i7-12700K performs reliably after initial setup challenges. The reviewer appreciated the integrated graphics for non-gaming use but was disappointed by the lack of an included cooler and difficulties installing the CPU into the socket.",
+      "pros": [
+        "Integrated graphics are useful for non-gaming purposes",
+        "Reliable performance after setup"
+      ],
+      "cons": [
+        "No included cooler",
+        "Difficult installation into the CPU socket"
+      ],
+      "rating": {
+        "score": 4.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Integrated graphics",
+        "Installation challenges",
+        "Reliability after setup"
+      ],
+      "suggestions": [
+        "Include a cooler with the CPU for convenience",
+        "Provide clearer installation instructions for the CPU socket"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i7-12700K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "General computing with no high-end gaming",
+      "technical_level": "Intermediate",
+      "experience": "Encountered minor challenges during installation but satisfied with operation"
+    }
+  },
+  {
+    "review": {
+      "title": "Thread Scheduling big.little is amazing, incredibly fast for the money, great value!",
+      "name": "Akula",
+      "publication_date": "March 31, 2024",
+      "summary": "The Intel i7-12700K's big.little architecture paired with Windows 11 provides excellent performance for demanding applications and gaming. The reviewer highlights its value when paired with DDR4 motherboards and affordable cooling solutions.",
+      "pros": [
+        "Thread scheduling architecture enhances performance",
+        "Efficient for multitasking and gaming",
+        "Great value when paired with DDR4 motherboards"
+      ],
+      "cons": [],
+      "rating": {
+        "score": 5.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Thread scheduling and architecture",
+        "Value for money",
+        "Multitasking and gaming performance"
+      ],
+      "suggestions": [
+        "Pair with a liquid cooler for optimal thermal performance",
+        "Choose DDR4 motherboards for cost efficiency"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i7-12700K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "Gaming, VR streaming, and demanding applications",
+      "technical_level": "Advanced",
+      "experience": "Positive experience with multitasking and resource-intensive applications"
+    }
+  },
+  {
+    "review": {
+      "title": "Great processor, with this you don’t need more.",
+      "name": "Luis",
+      "publication_date": "February 29, 2024",
+      "summary": "The Intel i7-12700K delivers stable and efficient performance. With customizable core usage, it excels in gaming and provides a great upgrade path for future Windows 11 adoption.",
+      "pros": [
+        "Stable temperatures with proper cooling",
+        "Customizable core usage for optimized performance",
+        "Excellent gaming performance"
+      ],
+      "cons": [
+        "Requires manual adjustments for certain games and Windows 10"
+      ],
+      "rating": {
+        "score": 5.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Gaming performance",
+        "Core customization",
+        "Stable temperatures"
+      ],
+      "suggestions": [
+        "Provide better support for older games and operating systems",
+        "Encourage use of efficient cooling solutions"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i7-12700K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "Gaming and future-proof system upgrades",
+      "technical_level": "Intermediate",
+      "experience": "Optimized gaming performance with efficient cooling and core adjustments"
+    }
+  },
+  {
+    "review": {
+      "title": "Stable, fast, and smooth",
+      "name": "Paul Chang",
+      "publication_date": "January 24, 2024",
+      "summary": "As a first-time Intel user after building with AMD for years, the reviewer was impressed with the stability, performance, and ease of overclocking the i7-12700K. They recommend careful installation and investing in a decent CPU cooler to avoid overheating. While satisfied with the purchase, they suggest spending a bit more for the i9 for better performance.",
+      "pros": [
+        "Stable and smooth performance",
+        "Easy overclocking with BIOS settings",
+        "Stays cool with a moderately priced cooler",
+        "Confidently future-proof until 2026"
+      ],
+      "cons": [
+        "Requires careful installation due to chip delicacy",
+        "No included cooler, adding to cost"
+      ],
+      "rating": {
+        "score": 5.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Stability and performance",
+        "Ease of overclocking",
+        "Future-proofing"
+      ],
+      "suggestions": [
+        "Include a cooler with the CPU for convenience",
+        "Consider investing in the i9 for extra performance"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i7-12700K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "Gaming and general-purpose computing",
+      "technical_level": "Intermediate",
+      "experience": "Smooth experience transitioning from AMD to Intel"
+    }
+  },
+  {
+    "review": {
+      "title": "Don't buy if you're a first timer",
+      "name": "Florenta Edwards",
+      "publication_date": "July 29, 2022",
+      "summary": "As a first-time builder, the reviewer faced challenges with the i7-12700K overheating during BIOS setup and certain workloads. While there are workarounds to manage the CPU's high temperatures, the reviewer found the experience frustrating and unsuitable for beginners.",
+      "pros": [],
+      "cons": [
+        "Overheating during BIOS setup and workloads",
+        "Challenging for first-time builders"
+      ],
+      "rating": {
+        "score": 3.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Thermal management issues",
+        "Challenges for beginners",
+        "Learning experience"
+      ],
+      "suggestions": [
+        "Provide better guidance and support for first-time builders",
+        "Enhance thermal performance to reduce overheating risks"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i7-12700K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "Gaming and general-purpose computing",
+      "technical_level": "Beginner",
+      "experience": "Faced challenges managing CPU overheating during setup"
+    }
+  },
+  {
+    "review": {
+      "title": "Not optimized for gaming",
+      "name": "Iddqd",
+      "publication_date": "January 16, 2024",
+      "summary": "The reviewer encountered frequent crashes while gaming on the i7-12700K due to compatibility issues with Alder Lake's architecture and certain anti-cheat software. Disabling the efficiency cores in BIOS was a workaround, but it was deemed too inconvenient. The CPU was returned, and the reviewer plans to upgrade to a 13th or 14th Gen Intel processor.",
+      "pros": [],
+      "cons": [
+        "Frequent crashes in games",
+        "Compatibility issues with anti-cheat software",
+        "Inconvenient workaround of disabling efficiency cores"
+      ],
+      "rating": {
+        "score": 2.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Gaming performance",
+        "Compatibility issues",
+        "User convenience"
+      ],
+      "suggestions": [
+        "Improve compatibility with anti-cheat software",
+        "Provide better support or guidance for gamers facing these issues"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i7-12700K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "Canada"
+    },
+    "user_context": {
+      "use_case": "Gaming",
+      "technical_level": "Intermediate",
+      "experience": "Faced frequent crashes due to architectural compatibility issues"
+    }
+  },
+  {
+    "review": {
+      "title": "Didn’t work for my computer",
+      "name": "Julie",
+      "publication_date": "December 27, 2022",
+      "summary": "The Intel i7-12700K was purchased as a Christmas gift but did not work with the intended computer. The company required the product to be returned before issuing a refund, which could take up to 30 days, leaving the reviewer dissatisfied with the overall experience.",
+      "pros": [],
+      "cons": [
+        "Incompatibility with the intended computer",
+        "Lengthy refund process"
+      ],
+      "rating": {
+        "score": 2.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Product compatibility",
+        "Customer service experience"
+      ],
+      "suggestions": [
+        "Provide clearer compatibility guidelines for potential buyers",
+        "Streamline the refund process to improve customer experience"
+      ]
+    },
+    "product": {
+      "name": "Intel Core i7-12700K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "Gaming and general computing",
+      "technical_level": "Beginner",
+      "experience": "Encountered compatibility issues and faced challenges with the refund process"
+    }
+  },
+  {
+    "review": {
+      "title": "5.8 Daily up to 6.2GHz 8200mts CL38 Daily Driver",
+      "name": "Deven",
+      "publication_date": "April 4, 2024",
+      "summary": "The Intel Core i9-14900K is a top-tier processor designed for experienced enthusiasts who can fully utilize its advanced tuning capabilities. With exceptional multitasking, gaming, and memory performance, the CPU shines when paired with proper cooling and overclocking knowledge. However, its complexity and high demands make it unsuitable for beginners or casual users.",
+      "pros": [
+        "Unparalleled performance when properly tuned, including the ability to run at 5.8GHz daily with boosts up to 6.2GHz.",
+        "Excellent gaming and multitasking capabilities due to its high core and thread counts, supporting demanding workloads and advanced applications.",
+        "Supports high-speed DDR5 RAM (8200-8400MT/s CL38), with low latency and high bandwidth for intensive tasks like stress testing and memory-heavy applications.",
+        "Customization-friendly with detailed control over voltage, core locking, and clock speeds for optimized performance and stability.",
+        "Reliable under stress testing, passing AIDA64 and burn-in workloads without stability issues when configured correctly."
+      ],
+      "cons": [
+        "Steep learning curve for optimal usage, requiring deep knowledge of overclocking, voltage management, and memory tuning.",
+        "High cooling requirements, needing advanced liquid cooling setups with specific features (e.g., 8th-gen Asetek pump and 360mm radiators).",
+        "Efficiency declines above 5.9GHz unless extreme cooling solutions are used, making higher speeds impractical for most users.",
+        "Not suitable for plug-and-play users or beginners, as improper configuration can result in instability or suboptimal performance.",
+        "Significant time investment needed for fine-tuning settings like Vcore, VccSA, and cache voltages to achieve desired stability and efficiency."
+      ],
+      "rating": {
+        "score": 5.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Advanced overclocking capabilities",
+        "Exceptional gaming and multitasking performance",
+        "High technical expertise required",
+        "Critical importance of cooling and voltage management"
+      ],
+      "suggestions": [
+        "Clearly communicate the CPU’s suitability for advanced users in marketing materials to avoid confusion among beginners.",
+        "Provide official guides or software to simplify the tuning process for less experienced users who still want high performance.",
+        "Offer bundled options or recommendations for compatible high-end cooling solutions and RAM for out-of-the-box performance."
+      ]
+    },
+    "product": {
+      "name": "Intel Core i9-14900K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "Gaming, multitasking, and advanced overclocking",
+      "technical_level": "Advanced",
+      "experience": "Expert-level understanding of overclocking, voltage management, memory tuning, and cooling setups"
+    }
+  },
+  {
+    "review": {
+      "title": "IF YOU WANT THE AIR COOLED OPTION",
+      "name": "JZ the reviewer",
+      "publication_date": "February 11, 2024",
+      "summary": "The Intel Core i9-14900K delivers exceptional performance for enthusiasts willing to invest in advanced cooling solutions. The reviewer highlights the feasibility of air cooling for this high-powered CPU while emphasizing the need for meticulous planning and proper components to handle its heat output. Overclocking is deemed unnecessary given its out-of-the-box performance.",
+      "pros": [
+        "Significant performance upgrade compared to older CPUs like the Intel 10980XE, offering 70-77% faster speeds on average.",
+        "Air cooling is viable with the right setup, delivering competitive temperatures similar to liquid cooling.",
+        "Excellent stock performance without requiring overclocking, achieving high Cinebench scores with manageable thermals.",
+        "Great compatibility with high-end motherboards like the MSI MEG Z790 ACE MAX, which maximizes the CPU’s capabilities.",
+        "Cost-effective for its performance, making it a strong choice for those avoiding expensive cooling setups."
+      ],
+      "cons": [
+        "Heat management is critical; improper cooling setups can result in high temperatures (up to 100°C on P-cores).",
+        "Requires careful planning for cooling solutions, including specific components like the Noctua NH-D15 and additional heatsinks.",
+        "Not suitable for beginners or casual users due to the need for advanced configuration and understanding of cooling dynamics.",
+        "Overclocking provides minimal benefits (3-4 FPS improvement) while significantly increasing thermal and power demands."
+      ],
+      "rating": {
+        "score": 5.0,
+        "scale": 5
+      },
+      "recommend": true,
+      "themes": [
+        "Air cooling feasibility",
+        "Exceptional performance at stock settings",
+        "Advanced cooling requirements",
+        "Compatibility with high-end motherboards"
+      ],
+      "suggestions": [
+        "Provide clear guidance on air cooling setups and compatible components for the 14900K.",
+        "Highlight the CPU’s strong stock performance to discourage unnecessary overclocking for most users.",
+        "Include specific recommendations for high-performance thermal grease and heatsink options in official materials."
+      ]
+    },
+    "product": {
+      "name": "Intel Core i9-14900K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "$550",
+      "release_date": "",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "Gaming and professional multitasking with advanced air cooling setups",
+      "technical_level": "Advanced",
+      "experience": "Extensive experience building PCs over 26 years, with a preference for air cooling over liquid solutions"
+    }
+  },
+  {
+    "review": {
+      "title": "Started to fail after 10 months",
+      "name": "Jonathan Pan",
+      "publication_date": "January 8, 2025",
+      "summary": "The Intel Core i9-14900K initially delivered excellent performance, excelling in video rendering and general tasks. However, after 10 months, the processor experienced significant thermal and stability issues, leading to frequent crashes and blue screens. An attempt to update the motherboard's BIOS rendered the PC non-functional, prompting the reviewer to consider switching to AMD.",
+      "pros": [
+        "Exceptional performance in video rendering and general computing during the first 10 months."
+      ],
+      "cons": [
+        "Severe thermal issues after prolonged use, with temperatures reaching 90+°C.",
+        "Frequent crashes and blue screens of death (BSOD) under load.",
+        "Updating the motherboard BIOS led to system failure, potentially damaging the CPU and motherboard.",
+        "Reliability concerns for long-term use, particularly for demanding workloads."
+      ],
+      "rating": {
+        "score": 1.0,
+        "scale": 5
+      },
+      "recommend": false,
+      "themes": [
+        "Short-term performance vs. long-term reliability",
+        "Thermal management challenges",
+        "System stability and BIOS update risks",
+        "User frustration with hardware failures"
+      ],
+      "suggestions": [
+        "Improve quality control to address long-term reliability issues.",
+        "Enhance BIOS update compatibility to prevent potential system failures.",
+        "Provide better cooling recommendations to mitigate overheating risks."
+      ]
+    },
+    "product": {
+      "name": "Intel Core i9-14900K",
+      "category": "Processor",
+      "manufacturer": "Intel",
+      "price": "",
+      "release_date": "",
+      "location": "United States"
+    },
+    "user_context": {
+      "use_case": "Video rendering and general-purpose computing",
+      "technical_level": "Intermediate",
+      "experience": "Experienced significant hardware and stability issues after 10 months of use"
+    }
+  }
+]
+  
