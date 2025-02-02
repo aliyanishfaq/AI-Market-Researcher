@@ -1,29 +1,20 @@
-app = 'agent-colony'
+# fly.toml app configuration file generated for colony-backend on 2025-02-02T04:38:58Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'colony-backend'
 primary_region = 'sjc'
 
 [build]
 
 [http_service]
-  internal_port = 8000
+  internal_port = 8080
   force_https = true
-  auto_stop_machines = true
+  auto_stop_machines = 'stop'
   auto_start_machines = true
   min_machines_running = 0
   processes = ['app']
-
-[[services]]
-  internal_port = 8000
-  protocol = "tcp"
-  processes = ["app"]
-
-  [[services.ports]]
-    port = 80
-    handlers = ["http"]
-    force_https = true
-
-  [[services.ports]]
-    port = 443
-    handlers = ["tls", "http"]
 
 [[vm]]
   memory = '1gb'
