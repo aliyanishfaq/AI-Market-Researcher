@@ -32,16 +32,21 @@ class QuestionAnalytics:
 
 
     def generate_samples(self) -> np.ndarray:
-        """Generate samples from multiple distributions"""
-        
-        print("[QuestionAnalytics][generate_samples] Starting with responses:", len(self.responses))
-        
+        """Generate samples from multiple distributions"""        
         # Pre-allocate the array for all samples
         all_samples = np.empty((len(self.responses), self.n_samples), dtype=object)
         
         for i, dist in enumerate(self.responses):
             options = np.array(list(dist.keys()))
             probs = np.array([dist[opt] for opt in options])
+            
+            # Add validation
+            total = np.sum(probs)
+            if not np.isclose(total, 1.0, rtol=1e-5):
+                print(f"[QuestionAnalytics][generate_samples] Distribution {i} sums to {total}: {dict(zip(options, probs))}")
+                # Normalize the probabilities
+                probs = probs / total
+            
             all_samples[i] = np.random.choice(options, size=self.n_samples, p=probs)
         
         return all_samples.flatten()
