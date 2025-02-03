@@ -13,3 +13,6 @@ class Question(BaseModel):
 class SurveyRequest(BaseModel):
     title: str
     questions: List[Question]
+    data_source: str = "glassdoor"
+    number_of_personas: int = 5
+    number_of_samples: int = 2000

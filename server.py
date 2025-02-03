@@ -226,21 +226,18 @@ This endpoint:
     3. Aggregates and analyzes results for each question before moving to the next
 """
 @app.post("/survey/run")
-async def run_survey(survey: SurveyRequest, data_source: str = "glassdoor", number_of_personas: int = 5, number_of_samples: int = 2000) -> Dict[str, Any]:
-    # Print the received data
+async def run_survey(survey: SurveyRequest) -> Dict[str, Any]:
     try:
-        # Get relevant personas based on data source
-        print(f"[run_survey] params: {data_source}, {number_of_personas}, {number_of_samples}, {survey}")
-        if data_source == "glassdoor":
-            persona_manager = PersonaManager(data_source)
+        print(f"[run_survey] params: {survey.data_source}, {survey.number_of_personas}, {survey.number_of_samples}, {survey}")
+        if survey.data_source == "glassdoor":
+            persona_manager = PersonaManager(survey.data_source)
         else:
-            persona_manager = PersonaManager(data_source)
+            persona_manager = PersonaManager(survey.data_source)
 
-        # Initialize services
         llm = LLMInference(persona_manager)
         config = SimulationConfig(max_parallel_personas=3, thread_pool_size=2, timeout_seconds=300)
 
-        async with SurveySimulation(llm, persona_manager, config, number_of_personas, number_of_samples) as simulation:
+        async with SurveySimulation(llm, persona_manager, config, survey.number_of_personas, survey.number_of_samples) as simulation:
             results = await simulation.run_survey(survey.questions)
         print(f"[run_survey] results: {results}")
         return results
