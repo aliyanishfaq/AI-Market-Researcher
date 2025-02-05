@@ -69,9 +69,8 @@ from tenacity import retry, stop_after_attempt, wait_exponential
 import json
 import asyncio
 import time 
-
-
-
+from transform_schema import SchemaTransformer
+from openai import AsyncAzureOpenAI
 
 
 load_dotenv()
@@ -83,6 +82,15 @@ class QuestionQualitativeAnalysis:
         gemini_api_key = os.getenv("GEMINI_API_KEY")
         genai.configure(api_key=gemini_api_key)
         self.model = genai.GenerativeModel('gemini-1.5-flash-latest')
+        self.azure_openai_api_key = os.getenv("AZURE_OPENAI_API_KEY")
+        self.azure_openai_endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
+        self.azure_openai_client = AsyncAzureOpenAI(
+            api_key=self.azure_openai_api_key, 
+            azure_endpoint = self.azure_openai_endpoint,
+            api_version = "2024-08-01-preview",
+        )
+        self.use_azure_openai = True
+
 
     async def analyze_question(self, question: str, options: List[str]) -> Dict[str, Any]:
         """Run all analyses concurrently and combine results"""
@@ -253,22 +261,48 @@ class QuestionQualitativeAnalysis:
         return "\n".join(formatted_data)
 
     @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=4, max=10))
-    async def _get_gemini_response(self, prompt: str, schema: Dict[str, Any]) -> Dict:
-        """Get structured response from Gemini"""
+    async def _get_azure_openai_response(self, prompt: str, schema: Dict[str, Any]) -> Dict:
+        """Get structured response from Azure OpenAI API."""
+        schema_transformer = SchemaTransformer()
+        wrapped_schema = schema_transformer.wrap_schema(schema, "theme", "Theme analysis schema", strict=True)
         try:
-            response = await self.model.generate_content_async(
-                prompt,
-                generation_config=genai.GenerationConfig(
-                    response_mime_type="application/json",
-                    response_schema=schema
-                )
+            response = await self.azure_openai_client.chat.completions.create(
+                model="gpt-4o-mini",
+                messages=[{"role": "user", "content": prompt}],
+                response_format={
+                    "type": "json_schema",
+                    "json_schema": wrapped_schema
+                }
             )
-            response_data = json.loads(response.text)
+            response_data = json.loads(response.choices[0].message.content)
             if isinstance(response_data, dict):
                 return response_data
             else:
-                print("Unexpected response format, returning empty dictionary.")
-                return {}
+                return {"error": "Unexpected response type"}
+        except Exception as e:
+            print(f"Gemini API error: {str(e)}")
+            return {"error": str(e)}
+        
+    @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=4, max=10))
+    async def _get_gemini_response(self, prompt: str, schema: Dict[str, Any]) -> Dict:
+        """Get structured response from Gemini"""
+        try:
+            if self.use_azure_openai:
+                return await self._get_azure_openai_response(prompt, schema)
+            else:
+                response = await self.model.generate_content_async(
+                    prompt,
+                    generation_config=genai.GenerationConfig(
+                    response_mime_type="application/json",
+                    response_schema=schema
+                    )
+                )
+                response_data = json.loads(response.text)
+                if isinstance(response_data, dict):
+                    return response_data
+                else:
+                    print("Unexpected response format, returning empty dictionary.")
+                    return {}
         except Exception as e:
             print(f"Gemini API error: {str(e)}")
             return {}  # Return empty dict for error case

@@ -13,6 +13,7 @@ from tenacity import retry, stop_after_attempt, wait_exponential
 from schema import Persona
 import time
 import asyncio
+from openai import AsyncAzureOpenAI
 load_dotenv()
 
 class SurveyMetaAnalysis:
@@ -33,11 +34,19 @@ class SurveyMetaAnalysis:
         self.response_distributions = response_distributions
         
         gemini_api_key = os.getenv("GEMINI_API_KEY")
+        self.azure_openai_api_key = os.getenv("AZURE_OPENAI_API_KEY")
+        self.azure_openai_endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
         if not gemini_api_key:
             raise ValueError("GEMINI_API_KEY environment variable is required")
             
         genai.configure(api_key=gemini_api_key)
         self.model = genai.GenerativeModel('gemini-1.5-flash-latest')
+        self.azure_openai_client = AsyncAzureOpenAI(
+            api_key=self.azure_openai_api_key, 
+            azure_endpoint = self.azure_openai_endpoint,
+            api_version = "2024-08-01-preview",
+        )
+        self.use_azure_openai = True
 
     async def analyze_persona_alignment(self) -> Dict[str, Any]:
         """Analyze how different persona types align in their responses."""
@@ -266,20 +275,41 @@ class SurveyMetaAnalysis:
         return dist_section
 
     @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=4, max=10))
-    async def _get_gemini_response(self, prompt: str) -> Dict[str, Any]:
+    async def _get_azure_openai_response(self, prompt: str) -> Dict[str, Any]:
         """Get structured response from Gemini API."""
         try:
-            response = await self.model.generate_content_async(
-                prompt,
-                generation_config=genai.GenerationConfig(
-                    response_mime_type="application/json"
-                )
+            response = await self.azure_openai_client.chat.completions.create(
+                model="gpt-4o-mini",
+                messages=[{"role": "user", "content": prompt}],
+                response_format={"type": "json_object"}
             )
-            response_data = json.loads(response.text)
+            response_data = json.loads(response.choices[0].message.content)
             if isinstance(response_data, dict):
                 return response_data
             else:
                 return {"error": "Unexpected response type"}
+        except Exception as e:
+            print(f"Gemini API error: {str(e)}")
+            return {"error": str(e)}
+        
+    @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=4, max=10))
+    async def _get_gemini_response(self, prompt: str) -> Dict[str, Any]:
+        """Get structured response from Gemini API."""
+        try:
+            if self.use_azure_openai:
+                return await self._get_azure_openai_response(prompt)
+            else:
+                response = await self.model.generate_content_async(
+                    prompt,
+                    generation_config=genai.GenerationConfig(
+                        response_mime_type="application/json"
+                    )
+                )
+                response_data = json.loads(response.text)
+                if isinstance(response_data, dict):
+                    return response_data
+                else:
+                    return {"error": "Unexpected response type"}
         except Exception as e:
             print(f"Gemini API error: {str(e)}")
             return {"error": str(e)}
