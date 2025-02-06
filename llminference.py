@@ -154,10 +154,7 @@ class LLMInference:
             try:
                 await asyncio.sleep(0.01)
                 prompt = self.persona_manager.build_prompt(persona_id=persona.id, question=question, options=options)
-                # print(f"Time taken to build prompt: {time.time() - start_time}")
-                # print(f"[LLMInference][get_ensemble_distribution] Prompt: {prompt}")
                 dist = await self.get_distribution(prompt, temp)
-                # print(f"Time taken to get distribution: {time.time() - start_time}")
                 if not dist.get("relevant"):
                     return {
                         'relevant': False,

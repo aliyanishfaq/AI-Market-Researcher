@@ -193,6 +193,209 @@ def build_employee_prompt_v4(persona: Persona, question: str, options: List[str]
 
     return prompt
 
+def build_product_reviewer_prompt_v1(persona: Persona, question: str, options: List[str]) -> str:
+    """Generate a survey simulation prompt for a product reviewer profile."""
+    prompt = f"""You are a product survey response predictor. 
+    Your task is to estimate realistic probability distributions for how a customer with the following profile might respond, acknowledging that even satisfied customers can vary their responses based on recent experiences and product usage.
+
+    Customer profile:
+    - Product: {persona.product_name} ({persona.product_category})
+    - Location: {persona.location}
+    - Rating given: {persona.rating}/5
+    - Review title: {persona.title}
+    - Positive aspects: {', '.join(persona.pros) if isinstance(persona.pros, list) else persona.pros}
+    - Negative aspects: {', '.join(persona.cons) if isinstance(persona.cons, list) else persona.cons}
+    - Key themes: {', '.join(persona.themes) if persona.themes else 'None specified'}
+    - Overall attitude: {'Recommends product' if persona.recommend else 'Does not recommend product'}
+    - Usage context: {persona.use_case}
+    - Technical expertise: {persona.technical_level}
+
+    Context from previous interactions:
+    """
+    if persona.conversation_history:
+        prompt += "The customer has previously answered the following questions:\n"
+        for hist in persona.conversation_history:
+            prompt += f"- {hist['summary']}\n"
+
+    prompt += f"""
+    Based on this information, predict the probability distribution for how this customer would answer the question: "{question}"
+
+    Account for:
+    - Their overall product satisfaction level
+    - Specific experiences mentioned in their review
+    - Technical background and use case context
+    - Pattern of likes and dislikes
+
+    Provide probabilities for each response option, ensuring they sum to 1:
+    """
+    for i, opt in enumerate(options, 1):
+        prompt += f"        {i}. {opt}\n"
+
+    prompt += """
+    Return your response in this JSON format:
+    {
+        "relevant": boolean (true if the question relates to their experience, false otherwise),
+        "option": {option1: probability, option2: probability, ...},
+        "reason": "Detailed reasoning for the assigned probabilities based on the persona"
+    }
+    
+    If the question is unrelated to the customer's experience, set "relevant": false and leave other fields as empty strings.
+    """
+
+    return prompt
+
+def build_product_reviewer_prompt_v2(persona: Persona, question: str, options: List[str]) -> str:
+    """Create a tailored prompt to simulate product reviewer survey responses."""
+    prompt = f"""You are an AI model tasked with simulating product review survey responses. 
+    Your objective is to generate probability distributions for each option based on the following customer's profile, recognizing that responses may vary depending on usage patterns and experiences.
+
+    Product review details:
+    - Product details: {persona.product_name} by {persona.manufacturer}
+    - Category: {persona.product_category}
+    - Customer location: {persona.location}
+    - Satisfaction rating: {persona.rating}/5
+    - Key benefits: {', '.join(persona.pros) if isinstance(persona.pros, list) else persona.pros}
+    - Issues encountered: {', '.join(persona.cons) if isinstance(persona.cons, list) else persona.cons}
+    - Primary themes: {', '.join(persona.themes) if persona.themes else 'None specified'}
+    - Recommendations: {', '.join(persona.suggestions) if persona.suggestions else 'None provided'}
+    - Usage scenario: {persona.use_case}
+    - Technical background: {persona.technical_level}
+
+    Previous survey responses:
+    """
+    if persona.conversation_history:
+        prompt += "The customer has previously responded as follows:\n"
+        for hist in persona.conversation_history:
+            prompt += f"- {hist['summary']}\n"
+
+    prompt += f"""
+    Given this context, simulate the probability distribution for their answer to: "{question}"
+
+    Consider these factors:
+    - Overall product satisfaction
+    - Specific experiences with the product
+    - Technical expertise level
+    - Use case requirements and expectations
+
+    List probabilities for each option below, ensuring they total 1:
+    """
+    for i, opt in enumerate(options, 1):
+        prompt += f"        {i}. {opt}\n"
+
+    prompt += """
+    Provide a response in the following JSON format:
+    {
+        "relevant": boolean (true if the question aligns with their experience, false otherwise),
+        "option": {option1: probability, option2: probability, ...},
+        "reason": "A clear explanation of how the reviewer's profile informed the distribution"
+    }
+    
+    If the question doesn't align with the reviewer's experience, set "relevant": false and leave other fields blank.
+    """
+
+    return prompt
+
+def build_product_reviewer_prompt_v3(persona: Persona, question: str, options: List[str]) -> str:
+    """Generate a probability-based survey response prediction prompt for product reviews."""
+    prompt = f"""You are a simulation model for product review surveys. 
+    Your role is to predict the probability distribution of responses a customer might give, considering their experience with the product and their technical background.
+
+    Review profile:
+    - Product info: {persona.product_name} ({persona.product_category})
+    - Review summary: {persona.summary}
+    - Experience level: {persona.technical_level}
+    - Usage pattern: {persona.use_case}
+    - Overall rating: {persona.rating}/5
+    - Highlighted features: {', '.join(persona.pros) if isinstance(persona.pros, list) else persona.pros}
+    - Reported issues: {', '.join(persona.cons) if isinstance(persona.cons, list) else persona.cons}
+    - Key themes identified: {', '.join(persona.themes) if persona.themes else 'None specified'}
+
+    Previous interactions:
+    """
+    if persona.conversation_history:
+        prompt += "Context from earlier responses:\n"
+        for hist in persona.conversation_history:
+            prompt += f"- {hist['summary']}\n"
+
+    prompt += f"""
+    Based on the above, estimate the likelihood of their response to: "{question}"
+
+    Consider:
+    - Product satisfaction level
+    - Technical expertise and usage context
+    - Specific experiences mentioned
+    - Overall sentiment patterns
+
+    Specify probabilities for each option, ensuring the total equals 1:
+    """
+    for i, opt in enumerate(options, 1):
+        prompt += f"        {i}. {opt}\n"
+
+    prompt += """
+    Deliver your output as a JSON object with the following structure:
+    {
+        "relevant": boolean (true if the question applies to their experience, false otherwise),
+        "option": {option1: probability, option2: probability, ...},
+        "reason": "Explanation of the probability distribution based on the reviewer's profile"
+    }
+    
+    If the question is irrelevant, set "relevant": false and leave other fields blank.
+    """
+
+    return prompt
+
+def build_product_reviewer_prompt_v4(persona: Persona, question: str, options: List[str]) -> str:
+    """Build a comprehensive prompt for product review survey simulation"""
+    prompt = f"""You are a survey response simulator for product reviews. 
+    Your task is to generate realistic probability distributions for how a customer with this profile would respond, considering their product experience and technical background.
+
+    Customer and product profile:
+    - Product reviewed: {persona.product_name} - {persona.product_category}
+    - Review title: {persona.title}
+    - Overall rating: {persona.rating}/5
+    - Product strengths: {', '.join(persona.pros) if isinstance(persona.pros, list) else persona.pros}
+    - Product weaknesses: {', '.join(persona.cons) if isinstance(persona.cons, list) else persona.cons}
+    - Technical proficiency: {persona.technical_level}
+    - Main themes: {', '.join(persona.themes) if persona.themes else 'None specified'}
+    - Suggested improvements: {', '.join(persona.suggestions) if persona.suggestions else 'None provided'}
+
+    Previous response history:
+    """
+    if persona.conversation_history:
+        prompt += "The reviewer has provided these previous responses:\n"
+        for hist in persona.conversation_history:
+            prompt += f"- {hist['summary']}\n"
+
+    prompt += f"""
+    Based on this profile, simulate the probability distribution for how this customer would respond to: "{question}"
+
+    Consider:
+    - Technical background and expertise level
+    - Specific product experiences described
+    - Overall satisfaction and rating given
+    - Key themes and suggestions mentioned
+    
+    Provide probabilities for each option, ensuring they sum to 1:
+    """
+    for i, opt in enumerate(options, 1):
+        prompt += f"        {i}. {opt}\n"
+
+    prompt += """
+    Return a JSON object with:
+    {
+        "relevant": boolean (true if question relates to their product experience, false otherwise),
+        "option": {option1: probability, option2: probability, ...},
+        "reason": "Detailed explanation of why this distribution makes sense for this reviewer"
+    }
+    
+    If the question is not relevant to the reviewer's experience, set "relevant": false and leave other fields as empty strings.
+    """
+
+    return prompt
+
+
+
+
 def build_employee_personality_summary_prompt(persona: Persona) -> str:
     """Generate a prompt to summarize an employee's personality based on their profile."""
     
@@ -232,4 +435,50 @@ def build_employee_personality_summary_prompt(persona: Persona) -> str:
 
     return prompt
 
+def build_product_reviewer_personality_summary_prompt(persona: Persona) -> str:
+    """Generate a prompt to summarize a product reviewer's personality based on their review profile."""
+    prompt = """You are part of a team running simulations with personalities for survey analysis.
+    You will be provided certain attributes of a persona/their responses or thoughts on something.
+    You will be asked to summarize the personality of the persona based on the provided attributes.
+
+    Your response should be a summary of the personality of the persona in 20 WORDS or less.
+    """
+
+    prompt += f"""
+    The attributes are:
+    - Name: {persona.name}
+    - Product reviewed: {persona.product_name} ({persona.product_category})
+    - Location: {persona.location}
+    - Rating given: {persona.rating}/5
+    - Review title: {persona.title}
+    """
+
+    if persona.pros:
+        pros = ', '.join(persona.pros) if isinstance(persona.pros, list) else persona.pros
+        prompt += f"- Positive aspects: {pros}\n"
+    
+    if persona.cons:
+        cons = ', '.join(persona.cons) if isinstance(persona.cons, list) else persona.cons
+        prompt += f"- Negative aspects: {cons}\n"
+
+    if persona.themes:
+        themes = ', '.join(persona.themes)
+        prompt += f"- Key themes: {themes}\n"
+
+    sentiment = []
+    if persona.recommend is not None and not persona.recommend:
+        sentiment.append("Does not recommend product")
+    if persona.technical_level:
+        prompt += f"- Technical expertise: {persona.technical_level}\n"
+    if persona.use_case:
+        prompt += f"- Use case: {persona.use_case}\n"
+
+    if sentiment:
+        prompt += f"- Overall sentiment: {', '.join(sentiment)}\n"
+
+    if persona.suggestions:
+        suggestions = ', '.join(persona.suggestions)
+        prompt += f"- Suggested improvements: {suggestions}\n"
+
+    return prompt
 

@@ -1,7 +1,7 @@
 from typing import List, Dict, Any, Literal, Union
 from typing_extensions import TypedDict
 from pydantic import BaseModel
-import enum
+from enum import Enum
 
 class Persona(BaseModel):
     id: str
@@ -19,15 +19,15 @@ class Persona(BaseModel):
     business_outlook: Union[bool, None] = None
     
     # Fields specific to product reviews
+    product_name: Union[str, None] = None  # Make optional
+    product_category: Union[str, None] = None  # Make optional
+    manufacturer: Union[str, None] = None  # Make optional
+    use_case: Union[str, None] = None  # Make optional
+    technical_level: Union[str, None] = None  # Make optional
     pros: Union[List[str], str]  # Use Union for type unions
     cons: Union[List[str], str]  # Use Union for type unions
     themes: Union[List[str], None] = None
     suggestions: Union[List[str], None] = None
-    
-    # Product-specific fields
-    product: Union[Dict[str, Any], None] = None  # Use Union for type unions
-    user_context: Union[Dict[str, Any], None] = None  # Use Union for type unions
-    publication_date: Union[str, None] = None  # Use Union for type unions
     
     # Common fields that might have different names
     advice_to_management: Union[str, None] = None  # Use Union for type unions
@@ -41,6 +41,10 @@ class Persona(BaseModel):
         """Determine if the object is an employee or product review"""
         return "employee" if self.role is not None else "product"
 
+
+class PersonaType(Enum):
+    INTEL_EMPLOYEE = "intel_employee"
+    INTEL_PRODUCT_REVIEWER = "intel_product_reviewer"
 
 
 # Schemas for Gemini qualitative analytics

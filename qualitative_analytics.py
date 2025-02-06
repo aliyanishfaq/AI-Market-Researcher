@@ -280,7 +280,7 @@ class QuestionQualitativeAnalysis:
             else:
                 return {"error": "Unexpected response type"}
         except Exception as e:
-            print(f"Gemini API error: {str(e)}")
+            print(f"Azure OpenAI API error: {str(e)}")
             return {"error": str(e)}
         
     @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=4, max=10))

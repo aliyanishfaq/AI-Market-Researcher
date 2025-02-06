@@ -1,6 +1,7 @@
 """
 This file is used to analyze the survey data and generate insights about the survey.
 ROUGH CODE: NOT VERIFIED FOR USEFULNESS
+The API endpoint is changed to Azure OpenAI API from Gemini API.
 """
 
 
@@ -19,7 +20,7 @@ load_dotenv()
 class SurveyMetaAnalysis:
     """
     Analyzes overall survey patterns and persona alignments across all questions.
-    Uses Gemini API for generating structured insights about survey-wide patterns.
+    Uses Azure OpenAI API for generating structured insights about survey-wide patterns.
     """
     
     def __init__(self, persona_data: List[Dict[str, Any]], response_distributions: List[Dict[str, Any]]):
@@ -77,7 +78,7 @@ class SurveyMetaAnalysis:
             "alignment_patterns": [
                 {{
                     "group": string,
-                    "score": number,
+                    "score": number (0-1),
                     "size": number,
                     "common_traits": List[string]
                 }}
@@ -113,14 +114,14 @@ class SurveyMetaAnalysis:
         Return a JSON object with:
         {{
             "overall_consistency": {{
-                "score": number,
-                "confidence_level": number,
+                "score": number (0-1),
+                "confidence_level": number (0-1),
                 "influential_factors": List[string]
             }},
             "consistency_by_group": [
                 {{
                     "group": string,
-                    "consistency_score": number,
+                    "consistency_score": number (0-1),
                     "pattern_description": string
                 }}
             ],
@@ -128,7 +129,7 @@ class SurveyMetaAnalysis:
                 {{
                     "trend_description": string,
                     "affected_groups": List[string],
-                    "significance": number
+                    "significance": number (0-1)
                 }}
             ]
         }}
@@ -159,7 +160,7 @@ class SurveyMetaAnalysis:
                 {{
                     "role_type": string,
                     "key_patterns": List[string],
-                    "sentiment_score": number
+                    "sentiment_score": number (0-1)
                 }}
             ],
             "experience_level_insights": [
@@ -172,7 +173,7 @@ class SurveyMetaAnalysis:
             "demographic_correlations": [
                 {{
                     "factor": string,
-                    "correlation_strength": number,
+                    "correlation_strength": number (0-1),
                     "description": string
                 }}
             ]
@@ -206,20 +207,20 @@ class SurveyMetaAnalysis:
                 {{
                     "title": string,
                     "description": string,
-                    "significance": number,
+                    "significance": number (0-1),
                     "supporting_data": string
                 }}
             ],
             "statistical_metrics": {{
-                "confidence_level": number,
-                "margin_of_error": number,
-                "response_quality_score": number
+                "confidence_level": number (0-1),
+                "margin_of_error": number (0-1),
+                "response_quality_score": number (0-1)
             }},
             "recommendations": [
                 {{
                     "title": string,
                     "description": string,
-                    "priority": number
+                    "priority": number (0-1)
                 }}
             ]
         }}
@@ -287,10 +288,10 @@ class SurveyMetaAnalysis:
             if isinstance(response_data, dict):
                 return response_data
             else:
+                print(f"[SurveyMetaAnalysis][_get_azure_openai_response] response_data is not a dictionary: {response_data}")
                 return {"error": "Unexpected response type"}
         except Exception as e:
-            print(f"Gemini API error: {str(e)}")
-            return {"error": str(e)}
+            return {"[SurveyMetaAnalysis][_get_azure_openai_response] error": str(e)}
         
     @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=4, max=10))
     async def _get_gemini_response(self, prompt: str) -> Dict[str, Any]:

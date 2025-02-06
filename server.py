@@ -19,6 +19,9 @@ from llminference import LLMInference
 from typing import Dict, Any, List
 from survey_simulation import SurveySimulation, SimulationConfig
 from personas import PersonaManager
+from schema import PersonaType
+from ask_endpoint.ask_prompts import AskPromptManager
+from ask_endpoint.persona_loader import PersonaLoader
 
 load_dotenv()
 
@@ -33,16 +36,16 @@ app.add_middleware(
     allow_headers=["*"],  # Allows all headers
 )
 
-with open('glassdoor.json', 'r') as f:
-    PERSONAS = json.load(f)
-
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 openai_client = AsyncOpenAI(api_key=OPENAI_API_KEY)
+prompt_manager = AskPromptManager()
+persona_loader = PersonaLoader()
 
 class QuestionRequest(BaseModel):
     persona_index: int
     question: str
-
+    persona_type: PersonaType
+    
 class Response(BaseModel):
     response: str
     name: str
@@ -55,8 +58,9 @@ class Response(BaseModel):
     advice_to_management: str
 
 class ResponseAnalysisRequest(BaseModel):
-    responses: List[Response]
+    responses: List[Dict[str, Any]]  # Make this generic to accept any response structure
     question: str
+    persona_type: PersonaType
 
 @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=4, max=10), reraise=True)
 async def make_openai_request(prompt: str):
@@ -75,11 +79,14 @@ async def root():
 
 # Endpoint to Get All Personas
 @app.get("/personas", response_model=List[dict])
-async def get_persona(persona_index: int):
+async def get_persona(persona_type: PersonaType):
     """
     Returns the persona with the given index.
     """
-    return PERSONAS[persona_index] or {"error": "Persona not found"}
+    try:
+        return persona_loader.get_personas(persona_type.value)
+    except ValueError as e:
+        raise HTTPException(status_code=404, detail=str(e))
 
 
 # Endpoint to Ask a Question to a Persona
@@ -88,39 +95,17 @@ async def ask_persona(request: QuestionRequest):
     """
     Handles user questions for a specific persona via OpenAI API.
     """
-    # Validate Persona Index
-    if request.persona_index < 0 or request.persona_index >= len(PERSONAS):
-        raise HTTPException(status_code=404, detail="Persona not found")
+    try:
+        # Get persona using PersonaLoader
+        persona = persona_loader.get_persona(request.persona_type.value, request.persona_index)
+    except ValueError as e:
+        raise HTTPException(status_code=404, detail=str(e))
 
-    # Fetch the Persona
-    persona = PERSONAS[request.persona_index]
-
-    # Construct Prompt for OpenAI
-    prompt = f"""
-    You are tasked with assuming the role of an employee at a company like Intel. 
-    Your profile:
-    - Role: {persona.get('role')} in {persona.get('location')}
-    - Work experience: {persona.get('employment_status')}
-    - Pros of your job: {persona.get('pros')}
-    - Cons of your job: {persona.get('cons')}
-    - Rating of the company: {persona.get('rating')}/5
-    - You {'' if persona.get('recommend') else 'do not '}recommend working at this company.
-    - Advice to management: {persona.get('advice_to_management')}
-
-    Respond to this question: "{request.question}". You are supposed to respond in the writing style of a person with this profile. Take into account the persona's writing style, tone, and vocabulary.
-
-    **Ground Rules:**
-    1. ONLY use the provided profile information to answer the question.
-    2. DO NOT make up additional information beyond what is given.
-    3. Your response must feel like it is written by someone with this profile.
-    4. If the persona lacks information to answer the question directly, acknowledge it and suggest a response based on what is known.
-    5. If the question is not related to the persona's profile, politely decline to answer.
-    Provide your response in the following JSON format:
-    {{
-        "response": "Your in-character response to the question"
-    }}
-    """
-
+    try:
+        prompt = prompt_manager.format_prompt(request.persona_type, persona, request.question)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error formatting prompt: {str(e)}")
+    
     # Send Request to OpenAI API
     try:
         response = await make_openai_request(prompt)
@@ -135,12 +120,30 @@ async def ask_persona(request: QuestionRequest):
 @app.post("/analyze_responses")
 async def analyze_responses(request: ResponseAnalysisRequest):
     try:
-        # Format responses correctly using dot notation
-        formatted_responses = [
-            f"Response {i+1}: {resp.response} (from {resp.name}, {resp.role}, {resp.date})" 
-            for i, resp in enumerate(request.responses)
-        ]
-        
+        # Format responses based on persona type
+        formatted_responses = []
+        for i, resp in enumerate(request.responses):
+            if request.persona_type == PersonaType.INTEL_EMPLOYEE:
+                formatted_response = (
+                    f"Response {i+1}: {resp.get('response')} "
+                    f"Date: {resp.get('date')}"
+                    f"(from {resp.get('name')}, {resp.get('role')}, {resp.get('location')}, "
+                    f"Rating: {resp.get('rating')})"
+                )
+            elif request.persona_type == PersonaType.INTEL_PRODUCT_REVIEWER:
+                formatted_response = (
+                    f"Response {i+1}: {resp.get('response')} "
+                    f"Date: {resp.get('date')}"
+                    f"(Product: {resp.get('product_name')}, "
+                    f"User: {resp.get('name')}, "
+                    f"Technical Level: {resp.get('technical_level')})"
+                )
+            else:
+                raise HTTPException(status_code=400, detail=f"Unsupported persona type: {request.persona_type}")
+            
+            formatted_responses.append(formatted_response)
+
+        # Rest of the analysis logic remains the same
         analysis_prompt = (
             f"Analyze these responses to: \"{request.question}\"\n\n"
             f"Responses with their timestamps and details:\n"
@@ -228,11 +231,11 @@ This endpoint:
 @app.post("/survey/run")
 async def run_survey(survey: SurveyRequest) -> Dict[str, Any]:
     try:
-        print(f"[run_survey] params: {survey.data_source}, {survey.number_of_personas}, {survey.number_of_samples}, {survey}")
-        if survey.data_source == "glassdoor":
-            persona_manager = PersonaManager(survey.data_source)
+        print(f"[run_survey] params: {survey.persona_type}, {survey.number_of_personas}, {survey.number_of_samples}, {survey}")
+        if survey.persona_type == PersonaType.INTEL_EMPLOYEE:
+            persona_manager = PersonaManager(survey.persona_type)
         else:
-            persona_manager = PersonaManager(survey.data_source)
+            persona_manager = PersonaManager(survey.persona_type)
 
         llm = LLMInference(persona_manager)
         config = SimulationConfig(max_parallel_personas=3, thread_pool_size=2, timeout_seconds=300)
@@ -252,4 +255,4 @@ async def run_survey(survey: SurveyRequest) -> Dict[str, Any]:
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000, reload=False) # change to False in production
+    uvicorn.run(app, host="0.0.0.0", port=8000, reload=True) # change to False in production

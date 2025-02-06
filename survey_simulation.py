@@ -60,15 +60,11 @@ class SurveySimulation:
             options_text = [option.text for option in options]
             await asyncio.sleep(0.01)
             personality_summary_prompt = self.persona_manager.get_personality_summary_prompt(persona_id=persona.id)
-
             personality_summary = await self.llm.get_personality_summary(prompt=personality_summary_prompt)
-
             self.persona_manager.update_personality_summary(persona_id=persona.id, personality_summary=personality_summary)
-
             try:
                 response = await self.llm.get_ensemble_distribution(persona=persona, question=question_text, options=options_text)
             except Exception as e:
-                print(f"[SurveySimulation][_process_persona_question] Error: {str(e)}")
                 response = None
 
             if response and response['relevant']:
@@ -97,6 +93,10 @@ class SurveySimulation:
             }
             
         except Exception as e:
+            import traceback
+            error_trace = traceback.format_exc()
+            print(f"[SurveySimulation][_process_persona_question] Error: {str(e)}")
+            print(f"[SurveySimulation][_process_persona_question] Error traceback: {error_trace}")
             return {
                 "persona_id": persona.id,
                 "personality_summary": "",
@@ -171,6 +171,7 @@ class SurveySimulation:
                     self.status.completed_personas -= 1
         # Analyze responses
         await asyncio.sleep(0.01)
+
         analysis = await self._analyze_question_responses(all_responses, question_text, options)
         
         if asyncio.iscoroutine(analysis):
@@ -267,5 +268,8 @@ class SurveySimulation:
             return final_result
             
         except Exception as e:
+            import traceback
+            error_trace = traceback.format_exc()
             print(f"[SurveySimulation][run_survey] Fatal error: {str(e)}")
+            print(f"[SurveySimulation][run_survey] Fatal error Full traceback:\n{error_trace}")
             raise

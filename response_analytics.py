@@ -86,11 +86,18 @@ class QuestionAnalytics:
             
         return stats_dict
 
-    def calculate_categorical_metrics(self) -> Dict:
+    def calculate_categorical_metrics(self, stats: Dict) -> Dict:
         """Calculate metrics appropriate for categorical data"""
-        stats = self.calculate_basic_stats()
+        if not stats["frequencies"]:
+            print("WARNING: Empty frequencies dictionary")
+            return {
+                "mode": None,
+                "mode_frequency": 0,
+                "mode_percentage": 0,
+                "distribution": {},
+                "total_responses": 0
+            }
         
-        # Find mode (most common response)
         mode = max(stats["frequencies"].items(), key=lambda x: x[1])
         
         # Calculate diversity of responses
@@ -98,11 +105,11 @@ class QuestionAnalytics:
         entropy = -sum(p * np.log(p) if p > 0 else 0 for p in props)
         
         return {
-            "most_common_response": {
-                "option": mode[0],
-                "frequency": mode[1],
-                "proportion": stats["proportions"][mode[0]]
-            },
+            "mode": mode[0],
+            "mode_frequency": mode[1],
+            "mode_percentage": stats["proportions"][mode[0]],
+            "distribution": stats["frequencies"],
+            "total_responses": stats["total_responses"],
             "response_entropy": entropy,  # Higher means more diverse responses
             "number_of_options_chosen": len(stats["frequencies"])
         }
@@ -149,14 +156,18 @@ class QuestionAnalytics:
 
     def calculate_polarization(self, ordered_options: List[str]) -> Dict:
         """Calculate polarization metrics for Likert scales"""
+        print(f"[QuestionAnalytics][calculate_polarization] ordered_options: {ordered_options}")
         if self.combined_samples is None:
             self.combined_samples = self.generate_samples()
             
         n_options = len(ordered_options)
         
-        # Create scale mapping from options to numeric values
+        # Convert ordered_options to strings and create scale mapping
+        ordered_options = [str(opt) for opt in ordered_options]  # Convert to strings
         scale = {opt: i/(n_options-1) for i, opt in enumerate(ordered_options)}
-        numeric_samples = [scale[s] for s in self.combined_samples]
+        
+        # Ensure all samples are strings before lookup
+        numeric_samples = [scale[str(s)] for s in self.combined_samples]
         
         # Calculate distance from middle
         middle = 0.5
@@ -201,7 +212,7 @@ class QuestionAnalytics:
             print(f"-- Time taken to calculate agreement metrics: {time.time() - start_time}")
         else:
             results.update({
-                "categorical_metrics": self.calculate_categorical_metrics()
+                "categorical_metrics": self.calculate_categorical_metrics(basic_stats)
             })
             print(f"-- Time taken to calculate categorical metrics: {time.time() - start_time}")
         #qualititave_analysis
