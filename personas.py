@@ -1,4 +1,4 @@
-from typing import List, Dict
+from typing import List, Dict, Tuple
 import json
 from pydantic import BaseModel
 from prompts import build_employee_prompt_v1, build_employee_prompt_v2, build_employee_prompt_v3, build_employee_prompt_v4, build_employee_personality_summary_prompt, build_product_reviewer_prompt_v1, build_product_reviewer_prompt_v2, build_product_reviewer_prompt_v3, build_product_reviewer_prompt_v4, build_product_reviewer_personality_summary_prompt
@@ -111,27 +111,27 @@ class PersonaManager:
         max_option = max(distribution.items(), key=lambda x: x[1])
         return f"When asked '{question}', leaned {int(max_option[1]*100)}% towards '{max_option[0]}'"
         
-    def _build_employee_prompt(self, persona: Persona, question: str, options: List[str]) -> str:
+    def _build_employee_prompt(self, persona: Persona, question: str, options: List[str]) -> Tuple[str, Dict]:
         """Build a prompt of employee for the LLM including persona context and conversation history"""
         selected_prompt_builder = random.choice(self.employee_prompt_variations)
         return selected_prompt_builder(persona, question, options)
 
-    def _build_product_reviewer_prompt(self, persona: Persona, question: str, options: List[str]) -> str:
+    def _build_product_reviewer_prompt(self, persona: Persona, question: str, options: List[str]) -> Tuple[str, Dict]:
         """Build a prompt of product reviewer for the LLM including persona context and conversation history"""
         selected_prompt_builder = random.choice(self.product_reviewer_prompt_variations)
         return selected_prompt_builder(persona, question, options)
 
-    def build_prompt(self, persona_id: str, question: str, options: List[str]) -> str:
+    def build_prompt(self, persona_id: str, question: str, options: List[str]) -> Tuple[str, Dict]:
         """Build a prompt for the LLM including persona context and conversation history"""
         persona = self._personas[persona_id]
         if self.persona_type == PersonaType.INTEL_EMPLOYEE:
-            prompt = self._build_employee_prompt(persona, question, options)
+            prompt, prompt_schema = self._build_employee_prompt(persona, question, options)
         elif self.persona_type == PersonaType.INTEL_PRODUCT_REVIEWER:
-            prompt = self._build_product_reviewer_prompt(persona, question, options)
+            prompt, prompt_schema = self._build_product_reviewer_prompt(persona, question, options)
         else:
             raise ValueError(f"Invalid persona type: {self.persona_type}")
 
-        return prompt
+        return prompt, prompt_schema
 
     def get_personality_summary_prompt(self, persona_id: str) -> str:
         """Get a summary of the personality of a persona"""

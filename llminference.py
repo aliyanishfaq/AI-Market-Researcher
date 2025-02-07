@@ -61,24 +61,30 @@ class LLMInference:
             # Still update the time to prevent getting stuck
             self.last_request_time = datetime.now()
 
-    async def _make_azure_openai_json_request(self, prompt: str, temperature: float):
+    async def _make_azure_openai_json_request(self, prompt: str, temperature: float, prompt_schema=None):
         response = await self.azure_openai_client.chat.completions.create(
             model="gpt-4o-mini",
-            messages=[{"role": "user", "content": prompt}],
             temperature=temperature,
-            response_format={"type": "json_object"}
+            messages=[{"role": "user", "content": prompt}],
+            response_format={
+                "type": "json_schema", 
+                "json_schema": prompt_schema
+            },
         )
         return response
     
-    async def _make_openai_json_request(self, prompt: str, temperature: float):
+    async def _make_openai_json_request(self, prompt: str, temperature: float, prompt_schema=None):
         if self.use_azure_openai:
-            response = await self._make_azure_openai_json_request(prompt, temperature)
+            response = await self._make_azure_openai_json_request(prompt, temperature, prompt_schema)
         else:
             response = await self.openai_client.chat.completions.create(
                 model="gpt-4o-mini",
-                messages=[{"role": "user", "content": prompt}],
                 temperature=temperature,
-                response_format={"type": "json_object"}
+                messages=[{"role": "user", "content": prompt}],
+                response_format={
+                    "type": "json_schema", 
+                    "json_schema": prompt_schema
+                },
             )
         try:
             json_response = json.loads(response.choices[0].message.content)
@@ -125,27 +131,34 @@ class LLMInference:
         return {k: float(v)/total for k, v in distribution.items()}
 
     @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=2, min=4, max=60), retry=retry_if_exception_type(Exception))
-    async def get_distribution(self, prompt: str, temperature: float) -> Dict[str, Any]:
+    async def get_distribution(self, prompt: str, temperature: float, prompt_schema=None) -> Dict[str, Any]:
         """Get probability distribution for options from LLM"""
-        start_time = time.time()
-        try:
-            # await self.wait_for_cooldown()
-            await asyncio.sleep(0.01)
-            response = await self._make_openai_json_request(prompt, temperature)
+        if prompt_schema:
+            try:
+                # await self.wait_for_cooldown()
+                await asyncio.sleep(0.01)
+                response = await self._make_openai_json_request(prompt, temperature, prompt_schema)
 
-            # Normalize the option distribution if it exists
-            if response.get('relevant') and 'option' in response:
-                response['option'] = self._normalize_distribution(response['option'])
-            # print(f"Time taken to get distribution: {time.time() - start_time}")
-            return response
-            
-        except Exception as e:
-            print(f"[LLMInference][get_distribution] Error: {str(e)}")
-            raise
+                # Convert array of objects into a dictionary if response is relevant
+                if response.get("relevant"):
+                    option_array = response.get("option", [])
+                    option_dict = {item["option"]: item["probability"] for item in option_array}
+                    response['option'] = option_dict
+
+                # Normalize the option distribution if it exists
+                if response.get('relevant') and 'option' in response:
+                    response['option'] = self._normalize_distribution(response['option'])
+                # print(f"Time taken to get distribution: {time.time() - start_time}")
+                return response
+
+            except Exception as e:
+                print(f"[LLMInference][get_distribution] Error: {str(e)}")
+                raise
+        else:
+            raise ValueError("Prompt schema is required")
         
     @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=8, max=32), reraise=True)
     async def get_ensemble_distribution(self, persona: Persona, question: str, options: List[str]) -> Dict[str, Any]:
-        start_time = time.time()
         """Get ensemble distribution by combining multiple calls with different temperatures"""
         distributions = []
         reasons = []  # Store reasons separately
@@ -153,15 +166,22 @@ class LLMInference:
         async def process_temperature(temp):
             try:
                 await asyncio.sleep(0.01)
-                prompt = self.persona_manager.build_prompt(persona_id=persona.id, question=question, options=options)
-                dist = await self.get_distribution(prompt, temp)
+                prompt, prompt_schema = self.persona_manager.build_prompt(persona_id=persona.id, question=question, options=options)
+                dist = await self.get_distribution(prompt, temp, prompt_schema)
                 if not dist.get("relevant"):
                     return {
                         'relevant': False,
                         'option': {},
                         'reason': 'Persona not relevant to question'
                     }
-                distributions.append(dist.get("option", {}))
+                # Handle option_array as a dictionary
+                option_dict = dist.get("option", {})
+                if not isinstance(option_dict, dict):
+                    print(f"[LLMInference][get_ensemble_distribution] Error: option_dict is not a dict. Actual type: {type(option_dict)}")
+                    print(f"option_dict content: {option_dict}")
+                    raise TypeError("option_dict is not a dict")
+                
+                distributions.append(option_dict)
                 reasons.append(dist.get("reason", ""))
             except Exception as e:
                 print(f"[LLMInference][get_ensemble_distribution] Error: {str(e)}")

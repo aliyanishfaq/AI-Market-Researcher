@@ -10,6 +10,7 @@ from openai import OpenAI
 from typing import List
 from fastapi import HTTPException
 from openai import AsyncOpenAI
+from openai import AsyncAzureOpenAI
 from httpx import Timeout
 from tenacity import retry, stop_after_attempt, wait_exponential
 import time
@@ -22,6 +23,10 @@ from personas import PersonaManager
 from schema import PersonaType
 from ask_endpoint.ask_prompts import AskPromptManager
 from ask_endpoint.persona_loader import PersonaLoader
+
+use_azure_openai = True
+azure_openai_api_key = os.getenv("AZURE_OPENAI_API_KEY")
+azure_openai_endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
 
 load_dotenv()
 
@@ -38,6 +43,12 @@ app.add_middleware(
 
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 openai_client = AsyncOpenAI(api_key=OPENAI_API_KEY)
+azure_openai_client = AsyncAzureOpenAI(
+    api_key=azure_openai_api_key, 
+    azure_endpoint = azure_openai_endpoint,
+    api_version = "2024-08-01-preview",
+)
+
 prompt_manager = AskPromptManager()
 persona_loader = PersonaLoader()
 
@@ -64,12 +75,20 @@ class ResponseAnalysisRequest(BaseModel):
 
 @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=4, max=10), reraise=True)
 async def make_openai_request(prompt: str):
-    response = await openai_client.chat.completions.create(
-        model="gpt-4o-mini",
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0.3,
-        response_format={"type": "json_object"}
-    )
+    if use_azure_openai:
+        response = await azure_openai_client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.3,
+            response_format={"type": "json_object"}
+        )
+    else:
+        response = await openai_client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.3,
+            response_format={"type": "json_object"}
+        )
     return response
 
 @app.get("/")

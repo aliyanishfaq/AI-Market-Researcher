@@ -1,7 +1,8 @@
 from schema import Persona
-from typing import List
+from typing import List, Dict, Tuple
+from pydantic import BaseModel, Field
 
-def build_employee_prompt_v1(persona: Persona, question: str, options: List[str]) -> str:
+def build_employee_prompt_v1(persona: Persona, question: str, options: List[str]) -> Tuple[str, Dict]:
     """Generate a survey simulation prompt for an employee profile."""
     prompt = f"""You are a company survey response predictor. 
     Your task is to estimate realistic probability distributions for how an employee with the following profile might respond, acknowledging that even predictable employees can vary their responses due to recent events or changes in mood.
@@ -40,16 +41,67 @@ def build_employee_prompt_v1(persona: Persona, question: str, options: List[str]
     Return your response in this JSON format:
     {
         "relevant": boolean (true if the question is related to the profile, false otherwise),
-        "option": {option1: probability, option2: probability, ...},
+        "option": [
+            {
+                "option": "option1",
+                "probability": probability
+            },
+            {
+                "option": "option2",
+                "probability": probability
+            },
+            ...
+        ],
         "reason": "Detailed reasoning for the assigned probabilities based on the persona"
     }
     
     If the question is unrelated to the employee's experience, set "relevant": false and leave other fields as empty strings.
     """
 
-    return prompt
+    schema = {
+        "name": "employee_response_v1",
+        "description": "Simulated employee survey response with probability distribution using an array of option-probability objects.",
+        "strict": True,
+        "schema": {
+            "type": "object",
+            "properties": {
+                "relevant": {
+                    "type": "boolean",
+                    "description": "True if the question relates to the employee's experience, false otherwise."
+                },
+                "option": {
+                    "type": "array",
+                    "description": "An array of objects, each representing a response option and its probability.",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "option": {
+                                "type": "string",
+                                "description": "The text of the response option."
+                            },
+                            "probability": {
+                                "type": "number",
+                                "description": "The probability assigned to this option."
+                            }
+                        },
+                        "required": ["option", "probability"],
+                        "additionalProperties": False
+                    }
+                },
+                "reason": {
+                    "type": "string",
+                    "description": "A detailed explanation of how the probability distribution was determined."
+                }
+            },
+            "required": ["relevant", "option", "reason"],
+            "additionalProperties": False
+        }
+    }
 
-def build_employee_prompt_v2(persona: Persona, question: str, options: List[str]) -> str:
+    # Return the prompt and the schema
+    return prompt, schema
+
+def build_employee_prompt_v2(persona: Persona, question: str, options: List[str]) -> Tuple[str, Dict]:
     """Create a tailored prompt to simulate employee survey responses."""
     prompt = f"""You are an AI model tasked with simulating employee survey responses. 
     Your objective is to generate probability distributions for each option based on the following employee's profile, recognizing that responses may vary depending on recent experiences or emotions.
@@ -95,9 +147,50 @@ def build_employee_prompt_v2(persona: Persona, question: str, options: List[str]
     If the question does not align with the persona, set "relevant": false and leave the other fields blank.
     """
 
-    return prompt
+    schema = {
+        "name": "employee_response_v2",
+        "description": "Simulated employee survey response with probability distribution using an array of option-probability objects.",
+        "strict": True,
+        "schema": {
+            "type": "object",
+            "properties": {
+                "relevant": {
+                    "type": "boolean",
+                    "description": "True if the question relates to the employee's experience, false otherwise."
+                },
+                "option": {
+                    "type": "array",
+                    "description": "An array of objects, each representing a response option and its probability.",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "option": {
+                                "type": "string",
+                                "description": "The text of the response option."
+                            },
+                            "probability": {
+                                "type": "number",
+                                "description": "The probability assigned to this option."
+                            }
+                        },
+                        "required": ["option", "probability"],
+                        "additionalProperties": False
+                    }
+                },
+                "reason": {
+                    "type": "string",
+                    "description": "A detailed explanation of how the probability distribution was determined."
+                }
+            },
+            "required": ["relevant", "option", "reason"],
+            "additionalProperties": False
+        }
+    }
 
-def build_employee_prompt_v3(persona: Persona, question: str, options: List[str]) -> str:
+    # Return the prompt and the schema
+    return prompt, schema
+
+def build_employee_prompt_v3(persona: Persona, question: str, options: List[str]) -> Tuple[str, Dict]:
     """Generate a probability-based survey response prediction prompt."""
     prompt = f"""You are a simulation model for employee surveys. 
     Your role is to predict the probability distribution of responses an employee might give, considering the nuances of their profile and the potential for variation influenced by recent experiences or emotional states.
@@ -143,9 +236,50 @@ def build_employee_prompt_v3(persona: Persona, question: str, options: List[str]
     If the question is irrelevant, set "relevant": false and leave the other fields blank.
     """
 
-    return prompt
+    schema = {
+        "name": "employee_response_v3",
+        "description": "Simulated employee survey response with probability distribution using an array of option-probability objects.",
+        "strict": True,
+        "schema": {
+            "type": "object",
+            "properties": {
+                "relevant": {
+                    "type": "boolean",
+                    "description": "True if the question relates to the employee's experience, false otherwise."
+                },
+                "option": {
+                    "type": "array",
+                    "description": "An array of objects, each representing a response option and its probability.",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "option": {
+                                "type": "string",
+                                "description": "The text of the response option."
+                            },
+                            "probability": {
+                                "type": "number",
+                                "description": "The probability assigned to this option."
+                            }
+                        },
+                        "required": ["option", "probability"],
+                        "additionalProperties": False
+                    }
+                },
+                "reason": {
+                    "type": "string",
+                    "description": "A detailed explanation of how the probability distribution was determined."
+                }
+            },
+            "required": ["relevant", "option", "reason"],
+            "additionalProperties": False
+        }
+    }
 
-def build_employee_prompt_v4(persona: Persona, question: str, options: List[str]) -> str:
+    # Return the prompt and the schema
+    return prompt, schema
+
+def build_employee_prompt_v4(persona: Persona, question: str, options: List[str]) -> Tuple[str, Dict]:
     """Build a prompt of employee for the LLM including persona context and conversation history"""
     prompt = f"""You are a survey response simulator for company surveys. 
     Your task is to generate realistic probability distributions for how an employee with this profile would respond, considering that even consistent employees might occasionally give different responses depending on their recent experiences and mood.
@@ -191,9 +325,50 @@ def build_employee_prompt_v4(persona: Persona, question: str, options: List[str]
     If the question is not relevant to the persona's experience, set "relevant": false and leave other fields as empty strings.
     """
 
-    return prompt
+    schema = {
+        "name": "employee_response_v4",
+        "description": "Simulated employee survey response with probability distribution using an array of option-probability objects.",
+        "strict": True,
+        "schema": {
+            "type": "object",
+            "properties": {
+                "relevant": {
+                    "type": "boolean",
+                    "description": "True if the question relates to the employee's experience, false otherwise."
+                },
+                "option": {
+                    "type": "array",
+                    "description": "An array of objects, each representing a response option and its probability.",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "option": {
+                                "type": "string",
+                                "description": "The text of the response option."
+                            },
+                            "probability": {
+                                "type": "number",
+                                "description": "The probability assigned to this option."
+                            }
+                        },
+                        "required": ["option", "probability"],
+                        "additionalProperties": False
+                    }
+                },
+                "reason": {
+                    "type": "string",
+                    "description": "A detailed explanation of how the probability distribution was determined."
+                }
+            },
+            "required": ["relevant", "option", "reason"],
+            "additionalProperties": False
+        }
+    }
 
-def build_product_reviewer_prompt_v1(persona: Persona, question: str, options: List[str]) -> str:
+    # Return the prompt and the schema
+    return prompt, schema
+
+def build_product_reviewer_prompt_v1(persona: Persona, question: str, options: List[str]) -> Tuple[str, Dict]:
     """Generate a survey simulation prompt for a product reviewer profile."""
     prompt = f"""You are a product survey response predictor. 
     Your task is to estimate realistic probability distributions for how a customer with the following profile might respond, acknowledging that even satisfied customers can vary their responses based on recent experiences and product usage.
@@ -242,9 +417,50 @@ def build_product_reviewer_prompt_v1(persona: Persona, question: str, options: L
     If the question is unrelated to the customer's experience, set "relevant": false and leave other fields as empty strings.
     """
 
-    return prompt
+    schema = {
+        "name": "product_reviewer_response_v1",
+        "description": "Simulated product reviewer survey response with probability distribution using an array of option-probability objects.",
+        "strict": True,
+        "schema": {
+            "type": "object",
+            "properties": {
+                "relevant": {
+                    "type": "boolean",
+                    "description": "True if the question relates to the customer's experience, false otherwise."
+                },
+                "option": {
+                    "type": "array",
+                    "description": "An array of objects, each representing a response option and its probability.",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "option": {
+                                "type": "string",
+                                "description": "The text of the response option."
+                            },
+                            "probability": {
+                                "type": "number",
+                                "description": "The probability assigned to this option."
+                            }
+                        },
+                        "required": ["option", "probability"],
+                        "additionalProperties": False
+                    }
+                },
+                "reason": {
+                    "type": "string",
+                    "description": "A detailed explanation of how the probability distribution was determined."
+                }
+            },
+            "required": ["relevant", "option", "reason"],
+            "additionalProperties": False
+        }
+    }
 
-def build_product_reviewer_prompt_v2(persona: Persona, question: str, options: List[str]) -> str:
+    # Return the prompt and the schema
+    return prompt, schema
+
+def build_product_reviewer_prompt_v2(persona: Persona, question: str, options: List[str]) -> Tuple[str, Dict]:
     """Create a tailored prompt to simulate product reviewer survey responses."""
     prompt = f"""You are an AI model tasked with simulating product review survey responses. 
     Your objective is to generate probability distributions for each option based on the following customer's profile, recognizing that responses may vary depending on usage patterns and experiences.
@@ -293,9 +509,50 @@ def build_product_reviewer_prompt_v2(persona: Persona, question: str, options: L
     If the question doesn't align with the reviewer's experience, set "relevant": false and leave other fields blank.
     """
 
-    return prompt
+    schema = {
+        "name": "product_reviewer_response_v2",
+        "description": "Simulated product reviewer survey response with probability distribution using an array of option-probability objects.",
+        "strict": True,
+        "schema": {
+            "type": "object",
+            "properties": {
+                "relevant": {
+                    "type": "boolean",
+                    "description": "True if the question relates to the customer's experience, false otherwise."
+                },
+                "option": {
+                    "type": "array",
+                    "description": "An array of objects, each representing a response option and its probability.",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "option": {
+                                "type": "string",
+                                "description": "The text of the response option."
+                            },
+                            "probability": {
+                                "type": "number",
+                                "description": "The probability assigned to this option."
+                            }
+                        },
+                        "required": ["option", "probability"],
+                        "additionalProperties": False
+                    }
+                },
+                "reason": {
+                    "type": "string",
+                    "description": "A detailed explanation of how the probability distribution was determined."
+                }
+            },
+            "required": ["relevant", "option", "reason"],
+            "additionalProperties": False
+        }
+    }
 
-def build_product_reviewer_prompt_v3(persona: Persona, question: str, options: List[str]) -> str:
+    # Return the prompt and the schema
+    return prompt, schema
+
+def build_product_reviewer_prompt_v3(persona: Persona, question: str, options: List[str]) -> Tuple[str, Dict]:
     """Generate a probability-based survey response prediction prompt for product reviews."""
     prompt = f"""You are a simulation model for product review surveys. 
     Your role is to predict the probability distribution of responses a customer might give, considering their experience with the product and their technical background.
@@ -342,9 +599,50 @@ def build_product_reviewer_prompt_v3(persona: Persona, question: str, options: L
     If the question is irrelevant, set "relevant": false and leave other fields blank.
     """
 
-    return prompt
+    schema = {
+        "name": "product_reviewer_response_v3",
+        "description": "Simulated product reviewer survey response with probability distribution using an array of option-probability objects.",
+        "strict": True,
+        "schema": {
+            "type": "object",
+            "properties": {
+                "relevant": {
+                    "type": "boolean",
+                    "description": "True if the question relates to the customer's experience, false otherwise."
+                },
+                "option": {
+                    "type": "array",
+                    "description": "An array of objects, each representing a response option and its probability.",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "option": {
+                                "type": "string",
+                                "description": "The text of the response option."
+                            },
+                            "probability": {
+                                "type": "number",
+                                "description": "The probability assigned to this option."
+                            }
+                        },
+                        "required": ["option", "probability"],
+                        "additionalProperties": False
+                    }
+                },
+                "reason": {
+                    "type": "string",
+                    "description": "A detailed explanation of how the probability distribution was determined."
+                }
+            },
+            "required": ["relevant", "option", "reason"],
+            "additionalProperties": False
+        }
+    }
 
-def build_product_reviewer_prompt_v4(persona: Persona, question: str, options: List[str]) -> str:
+    # Return the prompt and the schema
+    return prompt, schema
+
+def build_product_reviewer_prompt_v4(persona: Persona, question: str, options: List[str]) -> Tuple[str, Dict]:
     """Build a comprehensive prompt for product review survey simulation"""
     prompt = f"""You are a survey response simulator for product reviews. 
     Your task is to generate realistic probability distributions for how a customer with this profile would respond, considering their product experience and technical background.
@@ -391,10 +689,48 @@ def build_product_reviewer_prompt_v4(persona: Persona, question: str, options: L
     If the question is not relevant to the reviewer's experience, set "relevant": false and leave other fields as empty strings.
     """
 
-    return prompt
+    schema = {
+        "name": "product_reviewer_response_v4",
+        "description": "Simulated product reviewer survey response with probability distribution using an array of option-probability objects.",
+        "strict": True,
+        "schema": {
+            "type": "object",
+            "properties": {
+                "relevant": {
+                    "type": "boolean",
+                    "description": "True if the question relates to the customer's experience, false otherwise."
+                },
+                "option": {
+                    "type": "array",
+                    "description": "An array of objects, each representing a response option and its probability.",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "option": {
+                                "type": "string",
+                                "description": "The text of the response option."
+                            },
+                            "probability": {
+                                "type": "number",
+                                "description": "The probability assigned to this option."
+                            }
+                        },
+                        "required": ["option", "probability"],
+                        "additionalProperties": False
+                    }
+                },
+                "reason": {
+                    "type": "string",
+                    "description": "A detailed explanation of how the probability distribution was determined."
+                }
+            },
+            "required": ["relevant", "option", "reason"],
+            "additionalProperties": False
+        }
+    }
 
-
-
+    # Return the prompt and the schema
+    return prompt, schema
 
 def build_employee_personality_summary_prompt(persona: Persona) -> str:
     """Generate a prompt to summarize an employee's personality based on their profile."""
