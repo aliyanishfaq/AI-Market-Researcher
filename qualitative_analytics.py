@@ -81,7 +81,7 @@ class QuestionQualitativeAnalysis:
         
         gemini_api_key = os.getenv("GEMINI_API_KEY")
         genai.configure(api_key=gemini_api_key)
-        self.model = genai.GenerativeModel('gemini-1.5-flash-latest')
+        self.model = genai.GenerativeModel('gemini-2.0-flash-001')
         self.azure_openai_api_key = os.getenv("AZURE_OPENAI_API_KEY")
         self.azure_openai_endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
         self.azure_openai_client = AsyncAzureOpenAI(
@@ -89,7 +89,7 @@ class QuestionQualitativeAnalysis:
             azure_endpoint = self.azure_openai_endpoint,
             api_version = "2024-08-01-preview",
         )
-        self.use_azure_openai = True
+        self.use_azure_openai = False
 
 
     async def analyze_question(self, question: str, options: List[str]) -> Dict[str, Any]:

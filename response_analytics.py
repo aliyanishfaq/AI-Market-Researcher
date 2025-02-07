@@ -156,7 +156,6 @@ class QuestionAnalytics:
 
     def calculate_polarization(self, ordered_options: List[str]) -> Dict:
         """Calculate polarization metrics for Likert scales"""
-        print(f"[QuestionAnalytics][calculate_polarization] ordered_options: {ordered_options}")
         if self.combined_samples is None:
             self.combined_samples = self.generate_samples()
             

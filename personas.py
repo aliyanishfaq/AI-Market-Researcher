@@ -48,7 +48,6 @@ class PersonaManager:
                             "conversation_history": []
                         }
                     else:  # INTEL_PRODUCT_REVIEWER
-                        print(f"data: {data}")
                         review_data = data.get("review", {})
                         product_data = data.get("product", {})
                         user_context = data.get("user_context", {})

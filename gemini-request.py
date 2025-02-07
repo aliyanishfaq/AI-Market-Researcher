@@ -20,7 +20,7 @@ class SimpleResponse(typing.TypedDict):
     reason: str
 
 def test_simple_schema():
-    model = genai.GenerativeModel('gemini-1.5-pro-latest')
+    model = genai.GenerativeModel('gemini-2.0-flash-001')
     
     # Convert to OpenAPI schema
     schema = {
