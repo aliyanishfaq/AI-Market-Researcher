@@ -181,16 +181,18 @@ class SurveyMetaAnalysis:
         """
         return await self._get_gemini_response(prompt)
 
-    async def generate_key_findings(self) -> Dict[str, Any]:
+    async def generate_key_findings(self, alignment_results: Dict[str, Any] = None, consistency_results: Dict[str, Any] = None, demographic_results: Dict[str, Any] = None) -> Dict[str, Any]:
         """Generate overall key findings from the survey."""
         start_time = time.time()
         
         # Run all analysis methods concurrently
-        alignment_results, consistency_results, demographic_results = await asyncio.gather(
-            self.analyze_persona_alignment(),
-            self.analyze_response_consistency(),
-            self.analyze_demographic_insights()
-        )
+        if not alignment_results:
+            alignment_results = await self.analyze_persona_alignment()
+        if not consistency_results:
+            consistency_results = await self.analyze_response_consistency()
+        if not demographic_results:
+            demographic_results = await self.analyze_demographic_insights()
+
 
         prompt = f"""
         Generate key findings based on the following analysis results:
@@ -319,13 +321,13 @@ class SurveyMetaAnalysis:
         """Generate complete survey analysis including all aspects."""
         start_time = time.time()
         
-        # Run all analysis methods concurrently
-        key_findings, alignment_analysis, consistency_analysis, demographic_insights = await asyncio.gather(
-            self.generate_key_findings(),
+        alignment_analysis, consistency_analysis, demographic_insights = await asyncio.gather(
             self.analyze_persona_alignment(),
             self.analyze_response_consistency(),
             self.analyze_demographic_insights()
         )
+
+        key_findings = await self.generate_key_findings(alignment_analysis, consistency_analysis, demographic_insights)
         return {
             "key_findings": key_findings.get("primary_findings", []),
             "statistical_metrics": key_findings.get("statistical_metrics", {}),
