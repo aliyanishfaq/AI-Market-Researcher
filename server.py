@@ -274,4 +274,4 @@ async def run_survey(survey: SurveyRequest) -> Dict[str, Any]:
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000, reload=False) # change to False in production
+    uvicorn.run(app, host="0.0.0.0", port=8000, reload=True) # change to False in production

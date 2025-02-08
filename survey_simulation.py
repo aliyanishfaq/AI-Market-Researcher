@@ -248,11 +248,7 @@ class SurveySimulation:
             self.status.update(stage=SurveyStage.COMPLETED, message="Survey completed")
             
             start_time = time.time()
-            all_personas = self.persona_manager.get_all_personas()
-            if asyncio.iscoroutine(all_personas):
-                # Ensure coroutine is awaited
-                all_personas = await all_personas
-            survey_meta_analysis = SurveyMetaAnalysis(persona_data=all_personas, response_distributions=response_distributions)
+            survey_meta_analysis = SurveyMetaAnalysis(persona_data=self.personas[:self.number_of_personas], response_distributions=response_distributions)
             
             complete_analysis = await survey_meta_analysis.get_complete_analysis()
             await asyncio.sleep(0.01)

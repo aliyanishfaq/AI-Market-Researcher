@@ -141,7 +141,7 @@ class QuestionQualitativeAnalysis:
         Options: {', '.join(options)}
         Create a persona network by:
         1. For each persona:
-           - Identify role and experience level
+           - Identify role/experience/type of persona
            - Calculate sentiment score from responses
            - Extract key concerns and viewpoints
            - Note primary response choice
@@ -189,7 +189,7 @@ class QuestionQualitativeAnalysis:
         Options: {', '.join(options)}
         
         Create detailed response mapping:
-        1. For each experience level and response option:
+        1. For each experience level/type of persona and response option:
            - Calculate response frequency
            - Note significant patterns
            - Identify notable responses
@@ -198,7 +198,7 @@ class QuestionQualitativeAnalysis:
         4. Note experience-based trends
         
         Consider:
-        - Role/experience influence on responses
+        - Role/experience/type of persona influence on responses
         - Common reasoning patterns
         - Outlier responses
         
@@ -297,12 +297,19 @@ class QuestionQualitativeAnalysis:
                     response_schema=schema
                     )
                 )
-                response_data = json.loads(response.text)
-                if isinstance(response_data, dict):
-                    return response_data
-                else:
-                    print("Unexpected response format, returning empty dictionary.")
-                    return {}
+                try:
+                    response_data = json.loads(response.text)
+                    if isinstance(response_data, dict):
+                        return response_data
+                    else:
+                        print(f"Unexpected response format: {response.text[:200]}...")  # Print first 200 chars
+                        raise ValueError("Response was not a dictionary")
+                except json.JSONDecodeError as e:
+                    print(f"Invalid JSON response: {str(e)}")
+                    print(f"Response text preview: {response.text[:200]}...")  # Print first 200 chars
+                    raise  # Re-raise to trigger retry
         except Exception as e:
-            print(f"Gemini API error: {str(e)}")
-            return {}  # Return empty dict for error case
+            import traceback
+            print(f"[QualitativeAnalytics][_get_gemini_response] Gemini API error: {str(e)}")
+            print(f"[QualitativeAnalytics][_get_gemini_response] Traceback: {traceback.format_exc()}")
+            return {"error": str(e)}

@@ -312,7 +312,7 @@ class SurveyMetaAnalysis:
                 else:
                     return {"error": "Unexpected response type"}
         except Exception as e:
-            print(f"Gemini API error: {str(e)}")
+            print(f"[SurveyMetaAnalysis][_get_gemini_response] Gemini API error: {str(e)}")
             return {"error": str(e)}
 
     async def get_complete_analysis(self) -> Dict[str, Any]:
