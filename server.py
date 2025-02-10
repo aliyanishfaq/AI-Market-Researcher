@@ -259,7 +259,7 @@ async def run_survey(survey: SurveyRequest) -> Dict[str, Any]:
         llm = LLMInference(persona_manager)
         config = SimulationConfig(max_parallel_personas=3, thread_pool_size=2, timeout_seconds=300)
 
-        async with SurveySimulation(llm, persona_manager, config, survey.number_of_personas, survey.number_of_samples) as simulation:
+        async with SurveySimulation(llm, persona_manager, config, survey.number_of_personas, survey.number_of_samples, survey.persona_type) as simulation:
             results = await simulation.run_survey(survey.questions)
         print(f"[run_survey] results: {results}")
         return results

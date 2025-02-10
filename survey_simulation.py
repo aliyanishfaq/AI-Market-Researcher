@@ -7,10 +7,10 @@ import logging
 import traceback
 import time
 from llminference import LLMInference
-from schema import Persona
+from schema import Persona, PersonaType
 from response_analytics import QuestionAnalytics
 from personas import PersonaManager
-from SurveyTypes import Option
+from SurveyTypes import Option, Question
 from survey_status import SimulationStatus, SurveyStage
 from survery_meta_analysis import SurveyMetaAnalysis
 import json
@@ -33,7 +33,7 @@ class SurveySimulation:
     - Error handling and status tracking
     """
     
-    def __init__(self, llm: LLMInference, persona_manager: PersonaManager, config: SimulationConfig = SimulationConfig(), number_of_personas: int = 5, number_of_samples: int = 2000):
+    def __init__(self, llm: LLMInference, persona_manager: PersonaManager, config: SimulationConfig = SimulationConfig(), number_of_personas: int = 5, number_of_samples: int = 2000, persona_type: PersonaType = PersonaType.INTEL_EMPLOYEE):
         self.llm = llm
         self.persona_manager = persona_manager
         self.personas = self.persona_manager.get_all_personas()
@@ -42,7 +42,8 @@ class SurveySimulation:
         self._executor = None
         self.number_of_personas = number_of_personas
         self.number_of_samples = number_of_samples
-        
+        self.persona_type = persona_type
+
     async def __aenter__(self):
         """Setup for async context manager"""
         self._executor = ThreadPoolExecutor(max_workers=self.config.thread_pool_size)
@@ -179,7 +180,7 @@ class SurveySimulation:
         
         return analysis, self.status.completed_personas
 
-    async def run_survey(self, questions: List[Dict[str, Any]]) -> Dict[str, Any]:
+    async def run_survey(self, questions: List[Question]) -> Dict[str, Any]:
         """
         Run the complete survey simulation.
         """
@@ -248,7 +249,7 @@ class SurveySimulation:
             self.status.update(stage=SurveyStage.COMPLETED, message="Survey completed")
             
             start_time = time.time()
-            survey_meta_analysis = SurveyMetaAnalysis(persona_data=self.personas[:self.number_of_personas], response_distributions=response_distributions)
+            survey_meta_analysis = SurveyMetaAnalysis(persona_data=self.personas[:self.number_of_personas], response_distributions=response_distributions, questions=questions, persona_type=self.persona_type)
             
             complete_analysis = await survey_meta_analysis.get_complete_analysis()
             await asyncio.sleep(0.01)
