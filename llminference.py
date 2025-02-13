@@ -70,6 +70,7 @@ class LLMInference:
                 "type": "json_schema", 
                 "json_schema": prompt_schema
             },
+            seed=123
         )
         return response
     
@@ -85,6 +86,7 @@ class LLMInference:
                     "type": "json_schema", 
                     "json_schema": prompt_schema
                 },
+                seed=123
             )
         try:
             json_response = json.loads(response.choices[0].message.content)
@@ -103,6 +105,7 @@ class LLMInference:
             model="gpt-4o-mini",
             messages=[{"role": "user", "content": prompt}],
             temperature=temperature,
+            seed=123
         )
         return response
     @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=8, max=32), reraise=True)
@@ -114,6 +117,7 @@ class LLMInference:
                 model="gpt-4o-mini",
                 messages=[{"role": "user", "content": prompt}],
                 temperature=temperature,
+                seed=123
             )
         try:
             response = response.choices[0].message.content

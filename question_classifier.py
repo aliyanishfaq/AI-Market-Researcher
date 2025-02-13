@@ -33,13 +33,15 @@ class QuestionClassifier:
                     "type": "json_schema", 
                     "json_schema": schema
                 },
+                seed=123
             ) 
         else:
             response = await self.azure_openai_client.chat.completions.create(
                 model="gpt-4o-mini",
                 messages=[{"role": "user", "content": prompt}],
                 temperature=temperature,
-                response_format={"type": "json_object"}
+                response_format={"type": "json_object"},
+                seed=123
             )
         return response
     
@@ -56,13 +58,15 @@ class QuestionClassifier:
                         "type": "json_schema", 
                         "json_schema": schema
                     },
+                    seed=123
                 )
             else:
                 response = await self.openai_client.chat.completions.create(
                     model="gpt-4o-mini",
                     messages=[{"role": "user", "content": prompt}],
                     temperature=temperature,
-                    response_format={"type": "json_object"}
+                    response_format={"type": "json_object"},
+                    seed=123
                 )
         try:
             json_response = json.loads(response.choices[0].message.content)
