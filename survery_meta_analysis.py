@@ -62,7 +62,6 @@ class SurveyMetaAnalysis:
         distribution_data = self._format_response_distributions()
 
         prompt = AnalysisPrompts.get_alignment_prompt(self.persona_type, response_data, distribution_data)
-        print(f"[SurveyMetaAnalysis][analyze_persona_alignment] prompt: {prompt}")
         return await self._get_gemini_response(prompt)
 
     async def analyze_response_consistency(self) -> Dict[str, Any]:
@@ -71,7 +70,6 @@ class SurveyMetaAnalysis:
         distribution_data = self._format_response_distributions()
 
         prompt = AnalysisPrompts.get_consistency_prompt(self.persona_type, response_data, distribution_data)
-        print(f"[SurveyMetaAnalysis][analyze_response_consistency] prompt: {prompt}")
         return await self._get_gemini_response(prompt)
 
 
@@ -81,7 +79,6 @@ class SurveyMetaAnalysis:
         distribution_data = self._format_response_distributions()
 
         prompt = AnalysisPrompts.get_demographic_prompt(self.persona_type, response_data, distribution_data)
-        print(f"[SurveyMetaAnalysis][analyze_demographic_insights] prompt: {prompt}")
         return await self._get_gemini_response(prompt)
 
     async def generate_key_findings(self, alignment_results: Dict[str, Any] = None, consistency_results: Dict[str, Any] = None, demographic_results: Dict[str, Any] = None) -> Dict[str, Any]:
@@ -130,7 +127,6 @@ class SurveyMetaAnalysis:
             ]
         }}
         """
-        print(f"[SurveyMetaAnalysis][generate_key_findings] prompt: {prompt}")
         return await self._get_gemini_response(prompt)
 
     def _format_persona_data(self) -> str:

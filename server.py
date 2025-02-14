@@ -14,7 +14,7 @@ from openai import AsyncAzureOpenAI
 from httpx import Timeout
 from tenacity import retry, stop_after_attempt, wait_exponential
 import time
-from SurveyTypes import SurveyRequest
+from SurveyTypes import SurveyRequest, Question, Option
 import random
 from llminference import LLMInference
 from typing import Dict, Any, List
@@ -136,10 +136,49 @@ async def ask_persona(request: QuestionRequest):
     return {"answer": answer, "persona": persona}
 
 
+@app.post("/ask_survey_question")
+async def ask_survey_question(request: QuestionRequest):
+    """
+    Handles the user question and then passes it to the survey endpoint.
+    """
+    try:
+        prompt = f"""
+        You are a survey expert. You are given a question. You job is to provide me with a list of options that are relevant to the question.
+        The question is: {request.question}
+        You can only provide upto 5 options.
+        You need to provide me with the list in the following JSON format:
+        {{
+            "options": ["option1", "option2", "option3"]
+        }}
+        """
+        response = await make_openai_request(prompt)
+        options = json.loads(response.choices[0].message.content.strip()) or {"error": "Failed to generate a response"}
+        
+        # Create Question object with options from response
+        question = Question(
+            id="1",
+            text=request.question,
+            options=[Option(id=str(i+1), text=opt) for i, opt in enumerate(options["options"])]
+        )
+        
+        survey_request = SurveyRequest(
+            title=request.question,
+            title="Question Survey",
+            questions=[question],
+            persona_type=request.persona_type,
+            number_of_personas=32,
+            number_of_samples=2000
+        )
+        return await run_survey(survey_request)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"[ask_survey_question][Exception] Error: {str(e)}")
+
+
 @app.post("/analyze_responses")
 async def analyze_responses(request: ResponseAnalysisRequest):
     try:
         # Format responses based on persona type
+        print(f"[analyze_responses] request: {request}")
         formatted_responses = []
         for i, resp in enumerate(request.responses):
             if request.persona_type == PersonaType.INTEL_EMPLOYEE:
