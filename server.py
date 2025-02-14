@@ -165,7 +165,6 @@ async def ask_survey_question(request: QuestionRequest):
         
         survey_request = SurveyRequest(
             title=request.question,
-            title="Question Survey",
             questions=[question],
             persona_type=request.persona_type,
             number_of_personas=32,
@@ -315,4 +314,4 @@ async def run_survey(survey: SurveyRequest) -> Dict[str, Any]:
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000, reload=True) # change to False in production
+    uvicorn.run(app, host="0.0.0.0", port=8000, reload=False) # change to False in production
