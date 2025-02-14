@@ -80,14 +80,16 @@ async def make_openai_request(prompt: str):
             model="gpt-4o-mini",
             messages=[{"role": "user", "content": prompt}],
             temperature=0.3,
-            response_format={"type": "json_object"}
+            response_format={"type": "json_object"},
+            seed=123
         )
     else:
         response = await openai_client.chat.completions.create(
             model="gpt-4o-mini",
             messages=[{"role": "user", "content": prompt}],
             temperature=0.3,
-            response_format={"type": "json_object"}
+            response_format={"type": "json_object"},
+            seed=123
         )
     return response
 
