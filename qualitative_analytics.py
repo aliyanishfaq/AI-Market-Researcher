@@ -87,7 +87,7 @@ class QuestionQualitativeAnalysis:
         self.azure_openai_client = AsyncAzureOpenAI(
             api_key=self.azure_openai_api_key, 
             azure_endpoint = self.azure_openai_endpoint,
-            api_version = "2024-08-01-preview",
+            api_version = "2024-12-01-preview",
         )
         self.use_azure_openai = False
 
@@ -267,7 +267,7 @@ class QuestionQualitativeAnalysis:
         wrapped_schema = schema_transformer.wrap_schema(schema, "theme", "Theme analysis schema", strict=True)
         try:
             response = await self.azure_openai_client.chat.completions.create(
-                model="gpt-4o-mini",
+                model="o3-mini",
                 messages=[{"role": "user", "content": prompt}],
                 response_format={
                     "type": "json_schema",

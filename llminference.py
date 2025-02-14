@@ -37,7 +37,7 @@ class LLMInference:
         self.azure_openai_client = AsyncAzureOpenAI(
             api_key=self.azure_openai_api_key, 
             azure_endpoint = self.azure_openai_endpoint,
-            api_version = "2024-08-01-preview",
+            api_version = "2024-12-01-preview",
         )
         self.use_azure_openai = True
         # Add rate limiting properties
@@ -63,8 +63,8 @@ class LLMInference:
 
     async def _make_azure_openai_json_request(self, prompt: str, temperature: float, prompt_schema=None):
         response = await self.azure_openai_client.chat.completions.create(
-            model="gpt-4o-mini",
-            temperature=temperature,
+            model="o3-mini",
+            # temperature=temperature,
             messages=[{"role": "user", "content": prompt}],
             response_format={
                 "type": "json_schema", 
@@ -79,8 +79,8 @@ class LLMInference:
             response = await self._make_azure_openai_json_request(prompt, temperature, prompt_schema)
         else:
             response = await self.openai_client.chat.completions.create(
-                model="gpt-4o-mini",
-                temperature=temperature,
+                model="o3-mini",
+                # temperature=temperature,
                 messages=[{"role": "user", "content": prompt}],
                 response_format={
                     "type": "json_schema", 
@@ -102,9 +102,9 @@ class LLMInference:
     @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=8, max=32), reraise=True)
     async def _make_azure_openai_request(self, prompt: str, temperature: float):
         response = await self.azure_openai_client.chat.completions.create(
-            model="gpt-4o-mini",
+            model="o3-mini",
             messages=[{"role": "user", "content": prompt}],
-            temperature=temperature,
+            # temperature=temperature,
             seed=123
         )
         return response
@@ -114,9 +114,9 @@ class LLMInference:
             response = await self._make_azure_openai_request(prompt, temperature)   
         else:
             response = await self.openai_client.chat.completions.create(
-                model="gpt-4o-mini",
+                model="o3-mini",
                 messages=[{"role": "user", "content": prompt}],
-                temperature=temperature,
+                # temperature=temperature,
                 seed=123
             )
         try:

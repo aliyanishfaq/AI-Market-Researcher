@@ -20,14 +20,14 @@ class QuestionClassifier:
         self.azure_openai_client = AsyncAzureOpenAI(
             api_key=self.azure_openai_api_key, 
             azure_endpoint = self.azure_openai_endpoint,
-            api_version = "2024-08-01-preview",
+            api_version = "2024-12-01-preview",
         )
 
     @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=2, min=4, max=60), retry=retry_if_exception_type(Exception))
     async def _make_azure_openai_request(self, prompt: str, temperature: float, schema=None):
         if schema is not None:
             response = await self.azure_openai_client.chat.completions.create(
-                model="gpt-4o-mini",
+                model="o3-mini",
                 messages=[{"role": "user", "content": prompt}],
                 response_format={
                     "type": "json_schema", 
@@ -37,9 +37,9 @@ class QuestionClassifier:
             ) 
         else:
             response = await self.azure_openai_client.chat.completions.create(
-                model="gpt-4o-mini",
+                model="o3-mini",
                 messages=[{"role": "user", "content": prompt}],
-                temperature=temperature,
+                # temperature=temperature,
                 response_format={"type": "json_object"},
                 seed=123
             )
@@ -52,7 +52,7 @@ class QuestionClassifier:
         else:
             if schema is not None:
                 response = await self.openai_client.chat.completions.create(
-                    model="gpt-4o-mini",
+                    model="o3-mini",
                     messages=[{"role": "user", "content": prompt}],
                     response_format={
                         "type": "json_schema", 
@@ -62,9 +62,9 @@ class QuestionClassifier:
                 )
             else:
                 response = await self.openai_client.chat.completions.create(
-                    model="gpt-4o-mini",
+                    model="o3-mini",
                     messages=[{"role": "user", "content": prompt}],
-                    temperature=temperature,
+                    # temperature=temperature,
                     response_format={"type": "json_object"},
                     seed=123
                 )
