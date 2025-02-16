@@ -14,6 +14,7 @@ from SurveyTypes import Option, Question
 from survey_status import SimulationStatus, SurveyStage
 from survery_meta_analysis import SurveyMetaAnalysis
 import json
+from deep_research_py.run import main as research_main
 
 class SimulationConfig(BaseModel):
     """Configuration for the simulation"""
@@ -261,6 +262,20 @@ class SurveySimulation:
                 "consistency_analysis": complete_analysis.get("consistency_analysis", {}),
                 "demographic_insights": complete_analysis.get("demographic_insights", {})
             }
+
+            for i, question in enumerate(questions):
+                # Call the research function for each question
+                research_results = await research_main(
+                    query=question.text,
+                    breadth=4,  # or any other value you want to set
+                    depth=2,    # or any other value you want to set
+                    concurrency=2,  # or any other value you want to set
+                    service="azure",
+                    model="o3-mini",
+                    quiet=True
+                )
+                # Add research results to complete analysis
+                final_result["complete_analysis"][f"research_results_question_{i}"] = research_results
 
             return final_result
             
