@@ -125,6 +125,8 @@ async def ask_persona(request: QuestionRequest):
     try:
         prompt = prompt_manager.format_prompt(request.persona_type, persona, request.question)
     except Exception as e:
+        import traceback
+        traceback.print_exc()
         raise HTTPException(status_code=500, detail=f"Error formatting prompt: {str(e)}")
     
     # Send Request to OpenAI API
@@ -147,7 +149,7 @@ async def ask_survey_question(request: QuestionRequest):
         prompt = f"""
         You are a survey expert. You are given a question. You job is to provide me with a list of options that are relevant to the question.
         The question is: {request.question}
-        You can only provide upto 5 options.
+        You can only provide upto 5 options. The options should be as if the question was asked in a survey. So options should be brief and not too long.
         You need to provide me with the list in the following JSON format:
         {{
             "options": ["option1", "option2", "option3"]
@@ -179,7 +181,6 @@ async def ask_survey_question(request: QuestionRequest):
 async def analyze_responses(request: ResponseAnalysisRequest):
     try:
         # Format responses based on persona type
-        print(f"[analyze_responses] request: {request}")
         formatted_responses = []
         for i, resp in enumerate(request.responses):
             if request.persona_type == PersonaType.INTEL_EMPLOYEE:
@@ -192,10 +193,9 @@ async def analyze_responses(request: ResponseAnalysisRequest):
             elif request.persona_type == PersonaType.INTEL_PRODUCT_REVIEWER:
                 formatted_response = (
                     f"Response {i+1}: {resp.get('response')} "
-                    f"Date: {resp.get('date')}"
-                    f"(Product: {resp.get('product_name')}, "
-                    f"User: {resp.get('name')}, "
-                    f"Technical Level: {resp.get('technical_level')})"
+                    f"(User: {resp.get('name')}, "
+                    f"Date: {resp.get('information_cutoff')}"
+                    f"Technical Level: {resp.get('expertise_level', {}).get('level', 'Unknown')})"
                 )
             else:
                 raise HTTPException(status_code=400, detail=f"Unsupported persona type: {request.persona_type}")
@@ -215,7 +215,7 @@ async def analyze_responses(request: ResponseAnalysisRequest):
             '            "positive": "percentage (0-100)",\n'
             '            "negative": "percentage (0-100)"\n'
             "        }\n"
-            "    ],\n"
+            "    ], NOTE: The timestamps should be as granular as possible based on the data provided.\n"
             '    "themeDistribution": [\n'
             "        {\n"
             '            "theme": "theme name",\n'
@@ -241,7 +241,6 @@ async def analyze_responses(request: ResponseAnalysisRequest):
             "    ]\n"
             "}"
         )
-
         # Generate analysis
         response = await make_openai_request(analysis_prompt)
         # Extract content from OpenAI response correctly

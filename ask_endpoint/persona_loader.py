@@ -18,7 +18,7 @@ class PersonaLoader:
 
         persona_files = {
             'intel_employee': root_dir / 'glassdoor.json',
-            'intel_product_reviewer': root_dir / 'product-reviews.json',
+            'intel_product_reviewer': root_dir / 'intel_product_reviews.json',
         }
 
         # Load all persona files
