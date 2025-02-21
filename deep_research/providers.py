@@ -4,10 +4,8 @@ import tiktoken
 from typing import Optional
 from rich.console import Console
 from dotenv import load_dotenv
-try:
-    from text_splitter import RecursiveCharacterTextSplitter
-except ImportError:
-    from deep_research_py.text_splitter import RecursiveCharacterTextSplitter
+from deep_research.text_splitter import RecursiveCharacterTextSplitter
+from deep_research.text_splitter import RecursiveCharacterTextSplitter
 
 # Import AzureOpenAI
 from openai import AzureOpenAI

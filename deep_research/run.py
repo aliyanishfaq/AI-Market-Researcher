@@ -9,15 +9,9 @@ from rich.panel import Panel
 from rich.progress import Progress, SpinnerColumn, TextColumn
 from rich import print as rprint
 from openai import AzureOpenAI
-
-try:
-    from deep_research import deep_research, write_final_report
-    from feedback import generate_feedback
-    from providers import get_ai_client
-except ImportError:
-    from deep_research_py.deep_research import deep_research, write_final_report
-    from deep_research_py.feedback import generate_feedback
-    from deep_research_py.providers import get_ai_client
+from deep_research.deep_research import deep_research, write_final_report
+from deep_research.feedback import generate_feedback
+from deep_research.providers import get_ai_client
 
 load_dotenv()
 
@@ -30,16 +24,10 @@ async def async_prompt(message: str, default: str = "") -> str:
     return await session.prompt_async(message)
 
 @app.command()
-async def main(
-    query: str,
-    breadth: int = 4,
-    depth: int = 2,
-    concurrency: int = 2,
-    service: str = "azure",
-    model: str = "o3-mini",
-    quiet: bool = False,
-):
+async def main(query: str, breadth: int = 4, depth: int = 2, concurrency: int = 2, 
+                service: str = "azure", model: str = "o3-mini", quiet: bool = False):
     """Deep Research CLI"""
+    print(f"[deep_research] [run] query: {query}")
     if not quiet:
         console.print(
             Panel.fit(
@@ -88,6 +76,8 @@ async def main(
             visited_urls=research_results["visited_urls"],
             client=client,
             model=model,
+            survey_results=survey_results,
+            persona_responses=persona_responses
         )
         progress.remove_task(task)
 

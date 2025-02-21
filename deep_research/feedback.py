@@ -2,10 +2,7 @@ from typing import List
 import asyncio
 import openai
 import json
-try:
-    from prompt import system_prompt
-except ImportError:
-    from deep_research_py.prompt import system_prompt
+from deep_research.prompt import system_prompt
 from openai import AzureOpenAI
 
 async def generate_feedback(query: str, client: AzureOpenAI, model: str) -> List[str]:
