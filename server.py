@@ -23,6 +23,7 @@ from personas import PersonaManager
 from schema import PersonaType
 from ask_endpoint.ask_prompts import AskPromptManager
 from ask_endpoint.persona_loader import PersonaLoader
+from deep_research.run import main as research_main
 
 use_azure_openai = True
 azure_openai_api_key = os.getenv("AZURE_OPENAI_API_KEY")
@@ -73,6 +74,14 @@ class ResponseAnalysisRequest(BaseModel):
     question: str
     persona_type: PersonaType
 
+class ResearchRequest(BaseModel):
+    query: str
+    breadth: int
+    depth: int
+    concurrency: int
+    survey_results: Dict[str, Any]
+    persona_responses: List[Dict[str, Any]]
+
 @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=4, max=10), reraise=True)
 async def make_openai_request(prompt: str):
     if use_azure_openai:
@@ -108,6 +117,26 @@ async def get_persona(persona_type: PersonaType):
         return persona_loader.get_personas(persona_type.value)
     except ValueError as e:
         raise HTTPException(status_code=404, detail=str(e))
+
+
+@app.get("/research")
+async def research(request: ResearchRequest):
+    try:
+        research_results = await research_main(
+            query=request.query,
+            breadth=request.breadth,
+            depth=request.depth,
+            concurrency=request.concurrency,
+            service="azure",
+            model="o3-mini",
+            quiet=True,
+            survey_results=request.survey_results,
+            persona_responses=request.persona_responses
+        )
+        print(f"[research] results: {research_results}")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error processing research: {str(e)}")
+    return research_results
 
 
 # Endpoint to Ask a Question to a Persona

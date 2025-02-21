@@ -261,7 +261,6 @@ class SurveySimulation:
                 "consistency_analysis": complete_analysis.get("consistency_analysis", {}),
                 "demographic_insights": complete_analysis.get("demographic_insights", {})
             }
-
             return final_result
             
         except Exception as e:
