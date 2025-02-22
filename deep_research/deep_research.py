@@ -183,8 +183,6 @@ async def write_final_report(
     prompt: str,
     learnings: List[str],
     visited_urls: List[str],
-    persona_responses: List[Dict[str, Any]],
-    survey_results: Dict[str, Any],
     client: AzureOpenAI,
     model: str,
 ) -> str:
@@ -195,18 +193,12 @@ async def write_final_report(
         150_000,
     )
 
-    persona_responses_string = "\n".join([f"<persona_response>\n{response}\n</persona_response>" for response in persona_responses])
-    survey_results_string = "\n".join([f"<survey_result>\n{result}\n</survey_result>" for result in survey_results])
-    print(f"[deep_research] [write_final_report] survey_results_string: {survey_results_string}")
-    print(f"[deep_research] [write_final_report] persona_responses_string: {persona_responses_string}")
     user_prompt = (
         f"Given the following prompt from the user, write a final report on the topic using "
         f"the learnings from research. Return a JSON object with a 'reportMarkdown' field "
         f"containing a detailed markdown report (aim for 3+ pages). Include ALL the learnings and don't miss the granular details"
         f"from research:\n\n<prompt>{prompt}</prompt>\n\n"
         f"Here are all the learnings from research:\n\n<learnings>\n{learnings_string}\n</learnings>"
-        f"Here are the responses from all the personas:\n\n<persona_responses>\n{persona_responses_string}\n</persona_responses>"
-        f"Here are the survey results:\n\n<survey_results>\n{survey_results_string}\n</survey_results>"
     )
 
     response = await asyncio.get_event_loop().run_in_executor(

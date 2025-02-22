@@ -119,7 +119,11 @@ async def get_persona(persona_type: PersonaType):
         raise HTTPException(status_code=404, detail=str(e))
 
 
-@app.get("/research")
+@app.post("/research-4883u5834u958u923452")
+"""
+[TODO]
+The endpoint is not available in the production environment.
+"""
 async def research(request: ResearchRequest):
     try:
         research_results = await research_main(
@@ -129,9 +133,7 @@ async def research(request: ResearchRequest):
             concurrency=request.concurrency,
             service="azure",
             model="o3-mini",
-            quiet=True,
-            survey_results=request.survey_results,
-            persona_responses=request.persona_responses
+            quiet=False
         )
         print(f"[research] results: {research_results}")
     except Exception as e:
@@ -210,6 +212,7 @@ async def ask_survey_question(request: QuestionRequest):
 async def analyze_responses(request: ResponseAnalysisRequest):
     try:
         # Format responses based on persona type
+        print(f"[analyze_responses] request: {request}")
         formatted_responses = []
         for i, resp in enumerate(request.responses):
             if request.persona_type == PersonaType.INTEL_EMPLOYEE:

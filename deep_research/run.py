@@ -75,9 +75,7 @@ async def main(query: str, breadth: int = 4, depth: int = 2, concurrency: int = 
             learnings=research_results["learnings"],
             visited_urls=research_results["visited_urls"],
             client=client,
-            model=model,
-            survey_results=survey_results,
-            persona_responses=persona_responses
+            model=model
         )
         progress.remove_task(task)
 
