@@ -119,11 +119,7 @@ async def get_persona(persona_type: PersonaType):
         raise HTTPException(status_code=404, detail=str(e))
 
 
-@app.post("/research-4883u5834u958u923452")
-"""
-[TODO]
-The endpoint is not available in the production environment.
-"""
+@app.post("/research")
 async def research(request: ResearchRequest):
     try:
         research_results = await research_main(
