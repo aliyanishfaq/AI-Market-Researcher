@@ -4,42 +4,31 @@ import tiktoken
 from typing import Optional
 from rich.console import Console
 from dotenv import load_dotenv
-from deep_research.text_splitter import RecursiveCharacterTextSplitter
-from deep_research.text_splitter import RecursiveCharacterTextSplitter
+from text_splitter import RecursiveCharacterTextSplitter
 
 # Import AzureOpenAI
-from openai import AzureOpenAI
+#from openai import AzureOpenAI
+# Langfuse
+from langfuse.openai import AzureOpenAI
 
 load_dotenv()
+
+API_KEY = os.getenv("AZURE_OPENAI_API_KEY")
+AZURE_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT")
 
 def create_azure_openai_client(api_key: str, azure_endpoint: str) -> AzureOpenAI:
     return AzureOpenAI(
         api_key=api_key,
-        azure_endpoint=azure_endpoint,
+        azure_endpoint=AZURE_ENDPOINT,
         api_version="2024-12-01-preview",
     )
 
-# Initialize Azure OpenAI client with better error handling
-try:
-    azure_api_key = os.getenv("AZURE_OPENAI_API_KEY")
-    azure_endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
-    if not azure_api_key or not azure_endpoint:
-        raise ValueError(
-            "Azure OpenAI API key or endpoint not found. Please set AZURE_OPENAI_API_KEY and AZURE_OPENAI_ENDPOINT environment variables."
-        )
-
-    azure_openai_client = create_azure_openai_client(
-        api_key=azure_api_key, azure_endpoint=azure_endpoint
-    )
-except Exception as e:
-    print(f"Error initializing Azure OpenAI client: {e}")
-    raise
 
 def get_ai_client(service: str, console: Console) -> AzureOpenAI:
     # Decide which API key and endpoint to use
     if service.lower() == "azure":
-        api_key = os.getenv("AZURE_OPENAI_API_KEY")
-        endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
+        api_key = API_KEY
+        endpoint = AZURE_ENDPOINT
         if not api_key or not endpoint:
             console.print("[red]Missing AZURE_OPENAI_API_KEY or AZURE_OPENAI_ENDPOINT in environment[/red]")
             raise typer.Exit(1)
@@ -51,6 +40,7 @@ def get_ai_client(service: str, console: Console) -> AzureOpenAI:
             "[red]Invalid service selected. Choose 'azure'.[/red]"
         )
         raise typer.Exit(1)
+
 
 MIN_CHUNK_SIZE = 140
 encoder = tiktoken.get_encoding(

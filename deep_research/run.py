@@ -8,7 +8,6 @@ from rich.console import Console
 from rich.panel import Panel
 from rich.progress import Progress, SpinnerColumn, TextColumn
 from rich import print as rprint
-from openai import AzureOpenAI
 from deep_research.deep_research import deep_research, write_final_report
 from deep_research.feedback import generate_feedback
 from deep_research.providers import get_ai_client
