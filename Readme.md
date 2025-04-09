@@ -1,10 +1,14 @@
 # AI Survey Simulation Platform
 
-[![Demo Video](https://cdn.loom.com/sessions/thumbnails/88493cf639014566ab8c63f4b075792a-with-play.gif)](https://www.loom.com/share/88493cf639014566ab8c63f4b075792a)
+[![Demo Video](./market_research.png)](https://www.loom.com/share/88493cf639014566ab8c63f4b075792a)
 
 ## Overview
 
-Colony is an advanced AI-powered platform designed to simulate survey responses using realistic persona profiles. This system leverages large language models to generate authentic survey responses based on real data gathered from companies and customers. The platform creates and maintains detailed personas, allowing for the simulation of diverse perspectives and responses to survey questions.
+This platform simulates realistic survey responses by creating detailed persona profiles from real data. It generates nuanced, contextually appropriate responses that reflect how actual people with diverse backgrounds would answer surveys.
+
+Built for market researchers and product teams, the system helps predict how different user segments might react to products, policies, or workplace changes without the cost and time of traditional surveys. Each virtual respondent maintains consistency across questions while exhibiting the natural variation found in human responses.
+
+Key capabilities include parallel processing of multiple personas, theme detection across responses, sentiment tracking, and demographic insights—enabling detailed analysis without running a single real-world survey.
 
 ## Features
 
