@@ -1,6 +1,7 @@
 # AI Survey Simulation Platform
 
-[![Demo Video](./market_research.png)](https://www.loom.com/share/88493cf639014566ab8c63f4b075792a)
+![Market Research](./market_research.png)
+Watch the [full demonstration video](https://www.loom.com/share/88493cf639014566ab8c63f4b075792a) to see the simulation in action.
 
 ## Overview
 
