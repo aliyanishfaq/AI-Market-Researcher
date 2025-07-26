@@ -94,10 +94,7 @@ class SurveySimulation:
             }
             
         except Exception as e:
-            import traceback
-            error_trace = traceback.format_exc()
             print(f"[SurveySimulation][_process_persona_question] Error: {str(e)}")
-            print(f"[SurveySimulation][_process_persona_question] Error traceback: {error_trace}")
             return {
                 "persona_id": persona.id,
                 "personality_summary": "",
@@ -140,7 +137,8 @@ class SurveySimulation:
         # Determine the number of personas to process
         num_personas = min(self.number_of_personas, len(self.personas))
         print(f"Number of personas: {num_personas}, total personas: {len(self.personas)}")
-        await asyncio.sleep(0.01)
+        #await asyncio.sleep(0.01)
+
         # Create tasks for processing all batches concurrently
         batch_tasks = [
             self._process_question_batch(
@@ -152,7 +150,8 @@ class SurveySimulation:
         ]
         # Gather all batch responses concurrently
         all_batch_responses = await asyncio.gather(*batch_tasks, return_exceptions=True)
-        # await asyncio.sleep(0.01)
+
+
         all_responses = []
         for batch_responses in all_batch_responses:
             if isinstance(batch_responses, Exception):
@@ -171,7 +170,6 @@ class SurveySimulation:
                     )
                     self.status.completed_personas -= 1
         # Analyze responses
-        await asyncio.sleep(0.01)
 
         analysis = await self._analyze_question_responses(all_responses, question_text, options)
         
@@ -208,7 +206,7 @@ class SurveySimulation:
                 for i, question in enumerate(questions)
             ]
             
-            await asyncio.sleep(0.01)
+            # await asyncio.sleep(0.01)
             question_results = await asyncio.gather(*question_tasks, return_exceptions=True)
             # await asyncio.sleep(0.01)
             for i, result in enumerate(question_results):
@@ -245,14 +243,13 @@ class SurveySimulation:
                 }
             }
 
-            await asyncio.sleep(0.01)
             self.status.update(stage=SurveyStage.COMPLETED, message="Survey completed")
             
             start_time = time.time()
             survey_meta_analysis = SurveyMetaAnalysis(persona_data=self.personas[:self.number_of_personas], response_distributions=response_distributions, questions=questions, persona_type=self.persona_type)
             
             complete_analysis = await survey_meta_analysis.get_complete_analysis()
-            await asyncio.sleep(0.01)
+
             final_result["complete_analysis"] = {
                 "key_findings": complete_analysis.get("key_findings", []),
                 "statistical_metrics": complete_analysis.get("statistical_metrics", {}),
