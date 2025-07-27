@@ -138,6 +138,3 @@ When a survey was conducted, the following were the results:
 
 Use these in your analysis report.
 """
-
-
-print(system_prompt())
